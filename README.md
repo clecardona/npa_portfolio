@@ -7,43 +7,46 @@
 
 This project was bootstrapped with Create React App.
 
-1. Portfolio
+## 1. Content
 This is a portfolio to showcase my different projects.
+[Go to website]() : *to be created*
 
-2. Setup
+## 2. Setup
 These are the instructions to run the project:
 
 Open the terminal and navigate to the folder where this readme file is located.
-
+install dependencies:
 ```npm install```
-
+run the project:
 ```npm start```
+Open a browser at : ```http://localhost:3000```
 
-3. Dependencies
+## 3. Dependencies
 
 - Firebase Cloud Storage for uploading and hosting the images of each shopping item.
 
-4. Project organization
-5.1 Requirement gathering
+## 4. Project organization
+### 4.1 Requirement gathering
 
 [Google Docs link](https://docs.google.com/document/d/1ZmCtrgiXPj1qgSdKmgo7ObFWM2EASxXOpYo1N-agKMk/edit)
 
-5.2 Project spreadsheet
+### 4.2 Project spreadsheet
 
 [Google Spreadsheets link](https://docs.google.com/spreadsheets/d/1SXE6WLXl-HTeZVzc50HYBsM6YqzwS1l9_uIzh8DiUWg/edit#gid=722109281)
 
-5.3 User flows
+### 4.3 User flows
 Visualize how the app will work.
 [Whimsical User Flow board ](https://whimsical.com/user-flows-ACdTYKaB1FYiZpRq78HPVs@2Ux7TurymNF3R2GgZ1Zt)
 
-5.4 Design mockup
+### 4.4 Design mockup
 
 [Figma mockup](https://www.figma.com/file/PqYQa91AxatMvRXJ4BgQiO/Portfolio?node-id=2%3A2)
 
-5.5 Component tree
+### 4.5 Component tree
 
 [Whimsical Component Tree](https://whimsical.com/component-tree-Xy6kKsTTuSj3ZoQEZPPQQk@2Ux7TurymNLqhYS5xE34)
 
-6. Credits
+
+## 6. Credits
 
 Icons: Font awesome 5.
