@@ -1,0 +1,12 @@
+.section-about {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+
+  img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+}

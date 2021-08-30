@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+
+    "thumbnailTitle": "Java todo list",
+    "thumbnailURL": "https://cdn.dribbble.com/users/153946/screenshots/1089494/media/67bced0b33ddc31186a2f46f148b101a.png?compress=1&resize=400x300",
+    "isReleased": true,
+
+    "title": "Todo list",
+    "description": "A simple Java todo list ",
+    "technologies": ["java"],
+
+    "githubURL": "https://github.com/clecardona/todolist",
+    "websiteURL": "",
+    "screenshotURL": "https://clecardona.com/code/portfolio/todolist.png"
+  },
+
+  {
+    "id": 2,
+
+    "thumbnailTitle": "Fashion social network",
+    "thumbnailURL": "https://cdn.dribbble.com/users/59947/screenshots/15874343/media/afe65895379ec561bbdd25a79e7102ec.jpg?compress=1&resize=1600x1200",
+    "isReleased": true,
+
+    "title": "Fashion social network",
+    "description": "A tinder-like social app where users can submit their daily style, and fight with others in order to become the fashion king of the day",
+    "technologies": [
+      "javascript",
+      "react",
+      "firebase_hosting",
+      "firebase_storage",
+      "css",
+      "html",
+      "java",
+      "spring"
+    ],
+
+    "githubURL": "https://github.com/clecardona/inStyle",
+    "websiteURL": "https://instyle-3f5f5.web.app/",
+    "screenshotURL": "https://clecardona.com/code/portfolio/instyle.png"
+  },
+
+  {
+    "id": 3,
+
+    "thumbnailTitle": "EIKA Shopping-List",
+    "thumbnailURL": "https://cdn.dribbble.com/users/1008875/screenshots/4532141/shopping.png?compress=1&resize=800x600",
+    "isReleased": true,
+
+    "description": "A Shopping-list app where users can save their items to buy by EIKA store",
+    "technologies": [
+      "javascript",
+      "react",
+      "firebase_hosting",
+      "firebase_storage",
+      "sass",
+      "html"
+    ],
+
+    "title": "Shopping-List",
+    "githubURL": "https://github.com/clecardona/eika",
+    "websiteURL": "https://eika-31a2e.web.app/",
+    "screenshotURL": "https://clecardona.com/code/portfolio/eika.png"
+  },
+
+  {
+    "id": 4,
+
+    "thumbnailTitle": "Image gallery",
+    "thumbnailURL": "https://cdn.dribbble.com/users/4540442/screenshots/15285300/media/e68d117f62722937a9448c2d7ad2c72c.png?compress=1&resize=1600x1200",
+    "isReleased": true,
+
+    "description": "A simple multi style gallery, to apprehend different way of rendering images on a website",
+    "technologies": ["javascript", "react", "firebase_hosting", "sass", "html"],
+
+    "title": "La Galerie",
+    "githubURL": "https://github.com/clecardona/galerie",
+    "websiteURL": "https://galerie-9a9ae.web.app/",
+    "screenshotURL": "https://clecardona.com/code/portfolio/galerie.png"
+  },
+  {
+    "id": 5,
+
+    "thumbnailTitle": "Vegan Restaurant",
+    "thumbnailURL": "https://cdn.dribbble.com/users/427368/screenshots/11523001/dribbble.jpg?compress=1&resize=800x600",
+    "isReleased": true,
+
+    "description": "A website for a Vegan Resaturant wher user can order food online",
+    "technologies": ["javascript", "react", "firebase_hosting", "sass", "html"],
+
+    "title": "Wild and the Moon",
+    "githubURL": "https://github.com/clecardona/galerie",
+    "websiteURL": "https://www.wildandthemoon.fr/fr/",
+    "screenshotURL": "https://cdn.dribbble.com/users/2645051/screenshots/15264665/media/9b989cc5e5125cc2621f7b02ed8be604.png?compress=1&resize=1600x1200"
+  },
+  {
+    "id": 6,
+    "thumbnailTitle": "Package Tracker",
+    "thumbnailURL": "https://cdn.dribbble.com/users/427368/screenshots/11475057/dribbble.jpg?compress=1&resize=800x600",
+    "isReleased": false,
+
+    "description": "A Package tracker who allows user to track his parcel ordered online.",
+    "technologies": ["javascript", "react", "firebase_hosting", "sass", "html"],
+
+    "title": "Package Tracker",
+    "githubURL": "https://github.com/clecardona/galerie",
+    "websiteURL": "https://parcelsapp.com/fr",
+    "screenshotURL": "https://cdn.dribbble.com/users/4505805/screenshots/11957095/media/a66780e990ab05615bc094d24216ca56.jpg?compress=1&resize=1600x1200"
+  }
+]

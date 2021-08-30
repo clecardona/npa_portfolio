@@ -1,0 +1,25 @@
+.section-technologies {
+  ul {
+    margin: 20px;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    li {
+      display: grid;
+      grid-template-rows: 50px 1fr;
+      overflow: hidden;
+
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      justify-items: center;
+
+      h3 {
+        font-size: 11px;
+        text-align: center;
+      }
+    }
+  }
+}

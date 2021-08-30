@@ -1,0 +1,53 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  width: 100%;
+
+  h2 {
+    padding: 12px 0;
+  }
+  p {
+    padding: 20px;
+  }
+}
+section:first-child {
+  height: 100vh-$header-height;
+}
+section:nth-child(2) {
+  height: 100vh;
+}
+
+section:nth-child(even) {
+  background: $grayLight;
+}
+
+.section-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.img-50 {
+  height: 50px;
+  width: 50px;
+}
+
+.img-40 {
+  height: 40px;
+  width: 40px;
+}
+
+.img-30 {
+  height: 30px;
+  width: 30px;
+}
+
+.img-bw {
+  filter: grayscale(1);
+}
