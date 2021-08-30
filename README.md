@@ -14,15 +14,14 @@ This is a portfolio to showcase my different projects.
 ## 2. Setup
 These are the instructions to run the project:
 
-Open the terminal and navigate to the folder where this readme file is located.
-install dependencies:
+1. Open the terminal and navigate to the folder where this readme file is located.
+2. Install dependencies:
 ```npm install```
-run the project:
+3. run the project:
 ```npm start```
-Open a browser at : ```http://localhost:3000```
+4. Open a browser at : ```http://localhost:3000```
 
 ## 3. Dependencies
-
 - Firebase Cloud Hosting
 - Firebase Cloud Storage
 
@@ -32,22 +31,18 @@ Open a browser at : ```http://localhost:3000```
 [Google Docs link](https://docs.google.com/document/d/1ZmCtrgiXPj1qgSdKmgo7ObFWM2EASxXOpYo1N-agKMk/edit)
 
 ### 4.2 Project spreadsheet
-
 [Google Spreadsheets link](https://docs.google.com/spreadsheets/d/1SXE6WLXl-HTeZVzc50HYBsM6YqzwS1l9_uIzh8DiUWg/edit#gid=722109281)
 
 ### 4.3 User flows
-Visualize how the app will work.
+Visualize how the app will work:
 [Whimsical User Flow board ](https://whimsical.com/user-flows-ACdTYKaB1FYiZpRq78HPVs@2Ux7TurymNF3R2GgZ1Zt)
 
 ### 4.4 Design mockup
-
 [Figma mockup](https://www.figma.com/file/PqYQa91AxatMvRXJ4BgQiO/Portfolio?node-id=2%3A2)
 
 ### 4.5 Component tree
-
 [Whimsical Component Tree](https://whimsical.com/component-tree-Xy6kKsTTuSj3ZoQEZPPQQk@2Ux7TurymNLqhYS5xE34)
 
 
 ## 6. Credits
-
-Icons: Font awesome 5.
+Icons: Fontawesome
