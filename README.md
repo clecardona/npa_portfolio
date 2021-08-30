@@ -23,7 +23,8 @@ Open a browser at : ```http://localhost:3000```
 
 ## 3. Dependencies
 
-- Firebase Cloud Storage for uploading and hosting the images of each shopping item.
+- Firebase Cloud Hosting
+- Firebase Cloud Storage
 
 ## 4. Project organization
 ### 4.1 Requirement gathering
