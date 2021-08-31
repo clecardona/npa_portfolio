@@ -1,6 +1,7 @@
 import React from "react";
 //Local files
 import listOfProjects from "../assets/projects.json";
+import ButtonCard from "./ButtonCard";
 
 export default function Portfolio() {
   return (
@@ -13,12 +14,7 @@ export default function Portfolio() {
 
       <ul>
         {listOfProjects.map((item) => {
-          return (
-            <li key={item.id}>
-              <img className="" alt={item.name} src={item.thumbnailURL} />
-              <h3>{item.thumbnailTitle}</h3>
-            </li>
-          );
+          return <ButtonCard item={item} />;
         })}
       </ul>
     </section>

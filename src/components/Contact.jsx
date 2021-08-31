@@ -12,7 +12,7 @@ export default function Contact() {
   const contact = {
     email: "clecardona@gmail.com",
     phone: "+46 76 590 1639",
-    location: "Stockholm,Sweden",
+    location: "Stockholm , Sweden",
     fullname: "Clement Cardona",
     linkedIn: "https://www.linkedin.com/in/cl%C3%A9ment-cardona-205098171/",
     github: "https://github.com/clecardona",
