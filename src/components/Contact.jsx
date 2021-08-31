@@ -20,26 +20,27 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-contact">
-      <p>
-        <h2>Contact me</h2>
-        Here is my contact information if you are interested in starting a
-        collaboration.
-      </p>
-      <ul>
-        <li>
-          <FontAwesomeIcon icon={faEnvelope} />
-          <h4>{contact.email}</h4>
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faPhone} />
-          <h4>{contact.phone}</h4>
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faMapMarkerAlt} />
-          <h4>{contact.location}</h4>
-        </li>
-      </ul>
-
+      <div className="wrapper">
+        <p>
+          <h2>Contact me</h2>
+          Here is my contact information if you are interested in starting a
+          collaboration.
+        </p>
+        <ul>
+          <li>
+            <FontAwesomeIcon icon={faEnvelope} />
+            <h4>{contact.email}</h4>
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faPhone} />
+            <h4>{contact.phone}</h4>
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faMapMarkerAlt} />
+            <h4>{contact.location}</h4>
+          </li>
+        </ul>
+      </div>
       <footer>
         <ul>
           <li>

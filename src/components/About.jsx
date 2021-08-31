@@ -5,8 +5,8 @@ export default function About() {
     <section id="about" className="section-about">
       <div className="wrapper">
         <img alt="portrait" src="http://clecardona.com/img/portrait.jpg" />
+        <h2>About me</h2>
         <p>
-          <h2>About me</h2>
           Hi! I am Clement, a junior frontend developer from Nice, France.This
           is my Portfolio, which I use to showcase everything I develop. I
           specialize in React.js development with TypeScript with a intuitive

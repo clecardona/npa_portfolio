@@ -1,0 +1,25 @@
+section {
+  width: 100%;
+
+  .wrapper {
+    max-width: 800px;
+    margin: auto;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, fit-content);
+    grid-template-areas:
+      "data data data data data data"
+      "title              title  title title              title  title "
+      "paragraph       paragraph paragraph  paragraph       paragraph paragraph";
+    @media only screen and (min-device-width: $desktopBreakpoint) {
+      grid-template-areas:
+        "title          title    title title          title    title"
+        "paragraph  paragraph  paragraph   data data data"
+        "paragraph  paragraph  paragraph   data data data";
+    }
+  }
+}

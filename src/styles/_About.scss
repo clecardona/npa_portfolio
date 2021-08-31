@@ -6,18 +6,19 @@
   align-items: center;
 
   .wrapper {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-
-    @media only screen and (min-device-width: $desktopBreakpoint) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-      direction: rtl;
-      text-align: left;
+    h2 {
+      grid-area: title;
+    }
+    p {
+      grid-area: paragraph;
+    }
+    img {
+      grid-area: data;
     }
 
+    h2 {
+      width: 100%;
+    }
     img {
       align-self: self-end;
       width: 250px;
