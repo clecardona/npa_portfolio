@@ -1,14 +1,31 @@
 .section-about {
   height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  align-items: center;
-  justify-items: center;
 
-  img {
-    align-self: self-end;
-    width: 250px;
-    height: 250px;
-    border-radius: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    @media only screen and (min-device-width: $desktopBreakpoint) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      direction: rtl;
+      text-align: left;
+    }
+
+    img {
+      align-self: self-end;
+      width: 250px;
+      height: 250px;
+      border-radius: 250px;
+      @media only screen and (min-device-width: $desktopBreakpoint) {
+        align-self: unset;
+      }
+    }
   }
 }

@@ -6,6 +6,11 @@
 section {
   width: 100%;
 
+  .wrapper {
+    max-width: 800px;
+    margin: auto;
+  }
+
   h2 {
     padding: 12px 0;
   }
