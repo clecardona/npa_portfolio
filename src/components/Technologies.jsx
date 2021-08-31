@@ -1,17 +1,6 @@
 import React from "react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faReact,
-  faSass,
-  faFirefox,
-  faJava,
-  faCss3,
-  faHtml5,
-  faJs,
-} from "@fortawesome/free-brands-svg-icons";
+//Local files
 import technologies from "../assets/technologies.json";
-import { icon } from "@fortawesome/fontawesome-svg-core";
 
 export default function Technologies() {
   return (

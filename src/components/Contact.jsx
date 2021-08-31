@@ -28,15 +28,15 @@ export default function Contact() {
       <ul>
         <li>
           <FontAwesomeIcon icon={faEnvelope} />
-          <h3>{contact.email}</h3>
+          <h4>{contact.email}</h4>
         </li>
         <li>
           <FontAwesomeIcon icon={faPhone} />
-          <h3>{contact.phone}</h3>
+          <h4>{contact.phone}</h4>
         </li>
         <li>
           <FontAwesomeIcon icon={faMapMarkerAlt} />
-          <h3>{contact.location}</h3>
+          <h4>{contact.location}</h4>
         </li>
       </ul>
 
