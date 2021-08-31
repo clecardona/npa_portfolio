@@ -11,15 +11,20 @@ nav {
   align-items: center;
 
   z-index: 100;
+
+  @media only screen and (min-device-width: $desktopBreakpoint) {
+    background: black;
+    justify-content: space-between;
+    height: $header-height;
+  }
 }
-.nav-logo {
-  position: absolute;
-  background: black;
-  border-radius: 60px;
-  border: 1px solid $grayDark;
-  img {
-    height: 60px;
-    width: 60px;
+
+.author {
+  display: none;
+  @media only screen and (min-device-width: $desktopBreakpoint) {
+    display: flex;
+    color: white;
+    padding-left: 12%;
   }
 }
 .bar {
@@ -37,8 +42,39 @@ nav {
 
   border-radius: 44px;
   padding: 0 15px;
+
+  @media only screen and (min-device-width: $desktopBreakpoint) {
+    background: none;
+    width: fit-content;
+    grid-template-columns: repeat(4, 1fr);
+    div {
+      display: none;
+    }
+  }
+
   a {
     text-align: center;
     font-size: 13px;
+  }
+}
+
+.nav-logo {
+  position: absolute;
+  background: black;
+  border-radius: 60px;
+  border: 1px solid $grayDark;
+  @media only screen and (min-device-width: $desktopBreakpoint) {
+    left: 20px;
+    border: none;
+    background: none;
+  }
+
+  img {
+    height: 60px;
+    width: 60px;
+    @media only screen and (min-device-width: $desktopBreakpoint) {
+      height: 50px;
+      width: 50px;
+    }
   }
 }

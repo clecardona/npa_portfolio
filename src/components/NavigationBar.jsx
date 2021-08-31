@@ -6,7 +6,7 @@ export default function NavigationBar() {
       <div className="nav-logo">
         <img alt="logo" src="https://clecardona.com/npa/img/CC.png" />
       </div>
-
+      <div className="author">Clément Cardona</div>
       <div className="bar">
         <a href="#about">About</a>
         <a href="#portfolio">Projects</a>
