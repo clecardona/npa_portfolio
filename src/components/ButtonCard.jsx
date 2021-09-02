@@ -10,10 +10,10 @@ export default function ButtonCard({ item }) {
         <div>
           {!item.isReleased && (
             <div className="card-overlay">
-              <h2>
+              <p>
                 COMING
                 <br /> SOON
-              </h2>
+              </p>
             </div>
           )}
           <img className="" alt={item.name} src={item.thumbnailURL} />
