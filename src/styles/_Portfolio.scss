@@ -29,6 +29,7 @@
 
       @media only screen and (min-device-width: $desktopBreakpoint) {
         grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
       }
     }
   }
