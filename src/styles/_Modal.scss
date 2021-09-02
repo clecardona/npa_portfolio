@@ -3,13 +3,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
 .modal {
   background: white;
+  overflow: hidden;
 
   position: fixed;
   top: 50%;
@@ -17,58 +18,110 @@
   transform: translate(-50%, -50%);
 
   width: 90vw;
+  max-height: 90vh;
+
   z-index: 1000;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, min-content);
+  grid-template-areas:
+    "data        data        data        data        data        data"
+    "title       title       title       title       title       title "
+    "description description description description description description"
+    "pills       pills       pills       pills       pills       pills"
+    "buttons     buttons     buttons     buttons     buttons     buttons  ";
+
+  @media only screen and (min-device-width: $desktopBreakpoint) {
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+      "data     data     data    data   title        none"
+      "data     data     data    data   description  description "
+      "data     data     data    data   pills        pills"
+      "data     data     data    data   buttons      buttons ";
+
+    gap: 10px;
+    max-width: 90vw;
+    max-height: 550px;
+    padding: 10px;
+  }
 
   padding: 0 0 20px 0;
 
   .modal-img {
+    grid-area: data;
     width: 100%;
-    height: 180px;
+    height: 100%;
     object-fit: cover;
     object-position: top;
+    @media only screen and (min-device-width: $desktopBreakpoint) {
+      object-position: top left;
+    }
+  }
+  h2 {
+    grid-area: title;
+    line-height: 45px;
   }
 
+  p {
+    grid-area: description;
+  }
+
+  h2,
   p,
   .pills,
   .buttons {
-    padding: 15px 20px;
-  }
-
-  .btn-close {
-    position: fixed;
-    top: 6px;
-    right: 6px;
+    padding: 10px 20px;
+    @media only screen and (min-device-width: $desktopBreakpoint) {
+      padding: 0 0 0 10px;
+    }
   }
 
   .pills {
+    grid-area: pills;
+    height: min-content;
+    justify-self: start;
+
     padding: 0;
-    margin: 0 20px;
+    margin: 0 15px;
+    @media only screen and (min-device-width: $desktopBreakpoint) {
+      margin: -30px 0 0 10px;
+    }
+
     display: flex;
     flex-wrap: wrap;
-  }
-  .pill {
-    background: white;
-    border-radius: 20px;
-    border: 1px solid $grayDark;
-    color: $grayDark;
+    align-content: stretch;
 
-    padding: 3px 15px;
-    margin: 3px;
+    .pill {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid $grayDark;
+      color: $grayDark;
+
+      padding: 0 12px;
+      margin: 2px;
+    }
   }
 
   .buttons {
+    grid-area: buttons;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    @media only screen and (min-device-width: $desktopBreakpoint) {
+      justify-content: flex-end;
+    }
 
     .btn-main,
     .btn-ghost {
       width: 100%;
       margin: 2px 0;
     }
+  }
+
+  .btn-close {
+    position: fixed;
+    top: 6px;
+    right: 6px;
   }
 }

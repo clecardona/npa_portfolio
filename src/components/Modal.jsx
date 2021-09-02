@@ -20,10 +20,8 @@ export default function Modal({ isOpen, onClose, item }) {
 
         <img className="modal-img" alt={item.name} src={item.screenshotURL} />
 
-        <p>
-          <h2>{item.title}</h2>
-          {item.description} that uses:
-        </p>
+        <h2>{item.title}</h2>
+        <p>{item.description} that uses:</p>
 
         <ul className="pills">
           {technologies8.map((techno) => {
