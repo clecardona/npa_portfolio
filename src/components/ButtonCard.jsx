@@ -5,17 +5,20 @@ export default function ButtonCard({ item }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <li key={item.id}>
+    <li>
       <button disabled={!item.isReleased} onClick={() => setIsOpen(true)}>
-        {!item.isReleased && (
-          <div className="card-overlay">
-            <h2>
-              COMING
-              <br /> SOON
-            </h2>
-          </div>
-        )}
-        <img className="" alt={item.name} src={item.thumbnailURL} />
+        <div>
+          {!item.isReleased && (
+            <div className="card-overlay">
+              <h2>
+                COMING
+                <br /> SOON
+              </h2>
+            </div>
+          )}
+          <img className="" alt={item.name} src={item.thumbnailURL} />
+        </div>
+
         <h3>{item.thumbnailTitle}</h3>
       </button>
 

@@ -1,4 +1,25 @@
 .section-technologies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    h2 {
+      grid-area: title;
+      width: 100%;
+    }
+    p {
+      grid-area: paragraph;
+      @media only screen and (min-device-width: $desktopBreakpoint) {
+        height: 100%;
+        margin-top: 36px;
+      }
+    }
+    ul {
+      grid-area: data;
+    }
+  }
+
   ul {
     margin: 20px;
     padding: 0;

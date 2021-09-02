@@ -1,6 +1,5 @@
 .section-about {
   height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,6 +7,7 @@
   .wrapper {
     h2 {
       grid-area: title;
+      width: 100%;
     }
     p {
       grid-area: paragraph;
@@ -15,10 +15,18 @@
     img {
       grid-area: data;
     }
+    grid-template-areas:
+      "data        data       data       data        data      data"
+      "title      title      title       title     title       title "
+      "paragraph  paragraph   paragraph  paragraph   paragraph paragraph";
 
-    h2 {
-      width: 100%;
+    @media only screen and (min-device-width: $desktopBreakpoint) {
+      grid-template-areas:
+        "title       title      title  title   title    title"
+        "paragraph   paragraph  paragraph    data    data     data"
+        "paragraph   paragraph  paragraph    data    data     data";
     }
+
     img {
       align-self: self-end;
       width: 250px;

@@ -21,11 +21,12 @@ export default function Contact() {
   return (
     <section id="contact" className="section-contact">
       <div className="wrapper">
+        <h2>Contact me</h2>
         <p>
-          <h2>Contact me</h2>
           Here is my contact information if you are interested in starting a
           collaboration.
         </p>
+
         <ul>
           <li>
             <FontAwesomeIcon icon={faEnvelope} />
@@ -41,6 +42,7 @@ export default function Contact() {
           </li>
         </ul>
       </div>
+
       <footer>
         <ul>
           <li>

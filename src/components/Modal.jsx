@@ -2,7 +2,7 @@ import React from "react";
 import reactDom from "react-dom";
 
 export default function Modal({ isOpen, onClose, item }) {
-  //console.log(isOpen);
+  const technologies8 = item.technologies.slice(0, 8);
 
   if (!isOpen) return null;
 
@@ -26,7 +26,7 @@ export default function Modal({ isOpen, onClose, item }) {
         </p>
 
         <ul className="pills">
-          {item.technologies.map((techno) => {
+          {technologies8.map((techno) => {
             return (
               <li key={techno}>
                 <div className="pill">{techno}</div>
