@@ -68,7 +68,7 @@
 
   h2,
   p,
-  .pills,
+  .pills-wrapper,
   .buttons {
     padding: 10px 20px;
     @media only screen and (min-device-width: $desktopBreakpoint) {
@@ -76,33 +76,41 @@
     }
   }
 
-  .pills {
+  .pills-wrapper {
     grid-area: pills;
-    height: min-content;
-    justify-self: start;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     padding: 0;
     margin: 0 15px;
     @media only screen and (min-device-width: $desktopBreakpoint) {
       margin: 0 0 0 10px;
     }
 
-    display: flex;
-    flex-wrap: wrap;
-    align-content: stretch;
+    .pills {
+      margin: 0;
+      padding: 0;
+      height: min-content;
 
-    .pill {
-      background: white;
-      border-radius: 20px;
-      border: 1px solid $grayDark;
-      color: $grayDark;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
 
-      padding: 0 12px;
-      margin: 2px;
+      .pill {
+        background: transparent;
+        border-radius: 20px;
+        border: 1px solid $grayDark;
+        color: $grayDark;
+
+        padding: 0 12px;
+        margin: 2px;
+      }
     }
   }
 
   .buttons {
+    margin: 0;
+
     grid-area: buttons;
     display: flex;
     flex-direction: column;

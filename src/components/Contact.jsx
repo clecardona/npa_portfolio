@@ -26,7 +26,7 @@ export default function Contact() {
           Here is my contact information if you are interested in starting a
           collaboration.
         </p>
-
+        {/* Refactor , ContactEntity */}
         <ul>
           <li>
             <FontAwesomeIcon icon={faEnvelope} />
@@ -43,6 +43,7 @@ export default function Contact() {
         </ul>
       </div>
 
+      {/* Refactor Footer */}
       <footer>
         <ul>
           <li>

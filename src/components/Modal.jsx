@@ -22,17 +22,19 @@ export default function Modal({ isOpen, onClose, item }) {
 
         <h2>{item.title}</h2>
         <p>{item.description} that uses:</p>
+        <div className="pills-wrapper">
+          <ul className="pills">
+            {technologies8.map((techno) => {
+              return (
+                <li key={techno}>
+                  <div className="pill">{techno}</div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
-        <ul className="pills">
-          {technologies8.map((techno) => {
-            return (
-              <li key={techno}>
-                <div className="pill">{techno}</div>
-              </li>
-            );
-          })}
-        </ul>
-
+        {/* Refactor buttons */}
         <div className="buttons">
           <a
             className="btn btn-main"
