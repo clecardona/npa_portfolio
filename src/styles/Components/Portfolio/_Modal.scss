@@ -30,7 +30,7 @@
     "pills       "
     "buttons     ";
 
-  @media only screen and (min-width: $tabletBreakpoint) {
+  @media only screen and (min-width: $desktopBreakpoint) {
     grid-template-rows: repeat(4, min-content);
     grid-template-areas:
       "data     data     data    data   title        none"
@@ -52,8 +52,8 @@
     height: minmax(180px, 100%);
     object-fit: cover;
     object-position: top;
-    @media only screen and (min-width: $tabletBreakpoint) {
-      //height: 100%;
+    @media only screen and (min-width: $desktopBreakpoint) {
+      height: 100%;
       object-position: top left;
     }
   }
@@ -71,7 +71,7 @@
   .pills-container,
   .buttons {
     padding: 5px 20px;
-    @media only screen and (min-width: $tabletBreakpoint) {
+    @media only screen and (min-width: $desktopBreakpoint) {
       padding: 0 0 0 10px;
     }
   }
@@ -83,7 +83,7 @@
     justify-content: flex-start;
     padding: 0;
     margin: 0 15px;
-    @media only screen and (min-width: $tabletBreakpoint) {
+    @media only screen and (min-width: $desktopBreakpoint) {
       margin: 0 0 0 10px;
     }
 
@@ -115,7 +115,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    @media only screen and (min-width: $tabletBreakpoint) {
+    @media only screen and (min-width: $desktopBreakpoint) {
       justify-content: flex-end;
     }
 

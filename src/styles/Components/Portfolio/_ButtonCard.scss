@@ -3,7 +3,10 @@
     button {
       width: 100%;
       display: grid;
-      grid-template-rows: 120px 50px;
+      grid-template-rows: 140px 50px;
+      @media only screen and (min-width: $desktopBreakpoint) {
+        grid-template-rows: 120px 50px;
+      }
 
       &:disabled img {
         filter: brightness(0.7);
@@ -13,6 +16,7 @@
       padding: 0;
       div {
         position: relative;
+        height: 100%;
       }
 
       div img {
@@ -20,7 +24,8 @@
         padding: 0;
 
         width: 100%;
-        height: 100%;
+        height: auto;
+        overflow: hidden;
         object-fit: cover;
         border-radius: 15px;
         @media only screen and (min-width: $desktopBreakpoint) {
@@ -63,7 +68,9 @@
         height: 100%;
         display: flex;
         justify-content: flex-start;
+
         text-align: left;
+        padding-top: 4px;
       }
     }
   }

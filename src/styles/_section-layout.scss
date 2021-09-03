@@ -16,7 +16,7 @@ section {
 
     margin: 80px 20px;
 
-    @media only screen and (min-width: $tabletBreakpoint) {
+    @media only screen and (min-width: $desktopBreakpoint) {
       grid-template-areas:
         "title      title      title    title   title    title"
         "paragraph  paragraph  data     data    data     data"
