@@ -10,14 +10,14 @@
     }
     p {
       grid-area: paragraph;
-      @media only screen and (min-device-width: $desktopBreakpoint) {
+      @media only screen and (min-width: $tabletBreakpoint) {
         height: 100%;
         margin-top: 36px;
       }
     }
     ul {
       grid-area: data;
-      margin: 20px;
+      margin: 20px 0;
       padding: 0;
 
       display: grid;
@@ -27,7 +27,8 @@
       justify-items: center;
       align-items: center;
 
-      @media only screen and (min-device-width: $desktopBreakpoint) {
+      @media only screen and (min-width: $tabletBreakpoint) {
+        margin: 20px;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
       }

@@ -12,7 +12,7 @@ nav {
 
   z-index: 100;
 
-  @media only screen and (min-device-width: $desktopBreakpoint) {
+  @media only screen and (min-width: $desktopBreakpoint) {
     background: black;
     justify-content: space-between;
     height: $header-height;
@@ -21,7 +21,7 @@ nav {
 
 .author {
   display: none;
-  @media only screen and (min-device-width: $desktopBreakpoint) {
+  @media only screen and (min-width: $desktopBreakpoint) {
     display: flex;
     color: white;
     padding-left: 12%;
@@ -43,7 +43,7 @@ nav {
   border-radius: 44px;
   padding: 0 15px;
 
-  @media only screen and (min-device-width: $desktopBreakpoint) {
+  @media only screen and (min-width: $desktopBreakpoint) {
     background: none;
     width: fit-content;
     grid-template-columns: repeat(4, 1fr);
@@ -63,7 +63,7 @@ nav {
   background: black;
   border-radius: 60px;
   border: 1px solid $grayDark;
-  @media only screen and (min-device-width: $desktopBreakpoint) {
+  @media only screen and (min-width: $desktopBreakpoint) {
     left: 20px;
     border: none;
     background: none;
@@ -72,7 +72,7 @@ nav {
   img {
     height: 60px;
     width: 60px;
-    @media only screen and (min-device-width: $desktopBreakpoint) {
+    @media only screen and (min-width: $desktopBreakpoint) {
       height: 50px;
       width: 50px;
     }

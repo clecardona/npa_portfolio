@@ -12,7 +12,7 @@
     }
     p {
       grid-area: paragraph;
-      @media only screen and (min-device-width: $desktopBreakpoint) {
+      @media only screen and (min-width: $tabletBreakpoint) {
         height: 100%;
         margin-top: 36px;
       }
@@ -22,8 +22,8 @@
 
       width: 100%;
       margin: 0;
-      padding-left: 20px;
-      @media only screen and (min-device-width: $desktopBreakpoint) {
+      padding-left: 0;
+      @media only screen and (min-width: $tabletBreakpoint) {
         height: 100%;
         margin-top: 20px;
       }
@@ -34,7 +34,7 @@
         align-items: center;
 
         margin: 12px 0;
-        @media only screen and (min-device-width: $desktopBreakpoint) {
+        @media only screen and (min-width: $tabletBreakpoint) {
           padding-left: 30%;
         }
 

@@ -14,7 +14,9 @@ section {
       "paragraph paragraph paragraph  paragraph  paragraph paragraph"
       "data data data data data data";
 
-    @media only screen and (min-device-width: $desktopBreakpoint) {
+    margin: 80px 20px;
+
+    @media only screen and (min-width: $tabletBreakpoint) {
       grid-template-areas:
         "title      title      title    title   title    title"
         "paragraph  paragraph  data     data    data     data"

@@ -10,7 +10,7 @@
     }
     p {
       grid-area: paragraph;
-      @media only screen and (min-device-width: $desktopBreakpoint) {
+      @media only screen and (min-width: $tabletBreakpoint) {
         height: 100%;
         margin-top: 36px;
       }
@@ -21,7 +21,8 @@
   }
 
   ul {
-    margin: 20px;
+    margin: 20px 0;
+    width: 100%;
     padding: 0;
 
     display: grid;

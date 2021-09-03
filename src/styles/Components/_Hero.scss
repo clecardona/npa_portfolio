@@ -13,11 +13,11 @@
     padding: 0;
     margin: 0;
 
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    object-fit: cover;
     z-index: -10;
 
-    //animation: pop 3s ease infinite alternate;
     opacity: 0.7;
   }
 
@@ -32,7 +32,7 @@
       "subtitle"
       "illustration";
 
-    @media only screen and (min-device-width: $desktopBreakpoint) {
+    @media only screen and (min-width: $tabletBreakpoint) {
       height: 60%;
       display: grid;
       grid-template-columns: repeat(4, 1fr) min-content min-content;
@@ -48,7 +48,8 @@
     align-self: end;
     justify-self: center;
 
-    @media only screen and (min-device-width: $desktopBreakpoint) {
+    @media only screen and (min-width: $tabletBreakpoint) {
+      width: 100%;
       text-align: left;
     }
   }
@@ -58,14 +59,15 @@
     align-self: start;
     justify-self: center;
     font-weight: 200;
-    @media only screen and (min-device-width: $desktopBreakpoint) {
+    @media only screen and (min-width: $tabletBreakpoint) {
+      width: 100%;
       text-align: left;
     }
   }
   .illustration {
     grid-area: illustration;
-    height: 380px;
-    width: 400px;
+    height: 500px;
+    width: auto;
     align-self: end;
     object-fit: cover;
     object-position: bottom center;
