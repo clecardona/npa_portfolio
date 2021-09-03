@@ -1,6 +1,6 @@
 import React from "react";
-//Local files
-import listOfProjects from "../assets/projects.json";
+
+import listOfProjects from "./assets/projects.json";
 import ButtonCard from "./ButtonCard";
 
 export default function Portfolio() {

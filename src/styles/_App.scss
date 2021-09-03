@@ -41,3 +41,12 @@ section:nth-child(even) {
 .img-bw {
   filter: grayscale(1);
 }
+
+.img-2em {
+  width: 2em;
+  height: auto;
+}
+.img-1em {
+  width: 1em;
+  height: auto;
+}

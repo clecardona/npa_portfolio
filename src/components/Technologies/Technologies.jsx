@@ -1,6 +1,7 @@
 import React from "react";
-//Local files
-import technologies from "../assets/technologies.json";
+
+import technologies from "./assets/technologies.json";
+import TechnoItem from "./TechnoItem";
 
 export default function Technologies() {
   return (
@@ -12,16 +13,7 @@ export default function Technologies() {
         </p>
         <ul>
           {technologies.map((item) => {
-            return (
-              <li key={item.id}>
-                <img
-                  className="img-40 img-bw"
-                  alt={item.name}
-                  src={item.iconURL}
-                />
-                <h3>{item.name}</h3>
-              </li>
-            );
+            return <TechnoItem item={item} />;
           })}
         </ul>
       </div>

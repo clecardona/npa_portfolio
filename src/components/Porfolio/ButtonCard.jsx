@@ -16,7 +16,7 @@ export default function ButtonCard({ item }) {
               </p>
             </div>
           )}
-          <img className="" alt={item.name} src={item.thumbnailURL} />
+          <img alt={item.name} src={item.thumbnailURL} />
         </div>
 
         <h3>{item.thumbnailTitle}</h3>

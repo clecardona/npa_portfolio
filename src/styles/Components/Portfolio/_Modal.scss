@@ -1,4 +1,4 @@
-.overlay {
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -68,7 +68,7 @@
 
   h2,
   p,
-  .pills-wrapper,
+  .pills-container,
   .buttons {
     padding: 10px 20px;
     @media only screen and (min-device-width: $desktopBreakpoint) {
@@ -76,7 +76,7 @@
     }
   }
 
-  .pills-wrapper {
+  .pills-container {
     grid-area: pills;
     display: flex;
     flex-direction: column;
@@ -128,7 +128,10 @@
 
   .btn-close {
     position: fixed;
-    top: 6px;
-    right: 6px;
+    top: 10px;
+    right: 10px;
+    img {
+      height: 25px;
+    }
   }
 }
