@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -49,4 +53,7 @@ section:nth-child(even) {
 .img-1em {
   width: 1em;
   height: auto;
+}
+
+.scroll-down {
 }

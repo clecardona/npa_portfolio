@@ -4,7 +4,9 @@ export default function NavigationBar() {
   return (
     <nav>
       <div className="nav-logo">
-        <img alt="logo" src="https://clecardona.com/npa/img/CC.png" />
+        <a href="#hero">
+          <img alt="logo" src="https://clecardona.com/npa/img/CC.png" />
+        </a>
       </div>
       <div className="author">Clément Cardona</div>
       <div className="bar">
