@@ -12,13 +12,13 @@
 
     "githubURL": "https://github.com/clecardona/todolist",
     "websiteURL": "",
-    "screenshotURL": "https://clecardona.com/code/portfolio/todolist.png"
+    "screenshotURL": "https://clecardona.com/npa/img/screenshots/desktop/todolist.png"
   },
   {
     "id": 2,
 
     "thumbnailTitle": "Fashion social network",
-    "thumbnailURL": "https://cdn.dribbble.com/users/59947/screenshots/15874343/media/afe65895379ec561bbdd25a79e7102ec.jpg?compress=1&resize=1600x1200",
+    "thumbnailURL": "https://cdn.dribbble.com/users/2402074/screenshots/10630606/media/90e69d28d7d4b875bd26a97638edb868.jpg?compress=1&resize=800x600",
     "isReleased": true,
 
     "title": "Fashion social network",
@@ -36,7 +36,7 @@
 
     "githubURL": "https://github.com/clecardona/inStyle",
     "websiteURL": "https://instyle-3f5f5.web.app/",
-    "screenshotURL": "https://clecardona.com/code/portfolio/instyle.png"
+    "screenshotURL": "https://clecardona.com/npa/img/screenshots/desktop/instyle.png"
   },
   {
     "id": 3,
@@ -58,7 +58,7 @@
     "title": "Shopping-List",
     "githubURL": "https://github.com/clecardona/eika",
     "websiteURL": "https://eika-31a2e.web.app/",
-    "screenshotURL": "https://clecardona.com/code/portfolio/eika.png"
+    "screenshotURL": "https://clecardona.com/npa/img/screenshots/desktop/eika.png"
   },
   {
     "id": 4,
@@ -73,7 +73,7 @@
     "title": "La Galerie",
     "githubURL": "https://github.com/clecardona/galerie",
     "websiteURL": "https://galerie-9a9ae.web.app/",
-    "screenshotURL": "https://clecardona.com/code/portfolio/galerie.png"
+    "screenshotURL": "https://clecardona.com/npa/img/screenshots/desktop/galerie.png"
   },
   {
     "id": 5,
@@ -82,7 +82,7 @@
     "thumbnailURL": "https://cdn.dribbble.com/users/427368/screenshots/11523001/dribbble.jpg?compress=1&resize=800x600",
     "isReleased": true,
 
-    "description": "A website for a Vegan Resaturant wher user can order food online",
+    "description": "A website for a Vegan Restaurant where user can order food online",
     "technologies": ["javascript", "react", "firebase_hosting", "sass", "html"],
 
     "title": "Wild and the Moon",

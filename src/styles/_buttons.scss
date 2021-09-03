@@ -1,0 +1,29 @@
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.btn {
+  height: $mob-button-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-main {
+  background: black;
+  border: 1px solid black;
+
+  h3 {
+    color: white;
+  }
+}
+
+.btn-ghost {
+  background: none;
+  border: 1px solid black;
+
+  h3 {
+    color: black;
+  }
+}

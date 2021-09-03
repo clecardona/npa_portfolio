@@ -3,16 +3,6 @@
   flex-direction: column;
 }
 
-section {
-  width: 100%;
-
-  h2 {
-    padding: 12px 0;
-  }
-  p {
-    padding: 20px;
-  }
-}
 section:first-child {
   height: 100vh-$header-height;
 }
@@ -50,4 +40,13 @@ section:nth-child(even) {
 
 .img-bw {
   filter: grayscale(1);
+}
+
+.img-2em {
+  width: 2em;
+  height: auto;
+}
+.img-1em {
+  width: 1em;
+  height: auto;
 }
