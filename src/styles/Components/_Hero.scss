@@ -32,7 +32,7 @@
       "subtitle"
       "illustration";
 
-    @media only screen and (min-width: $tabletBreakpoint) {
+    @media only screen and (min-width: $desktopBreakpoint) {
       height: 60%;
       display: grid;
       grid-template-columns: repeat(4, 1fr) min-content min-content;
@@ -48,7 +48,7 @@
     align-self: end;
     justify-self: center;
 
-    @media only screen and (min-width: $tabletBreakpoint) {
+    @media only screen and (min-width: $desktopBreakpoint) {
       width: 100%;
       text-align: left;
     }
@@ -59,7 +59,7 @@
     align-self: start;
     justify-self: center;
     font-weight: 200;
-    @media only screen and (min-width: $tabletBreakpoint) {
+    @media only screen and (min-width: $desktopBreakpoint) {
       width: 100%;
       text-align: left;
     }

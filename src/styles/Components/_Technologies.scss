@@ -10,7 +10,7 @@
     }
     p {
       grid-area: paragraph;
-      @media only screen and (min-width: $tabletBreakpoint) {
+      @media only screen and (min-width: $desktopBreakpoint) {
         height: 100%;
         margin-top: 36px;
       }
