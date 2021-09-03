@@ -6,16 +6,11 @@ html {
   display: flex;
   flex-direction: column;
 }
-
-section:first-child {
-  height: 100vh-$header-height;
+section:nth-child(even) {
+  background-color: $grayLight;
 }
 section:nth-child(2) {
-  height: 100vh;
-}
-
-section:nth-child(even) {
-  background: $grayLight;
+  background: none;
 }
 
 .section-hero {

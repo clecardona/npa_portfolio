@@ -32,3 +32,14 @@ $header-height: 70px;
 $footer-height: 85px;
 
 $mob-button-height: 44px;
+
+/* animation */
+
+@keyframes pop {
+  0% {
+    filter: hue-rotate(30deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
