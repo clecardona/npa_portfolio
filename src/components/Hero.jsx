@@ -12,9 +12,7 @@ export default function Hero() {
       <div className="layout">
         <CSSTransitionGroup
           className="title"
-          transitionName={"fade"}
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={10}
+          transitionName={"fade-down"}
           transitionAppear={true}
           transitionAppearTimeout={400}
         >
@@ -22,7 +20,14 @@ export default function Hero() {
             Hi, I am <strong>Clément</strong>
           </h1>
         </CSSTransitionGroup>
-        <h3>A frontend developer from France</h3>
+        <CSSTransitionGroup
+          className="subtitle"
+          transitionName={"fade-up"}
+          transitionAppear={true}
+          transitionAppearTimeout={400}
+        >
+          <h3>A frontend developer from France</h3>
+        </CSSTransitionGroup>
         <img
           className="illustration"
           alt="bunny"
