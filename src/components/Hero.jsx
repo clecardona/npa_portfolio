@@ -1,4 +1,5 @@
 import React from "react";
+import { CSSTransitionGroup } from "react-transition-group";
 
 export default function Hero() {
   return (
@@ -9,10 +10,24 @@ export default function Hero() {
         src="https://clecardona.com/npa/img/bg.png"
       />
       <div className="layout">
-        <h1>
-          Hi, I am <strong>Clément</strong>
-        </h1>
-        <h3>A frontend developer from France</h3>
+        <CSSTransitionGroup
+          className="title"
+          transitionName={"fade-down"}
+          transitionAppear={true}
+          transitionAppearTimeout={400}
+        >
+          <h1>
+            Hi, I am <strong>Clément</strong>
+          </h1>
+        </CSSTransitionGroup>
+        <CSSTransitionGroup
+          className="subtitle"
+          transitionName={"fade-up"}
+          transitionAppear={true}
+          transitionAppearTimeout={400}
+        >
+          <h3>A frontend developer from France</h3>
+        </CSSTransitionGroup>
         <img
           className="illustration"
           alt="bunny"

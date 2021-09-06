@@ -42,7 +42,7 @@
         "none subtitle subtitle  subtitle illustration illustration";
     }
   }
-  h1 {
+  .title {
     grid-area: title;
     width: 80%;
     align-self: end;
@@ -53,7 +53,7 @@
       text-align: left;
     }
   }
-  h3 {
+  .subtitle {
     width: 80%;
     grid-area: subtitle;
     align-self: start;

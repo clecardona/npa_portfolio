@@ -55,6 +55,9 @@ nav {
   a {
     text-align: center;
     font-size: 13px;
+    &:hover {
+      color: white;
+    }
   }
 }
 
@@ -63,6 +66,7 @@ nav {
   background: black;
   border-radius: 60px;
   border: 1px solid $grayDark;
+
   @media only screen and (min-width: $desktopBreakpoint) {
     left: 20px;
     border: none;
@@ -76,5 +80,10 @@ nav {
       height: 50px;
       width: 50px;
     }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    transition: 0.1s ease;
   }
 }
