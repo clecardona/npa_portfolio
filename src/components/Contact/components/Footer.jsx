@@ -1,10 +1,10 @@
 import React from "react";
 
-import iconsData from "../../assets/icons.json";
-import contactData from "./assets/contact.json";
 import IconSocial from "./IconSocial";
 
-export default function Footer() {
+// This could be in the Contact, the tag footer is ok but i dont see the need to further break down the components
+// at least pass me the contact data as a json same with icons data to make this component worthwile
+export default function Footer({contactData, iconsData}) {
   const contact = contactData[0];
   const icons = iconsData[0];
 

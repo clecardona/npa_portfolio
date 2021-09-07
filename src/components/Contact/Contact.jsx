@@ -1,8 +1,11 @@
+// NPM Packages
 import React from "react";
+
+// Project files
 import iconsData from "../../assets/icons.json";
-import contactData from "./assets/contact.json";
-import ContactEntity from "./ContactEntity";
-import Footer from "./Footer";
+import ContactEntity from "./components/ContactEntity";
+import Footer from "./components/Footer";
+import contactData from "./data.json";
 
 export default function Contact() {
   const contact = contactData[0];
@@ -22,7 +25,7 @@ export default function Contact() {
           <ContactEntity icon={icons.locationURL} text={contact.location} />
         </ul>
       </div>
-      <Footer />
+      <Footer contactData={contactData} iconsData={iconsData} />
     </section>
   );
 }

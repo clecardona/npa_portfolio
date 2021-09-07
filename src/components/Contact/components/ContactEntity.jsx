@@ -1,5 +1,6 @@
 import React from "react";
 
+// This can be called item after all is a <li> list item
 export default function ContactEntity({ icon, text }) {
   return (
     <li>

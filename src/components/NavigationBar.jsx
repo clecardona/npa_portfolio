@@ -12,6 +12,8 @@ export default function NavigationBar() {
       <div className="bar">
         <a href="#about">About</a>
         <a href="#portfolio">Projects</a>
+        {/* If this a class to add space, you can call it className="spacer" to give more context */}
+        {/* even if there is not any css code for it */}
         <div>
           {/* empty on purpose for the central div in mobile version */}
         </div>

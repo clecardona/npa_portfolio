@@ -1,3 +1,9 @@
+/** 
+ * Perfect component organization
+ * Just reorder the stuff similar on how you see in the IDE sidebar
+ * folders go first sorted in alphabetical order.
+ * and files at the same level go at the bottom.
+*/
 import "./styles/base.scss";
 import NavigationBar from "./components/NavigationBar";
 import Hero from "./components/Hero";
