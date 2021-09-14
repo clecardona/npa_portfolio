@@ -2,10 +2,11 @@
 import React from "react";
 
 // Project files
-import iconsData from "../../assets/icons.json";
-import ContactEntity from "./components/ContactEntity";
-import Footer from "./components/Footer";
 import contactData from "./data.json";
+import iconsData from "../../assets/icons.json";
+
+import ContactItem from "./components/ContactItem";
+import IconSocial from "./IconSocial";
 
 export default function Contact() {
   const contact = contactData[0];
@@ -20,12 +21,18 @@ export default function Contact() {
           collaboration.
         </p>
         <ul>
-          <ContactEntity icon={icons.emailURL} text={contact.email} />
-          <ContactEntity icon={icons.phoneURL} text={contact.phone} />
-          <ContactEntity icon={icons.locationURL} text={contact.location} />
+          <ContactItem icon={icons.emailURL} text={contact.email} />
+          <ContactItem icon={icons.phoneURL} text={contact.phone} />
+          <ContactItem icon={icons.locationURL} text={contact.location} />
         </ul>
       </div>
-      <Footer contactData={contactData} iconsData={iconsData} />
+      <footer>
+        <ul>
+          <IconSocial icon={icons.linkedInURL} link={contact.linkedIn} />
+          <IconSocial icon={icons.githubURL} link={contact.github} />
+        </ul>
+        <span>© 2021 • {contact.fullname}</span>
+      </footer>
     </section>
   );
 }
