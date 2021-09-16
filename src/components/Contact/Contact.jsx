@@ -6,7 +6,7 @@ import contactData from "./data.json";
 import iconsData from "../../assets/icons.json";
 
 import ContactItem from "./components/ContactItem";
-import IconSocial from "./IconSocial";
+import IconSocial from "./components/IconSocial";
 
 export default function Contact() {
   const contact = contactData[0];

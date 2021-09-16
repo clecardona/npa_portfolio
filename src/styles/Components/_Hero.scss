@@ -66,11 +66,17 @@
   }
   .illustration {
     grid-area: illustration;
-    height: 500px;
+    height: 350px;
     width: auto;
     align-self: end;
+    justify-self: center;
     object-fit: cover;
     object-position: bottom center;
-    opacity: 0.6;
+
+    @media only screen and (min-width: $desktopBreakpoint) {
+      height: 425px;
+      justify-self: center;
+      padding-right: 20%;
+    }
   }
 }

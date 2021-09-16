@@ -86,9 +86,9 @@
     "technologies": ["javascript", "react", "firebase_hosting", "sass", "html"],
 
     "title": "Wild and the Moon",
-    "githubURL": "https://github.com/clecardona/galerie",
-    "websiteURL": "https://www.wildandthemoon.fr/fr/",
-    "screenshotURL": "https://cdn.dribbble.com/users/2645051/screenshots/15264665/media/9b989cc5e5125cc2621f7b02ed8be604.png?compress=1&resize=1600x1200"
+    "githubURL": "https://github.com/clecardona/vegan-restaurant",
+    "websiteURL": "https://npa-vegan-restaurant.web.app/",
+    "screenshotURL": "https://clecardona.com/npa/portfolio/screenshots/vegan_restaurant.png"
   },
   {
     "id": 6,

@@ -1,7 +1,6 @@
 import React from "react";
 
-import technologies from "./assets/technologies.json";
-import TechnoItem from "./TechnoItem";
+import TechnoList from "./TechnoList";
 
 export default function Technologies() {
   return (
@@ -11,12 +10,7 @@ export default function Technologies() {
         <p>
           Here is the techology that I already know and also starting to learn.
         </p>
-        <ul>
-          {/* tip do the rendering outside, to keep the jsx easier to read */}
-          {technologies.map((item) => {
-            return <TechnoItem item={item} />;
-          })}
-        </ul>
+        <TechnoList />
       </div>
     </section>
   );
