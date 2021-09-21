@@ -30,8 +30,8 @@ export default function Hero() {
         </CSSTransitionGroup>
         <img
           className="illustration"
-          alt="bunny"
-          src="https://clecardona.com/npa/img/rabbit.svg"
+          alt="illustrattion"
+          src="https://clecardona.com/npa/portfolio/img/cool_guy.svg"
         />
       </div>
     </section>

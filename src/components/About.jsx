@@ -4,6 +4,7 @@ export default function About() {
   return (
     <section id="about" className="section-about">
       <div className="wrapper">
+        {/* tip use local files for your project you never know when the other site goes down */}
         <img alt="portrait" src="http://clecardona.com/img/portrait.jpg" />
         <h2>About me</h2>
         <p>
