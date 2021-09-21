@@ -1,5 +1,9 @@
 .section-hero {
   height: 100vh;
+  @media only screen and (min-width: 1000px) {
+    max-width: 1000px;
+    margin: auto;
+  }
 
   display: flex;
   flex-direction: column;
@@ -74,7 +78,7 @@
     object-position: bottom center;
 
     @media only screen and (min-width: $desktopBreakpoint) {
-      height: 425px;
+      height: 400px;
       justify-self: center;
       padding-right: 20%;
     }
