@@ -94,15 +94,15 @@
     "id": 6,
     "thumbnailTitle": "Package Tracker",
     "thumbnailURL": "https://cdn.dribbble.com/users/427368/screenshots/11475057/dribbble.jpg?compress=1&resize=800x600",
-    "isReleased": false,
+    "isReleased": true,
 
     "description": "A Package tracker who allows user to track his parcel ordered online.",
     "technologies": ["javascript", "react", "firebase_hosting", "sass", "html"],
 
-    "title": "Package Tracker",
-    "githubURL": "https://github.com/clecardona/galerie",
-    "websiteURL": "https://parcelsapp.com/fr",
-    "screenshotURL": "https://cdn.dribbble.com/users/4505805/screenshots/11957095/media/a66780e990ab05615bc094d24216ca56.jpg?compress=1&resize=1600x1200"
+    "title": "TrackCel",
+    "githubURL": "https://github.com/clecardona/npa-package-tracker",
+    "websiteURL": "https://npa-package-tracker.web.app/",
+    "screenshotURL": "https://clecardona.com/npa/portfolio/screenshots/react_package_tracker.png"
   },
   {
     "id": 7,
