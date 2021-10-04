@@ -106,17 +106,17 @@
   },
   {
     "id": 7,
-    "thumbnailTitle": "Todo list TDD",
+    "thumbnailTitle": "Todo list Unit Testing",
     "thumbnailURL": "https://cdn.dribbble.com/users/441305/screenshots/5477297/dribbble-school_4x.png?compress=1&resize=1600x1200",
-    "isReleased": false,
+    "isReleased": true,
 
-    "description": "A todo list developed using Test Driven Development",
+    "description": "A todo list developed using Unit Testing",
     "technologies": ["javascript", "react", "firebase_hosting", "sass", "html"],
 
     "title": "Todo list using Test Driven Development",
-    "githubURL": "https://github.com/clecardona/galerie",
-    "websiteURL": "https://idonethis.com/",
-    "screenshotURL": "https://cdn.dribbble.com/users/930637/screenshots/15575398/media/eb05aacb68163a703f93385484308d81.png?compress=1&resize=1600x1200"
+    "githubURL": "https://github.com/clecardona/npa-todolist-test",
+    "websiteURL": "https://npa-todolist-tested.web.app/",
+    "screenshotURL": "https://clecardona.com/npa/portfolio/screenshots/todolist.png"
   },
   {
     "id": 8,
