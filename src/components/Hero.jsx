@@ -31,7 +31,7 @@ export default function Hero() {
         <img
           className="illustration"
           alt="illustrattion"
-          src="https://clecardona.com/npa/portfolio/img/cool_guy.svg"
+          src="https://clecardona.com/npa/img/illustration-portfolio.png"
         />
       </div>
     </section>

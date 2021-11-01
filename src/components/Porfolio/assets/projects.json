@@ -113,55 +113,48 @@
     "description": "A todo list developed using Unit Testing",
     "technologies": ["javascript", "react", "firebase_hosting", "sass", "html"],
 
-    "title": "Todo list using Test Driven Development",
+    "title": "Todo list Unit Testing",
     "githubURL": "https://github.com/clecardona/npa-todolist-test",
     "websiteURL": "https://npa-todolist-tested.web.app/",
     "screenshotURL": "https://clecardona.com/npa/portfolio/screenshots/todolist.png"
   },
   {
     "id": 8,
-    "thumbnailTitle": "E-commerce site",
-    "thumbnailURL": "https://cdn.dribbble.com/users/3956332/screenshots/15579051/media/dc9d1724e5f428136a1853867f59dc9c.jpg?compress=1&resize=1600x1200",
-    "isReleased": false,
+    "thumbnailTitle": "BBQ restaurant website",
+    "thumbnailURL": "https://cdn.dribbble.com/users/1277705/screenshots/13554344/media/a8026e142c02a09c52da8d419ad92b75.png?compress=1&resize=1600x1200",
+    "isReleased": true,
 
-    "description": "An intuitive E-commerce web app",
+    "description": "YETI BBQ Restaurant in Stockholm",
     "technologies": ["javascript", "react", "firebase_hosting", "sass", "html"],
 
-    "title": "Azonma",
-    "githubURL": "https://github.com/clecardona/galerie",
-    "websiteURL": "https://www.amazon.se/",
-    "screenshotURL": "https://cdn.dribbble.com/users/1458982/screenshots/15187914/media/329e7851b847eac155e450929ba16f54.png?compress=1&resize=1600x1200"
+    "title": "YETI BBQ",
+    "githubURL": "https://github.com/clecardona/npa-bbq-restaurant",
+    "websiteURL": "https://yet-bbq.web.app/",
+    "screenshotURL": "https://clecardona.com/npa/portfolio/screenshots/yeti_bbq.png"
   },
   {
     "id": 9,
-    "thumbnailTitle": "BBQ restaurant website",
-    "thumbnailURL": "https://cdn.dribbble.com/users/1277705/screenshots/13554344/media/a8026e142c02a09c52da8d419ad92b75.png?compress=1&resize=1600x1200",
-    "isReleased": false,
+    "thumbnailTitle": "Learning platform",
+    "thumbnailURL": "https://cdn.dribbble.com/users/46743/screenshots/4406766/evertonmedical_header-dribbble.jpg?compress=1&resize=410x300",
+    "isReleased": true,
 
-    "description": "A website for a BBQ Restaurant in Stockholm",
-    "technologies": ["javascript", "react", "firebase_hosting", "sass", "html"],
+    "description": "A fun learning platform based on self learning and interests",
+    "technologies": [
+      "react",
+      "typescript",
+      "sass",
+      "firebase_hosting",
+      "firebase_storage",
+      "firebase_auth"
+    ],
 
-    "title": "Flame Heroes",
-    "githubURL": "https://github.com/clecardona/galerie",
-    "websiteURL": "https://www.bbqhenin.fr/",
-    "screenshotURL": "https://cdn.dribbble.com/users/5523736/screenshots/13378474/media/dc9b73d5c39a7b4cde72845603086d3b.jpg?compress=1&resize=1600x1200"
+    "title": "Foot-X",
+    "githubURL": "https://github.com/clecardona/npa-lms",
+    "websiteURL": "https://lms-football.web.app/",
+    "screenshotURL": "https://clecardona.com/npa/portfolio/screenshots/footx.png"
   },
   {
     "id": 10,
-    "thumbnailTitle": "Learning platform",
-    "thumbnailURL": "https://cdn.dribbble.com/users/3956332/screenshots/15328790/media/4ab493806f16daa46753a68bb3adc53a.jpg?compress=1&resize=1600x1200",
-    "isReleased": false,
-
-    "description": "A fun learning platform based on self learning and interests",
-    "technologies": ["javascript", "react", "firebase_hosting", "sass", "html"],
-
-    "title": "Moolde",
-    "githubURL": "https://github.com/clecardona/galerie",
-    "websiteURL": "https://moodle.org/",
-    "screenshotURL": "https://cdn.dribbble.com/users/2001748/screenshots/15805881/media/e19ea998be18203fc549c419dd3843b0.png?compress=1&resize=1600x1200"
-  },
-  {
-    "id": 11,
     "thumbnailTitle": "Netflix Clone",
     "thumbnailURL": "https://cdn.dribbble.com/users/2522172/screenshots/14777334/media/07b4f226c700d5557be52e4a449d3e3c.png?compress=1&resize=1600x1200",
     "isReleased": false,
