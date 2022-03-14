@@ -1,5 +1,7 @@
-import React from "react";
 import reactDom from "react-dom";
+
+import link from "../../assets/icns/link.png";
+import github from "../../assets/icns/github.png";
 
 import iconsData from "../../assets/icons.json";
 import Pills from "./Pills";
@@ -14,28 +16,44 @@ export default function Modal({ isOpen, onClose, item }) {
   return reactDom.createPortal(
     <>
       <div className="modal-overlay" onClick={onClose} />
-      <div className="modal">
-        <button className="btn-close" onClick={onClose}>
-          <img alt="close" src={icons.cross} />
-        </button>
+      <div className="modal-wrapper">
+        <div className="modal">
+          <button className="btn-close" onClick={onClose}>
+            <img alt="close" src={icons.cross} />
+          </button>
 
-        <img className="modal-img" alt={item.name} src={item.screenshotURL} />
+          <div className="modal-img">
+            <img alt={item.name} src={item.screenshotURL} />
+          </div>
 
-        <h2>{item.title}</h2>
+          <h1>{item.title}</h1>
+          <p>{item.description} that uses:</p>
 
-        <p>{item.description} that uses:</p>
+          <div className="pills-container">
+            <Pills technologies={technologies8} />
+          </div>
 
-        <div className="pills-container">
-          <Pills technologies={technologies8} />
-        </div>
+          <div className="buttons">
+            {item.websiteURL && (
+              <ButtonLink
+                design="btn btn-main"
+                link={item.websiteURL}
+                icon={link}
+              >
+                Visit website
+              </ButtonLink>
+            )}
 
-        <div className="buttons">
-          <ButtonLink design="btn btn-main" link={item.websiteURL}>
-            Visit website/app
-          </ButtonLink>
-          <ButtonLink design="btn btn-ghost" link={item.githubURL}>
-            Git repository
-          </ButtonLink>
+            {item.githubURL && (
+              <ButtonLink
+                design="btn btn-ghost"
+                link={item.githubURL}
+                icon={github}
+              >
+                Git repository
+              </ButtonLink>
+            )}
+          </div>
         </div>
       </div>
     </>,

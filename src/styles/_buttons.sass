@@ -1,0 +1,32 @@
+button
+  background: none
+  border: none
+  cursor: pointer
+
+.btn
+  height: $mob-button-height
+  display: grid
+  grid-template-columns: min-content 1fr
+  align-items: center
+  justify-items: center
+  border-radius: 6px
+  img
+    height: 1.2em
+    padding: 0 1em
+    border-right: 1px solid $gray5
+
+.btn-main
+  background: black
+  border: 1px solid black
+
+  h3
+    color: white
+
+.btn-ghost
+  background: none
+  border: 1px solid black
+
+  h3
+    color: black
+  &:hover
+    background: $grayLight

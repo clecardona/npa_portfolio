@@ -1,0 +1,123 @@
+.modal-overlay
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  background: rgba(0, 0, 0, 0.7)
+  z-index: 1000
+
+.modal-wrapper
+
+  width: 90vw
+  height: 80vh
+
+  background: white
+  overflow: hidden
+
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  border-radius: .5em
+  z-index: 1000
+
+.modal
+
+  height: 80vh
+
+  display: grid
+  align-items: center
+  grid-template-rows: repeat(4, min-content)
+  grid-template-columns: 1fr
+  grid-template-areas: "data ""title ""description ""pills ""buttons "
+
+  @media only screen and (min-width: $desktopBreakpoint)
+    grid-template-rows: repeat(4, min-content)
+    grid-template-columns: repeat(6, 1fr)
+    grid-template-areas: "data data data data title none""data data data data description description ""data data data data pills pills""data data data data buttons buttons "
+    gap: .5em
+    padding: 0
+
+  .btn-close
+    &:hover
+      filter: invert(.5) sepia(1) invert(1) saturate(2)
+
+  .modal-img
+    grid-area: data
+    overflow: hidden
+    border-right: 1px solid $grayLight
+    filter: brightness(.9)
+
+    img
+      height: 80vh
+      object-fit: cover
+      object-position: top
+
+  h1,h2
+    grid-area: title
+    line-height: 45px
+
+  p
+    grid-area: description
+
+  h2,h1,
+  p,
+  .pills-container,
+  .buttons
+    padding: 5px 20px
+    @media only screen and (min-width: $desktopBreakpoint)
+      padding: 0 0 0 10px
+
+  .pills-container
+    grid-area: pills
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    padding: 0
+    margin: 0 15px
+    @media only screen and (min-width: $desktopBreakpoint)
+      margin: 0 0 0 10px
+
+    .pills
+      margin: 0
+      padding: 0
+      height: min-content
+
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-start
+
+      li img
+        height: 24px
+        margin: 0 2px
+
+  .buttons
+
+    grid-area: buttons
+    padding: 1em
+
+    margin: 0
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    @media only screen and (min-width: $desktopBreakpoint)
+      justify-content: flex-end
+
+    .btn-main,
+    .btn-ghost
+      width: 100%
+      margin: .3em 0
+
+    .btn-main
+      &:hover
+        filter: invert(.2)
+      h3
+        color: $white
+
+  .btn-close
+    position: fixed
+    top: 10px
+    right: 10px
+    img
+      height: 25px

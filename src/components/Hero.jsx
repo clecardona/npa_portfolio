@@ -26,7 +26,10 @@ export default function Hero() {
           transitionAppear={true}
           transitionAppearTimeout={400}
         >
-          <h3>A frontend developer from France</h3>
+          <h3>Frontend developer from France</h3>
+          <h3 style={{ color: "#fafafa", fontWeight: 200 }}>
+            Living in Stockholm, Sweden
+          </h3>
         </CSSTransitionGroup>
         <img
           className="illustration"

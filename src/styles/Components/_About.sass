@@ -1,0 +1,21 @@
+.about-content
+  display: grid
+  align-items: center
+  justify-items: center
+  grid-template-columns: 1fr min-content
+  grid-template-areas: "paragraph img"
+  padding: 1em 2em 3em 2em
+
+  height: min-content
+  transition: height 3s ease-in
+  overflow: hidden
+
+.about-paragraph
+  grid-area: paragraph
+  max-width: 500px
+
+.about-img
+  grid-area: img
+  width: 250px
+  height: 250px
+  border-radius: 250px

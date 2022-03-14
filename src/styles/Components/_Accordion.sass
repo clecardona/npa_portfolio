@@ -1,0 +1,29 @@
+.accordion
+  border-radius: .5em
+  overflow: hidden
+  @include shadow-light
+
+  .accordion-title
+    display: flex
+    justify-content: space-between
+
+    background: $pinkLight
+    color: $gray5
+    cursor: pointer
+    padding: 18px
+    width: 100%
+    &:hover
+      filter: brightness(.95)
+
+  .accordion-content
+    background: $grayLighter
+
+    overflow: hidden
+    padding: 0 18px
+    max-height: 1000px
+    transition: max-height 1s ease-in-out
+
+  .accordion-content[aria-expanded="true"]
+
+    max-height: 0px
+    transition: max-height 0.5s ease-out

@@ -1,0 +1,27 @@
+html
+  scroll-behavior: smooth
+  overflow-x: hidden
+
+.App
+  display: grid
+  grid-auto-flow: row
+  // row-gap: 1em
+
+section:nth-child(even)
+  background-color: $grayLight
+
+section:nth-child(2)
+  background: none
+
+.section-hero
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 1fr
+  align-items: center
+  justify-items: center
+  text-align: center
+
+.accordions
+  padding: 3em 2em 5em
+  display: grid
+  row-gap: 1em
