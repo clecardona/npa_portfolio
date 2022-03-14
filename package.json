@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "deploy website": "yarn build && firebase deploy"
+    "deploy website": "react-scripts build && firebase deploy"
   },
   "eslintConfig": {
     "extends": [

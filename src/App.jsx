@@ -5,7 +5,7 @@ import Portfolio from "./components/Porfolio/Portfolio";
 import Technologies from "./components/Technologies/Technologies";
 
 import NavigationBar from "./components/NavigationBar";
-import Hero from "./components/Hero";
+import Hero from "./components/Hero/Hero";
 import Accordion from "./components/Accordion";
 import AboutMe from "./components/AboutMe";
 import { useTheme } from "state/ThemeProvider";
