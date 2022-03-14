@@ -1,7 +1,13 @@
-import React from "react";
-import { CSSTransitionGroup } from "react-transition-group";
+import { useState, useEffect } from "react";
+import { CSSTransition } from "react-transition-group";
 
 export default function Hero() {
+  const [inProp, setInProp] = useState(false);
+
+  useEffect(() => {
+    setInProp(true);
+  }, []);
+
   return (
     <section id="hero" className="section-hero">
       <img
@@ -10,27 +16,27 @@ export default function Hero() {
         src="https://clecardona.com/npa/img/bg.png"
       />
       <div className="layout">
-        <CSSTransitionGroup
+        <CSSTransition
+          in={inProp}
+          timeout={400}
+          classNames="title"
           className="title"
-          transitionName={"fade-down"}
-          transitionAppear={true}
-          transitionAppearTimeout={400}
         >
           <h1>
             Hi, I am <strong>Clément</strong>
           </h1>
-        </CSSTransitionGroup>
-        <CSSTransitionGroup
+        </CSSTransition>
+        <CSSTransition
+          in={inProp}
+          timeout={400}
+          classNames="subtitle"
           className="subtitle"
-          transitionName={"fade-up"}
-          transitionAppear={true}
-          transitionAppearTimeout={400}
         >
-          <h3>Frontend developer from France</h3>
-          <h3 style={{ color: "#fafafa", fontWeight: 200 }}>
-            Living in Stockholm, Sweden
-          </h3>
-        </CSSTransitionGroup>
+          <div>
+            <h3>Frontend developer from France</h3>
+            <h3 style={{ fontWeight: 200 }}>Living in Stockholm, Sweden</h3>
+          </div>
+        </CSSTransition>
         <img
           className="illustration"
           alt="illustrattion"

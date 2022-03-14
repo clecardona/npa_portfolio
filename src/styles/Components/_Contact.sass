@@ -6,12 +6,17 @@
   align-items: center
 
   .wrapper
+    width: 100%
     padding: 2em 3em
+    grid-template-rows: repeat(3, min-content)
+    grid-template-areas: "title title title""paragraph paragraph paragraph" "data data data"
+    @media only screen and (min-width: $desktopBreakpoint)
+      grid-template-rows: repeat(2, min-content)
+      grid-template-areas: "title title title""paragraph data data"
 
     h2
       grid-area: title
       width: 100%
-
     p
       grid-area: paragraph
       @media only screen and (min-width: $desktopBreakpoint)
@@ -23,7 +28,8 @@
 
       width: 100%
       margin: 0
-      padding-left: 0
+      @media only screen and (min-width: $desktopBreakpoint)
+        padding-left: 4em
 
       li
         display: flex

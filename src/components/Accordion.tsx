@@ -1,13 +1,21 @@
 import { useState } from "react";
 
 interface IProps {
+  isOpen: boolean;
+  setisOpen: any;
   title: string;
   content: JSX.Element;
   color?: string;
 }
 
-const Accordion = ({ title, content, color }: IProps): JSX.Element => {
-  const [isOpen, setisOpen] = useState(false);
+const Accordion = ({
+  isOpen,
+  setisOpen,
+  title,
+  content,
+  color,
+}: IProps): JSX.Element => {
+  //const [isOpen, setisOpen] = useState(false);
   return (
     <div className="accordion">
       <button

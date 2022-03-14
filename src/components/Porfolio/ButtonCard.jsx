@@ -1,4 +1,8 @@
+// npm packages
 import { useState } from "react";
+import { CSSTransition } from "react-transition-group";
+
+//Local packages
 import Modal from "./Modal";
 
 export default function ButtonCard({ item }) {
@@ -22,7 +26,9 @@ export default function ButtonCard({ item }) {
         <h3>{item.thumbnailTitle}</h3>
       </button>
 
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} item={item} />
+      <CSSTransition in={isOpen} timeout={500} classNames="modal-overlay">
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} item={item} />
+      </CSSTransition>
     </li>
   );
 }

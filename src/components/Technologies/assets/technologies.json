@@ -2,73 +2,66 @@
   {
     "id": 1,
     "name": "Javascript",
-    "iconFA": "faJs",
     "iconURL": "https://clecardona.com/npa/icns/javascript.svg"
   },
   {
     "id": 2,
     "name": "TypeScript",
-    "iconFA": "faJs",
     "iconURL": "https://clecardona.com/npa/icns/typescript-icon.svg"
   },
   {
     "id": 3,
     "name": "React",
-    "iconFA": "faReact",
     "iconURL": "https://clecardona.com/npa/icns/react-icon.svg"
   },
   {
     "id": 4,
-    "name": "Recoil.js",
-    "iconFA": "faReact",
+    "name": "React Context",
     "iconURL": "https://clecardona.com/npa/icns/react-icon.svg"
   },
   {
     "id": 5,
-    "name": "Firebase Auth",
-    "iconFA": "",
-    "iconURL": "https://clecardona.com/npa/icns/firebase.svg"
+    "name": "Redux",
+    "iconURL": "https://seeklogo.com/images/R/redux-logo-9CA6836C12-seeklogo.com.png"
   },
   {
     "id": 6,
-    "name": "FireStore",
-    "iconFA": "",
+    "name": "Firebase Auth",
     "iconURL": "https://clecardona.com/npa/icns/firebase.svg"
   },
   {
     "id": 7,
-    "name": "Cloud Storage",
-    "iconFA": "",
+    "name": "FireStore",
     "iconURL": "https://clecardona.com/npa/icns/firebase.svg"
   },
   {
     "id": 8,
-    "name": "Java",
-    "iconFA": "faJava",
-    "iconURL": "https://clecardona.com/npa/icns/java-icon.svg"
+    "name": "Cloud Storage",
+    "iconURL": "https://clecardona.com/npa/icns/firebase.svg"
   },
   {
     "id": 9,
-    "name": "HTML",
-    "iconFA": "faHtml5",
-    "iconURL": "https://clecardona.com/npa/icns/html5.svg"
+    "name": "Java",
+    "iconURL": "https://clecardona.com/npa/icns/java-icon.svg"
   },
   {
     "id": 10,
+    "name": "HTML",
+    "iconURL": "https://clecardona.com/npa/icns/html5.svg"
+  },
+  {
+    "id": 11,
     "name": "CSS",
-    "iconFA": "faCss3",
     "iconURL": "https://clecardona.com/npa/icns/css3.svg"
   },
   {
-    "id": 11,
+    "id": 12,
     "name": "Sass",
-    "iconFA": "faSass",
     "iconURL": "https://clecardona.com/npa/icns/sass.svg"
   },
   {
-    "id": 11,
+    "id": 13,
     "name": "Figma",
-    "iconFA": "faSass",
     "iconURL": "https://firebasestorage.googleapis.com/v0/b/npa-portfolio.appspot.com/o/figma.png?alt=media&token=83768625-5aff-496e-829f-8608e0bf86ce"
   }
 ]
