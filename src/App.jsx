@@ -24,7 +24,7 @@ export default function App() {
     <div className="App">
       <NavigationBar />
       <Hero />
-      <div className="accordions">
+      <div className="accordions" id="more">
         <Accordion
           isOpen={isAboutOpen}
           setisOpen={setAboutOpen}

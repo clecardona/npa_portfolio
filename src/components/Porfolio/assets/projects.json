@@ -177,7 +177,7 @@
   },
   {
     "id": 11,
-    "thumbnailTitle": "CV Maker",
+    "thumbnailTitle": "CV Creator",
     "thumbnailURL": "https://cdn.dribbble.com/users/2525010/screenshots/6231961/cv.jpg?compress=1&resize=400x300&vertical=top",
     "isReleased": true,
     "description": "A CV Maker App",
@@ -187,7 +187,7 @@
       "sass",
       "firebase"
     ],
-    "title": "CV MAKER",
+    "title": "The CV Coach",
     "websiteURL": "https://cv-maker-cdfa3.web.app/",
     "screenshotURL": "https://firebasestorage.googleapis.com/v0/b/npa-portfolio.appspot.com/o/screenshot-cvmaker.png?alt=media&token=c0686669-a16b-4171-92b1-86eb7f263123"
   }

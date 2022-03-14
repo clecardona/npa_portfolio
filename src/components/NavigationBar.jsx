@@ -24,7 +24,7 @@ export default function NavigationBar() {
       </div>
       <div className="author">Clément Cardona</div>
       <div className="bar">
-        <a href="#portfolio">More</a>
+        <a href="#more">More</a>
       </div>
     </nav>
   );

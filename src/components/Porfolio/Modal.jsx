@@ -32,7 +32,7 @@ export default function Modal({ isOpen, onClose, item }) {
             </div>
 
             <h1>{item.title}</h1>
-            <p>{item.description} that uses:</p>
+            <p>{item.description}</p>
 
             <div className="pills-container">
               <Pills technologies={technologies8} />
