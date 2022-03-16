@@ -1,5 +1,8 @@
-export default function Pills({ technologies }) {
-  function getBadge(key) {
+interface IProps {
+  technologies: string[];
+}
+const Pills = ({ technologies }: IProps) => {
+  function getBadge(key: string) {
     switch (key) {
       case "typescript":
         return "https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white";
@@ -24,11 +27,11 @@ export default function Pills({ technologies }) {
       {technologies.map((techno) => {
         return (
           <li key={techno}>
-            {/* <div className="pill">{techno}</div> */}
             <img src={getBadge(techno)} alt="" />
           </li>
         );
       })}
     </ul>
   );
-}
+};
+export default Pills;

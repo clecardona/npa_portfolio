@@ -1,7 +1,7 @@
 import "./styles/base.sass";
 
 import Contact from "./components/Contact/Contact";
-import Portfolio from "./components/Porfolio/Portfolio";
+import Portfolio from "./components/Projects/Projects";
 import Technologies from "./components/Technologies/Technologies";
 
 import NavigationBar from "./components/NavigationBar";
@@ -10,7 +10,8 @@ import Accordion from "./components/Accordion";
 import AboutMe from "./components/AboutMe";
 import { useTheme } from "state/ThemeProvider";
 
-export default function App() {
+const App = (): JSX.Element => {
+  // Global state
   const {
     isAboutOpen,
     setAboutOpen,
@@ -51,4 +52,5 @@ export default function App() {
       <Contact />
     </div>
   );
-}
+};
+export default App;

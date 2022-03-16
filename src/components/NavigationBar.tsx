@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ToggleTheme from "./ToggleTheme";
 
-export default function NavigationBar() {
+const NavigationBar = () => {
   // Local state
   const [scrollPosition, setScrollPosition] = useState(0);
   //Methods
@@ -34,4 +34,5 @@ export default function NavigationBar() {
       </div>
     </nav>
   );
-}
+};
+export default NavigationBar;

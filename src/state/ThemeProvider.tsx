@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from "react";
 
-interface AppContextInterface {
+export interface ITheme {
   theme: string;
   toggleTheme: any;
   isAboutOpen: boolean;
@@ -10,10 +10,10 @@ interface AppContextInterface {
   isTechOpen: boolean;
   setTechOpen: any;
 }
+//@ts-expect-error
+const ThemeContext = createContext<ITheme>(null);
 
-const ThemeContext = createContext<AppContextInterface | null>(null);
-
-export function ThemeProvider({ children }: { children: any }) {
+export function ThemeProvider({ children }: { children: JSX.Element }) {
   // Local states
   const [theme, setTheme] = useState<string>(
     localStorage.getItem("theme") || "light"

@@ -1,11 +1,9 @@
-import React from "react";
-
 import listOfProjects from "./assets/projects.json";
 import ButtonCard from "./ButtonCard";
 
-export default function Portfolio() {
+const Projects = (): JSX.Element => {
   return (
-    <section id="portfolio" className="section-portfolio">
+    <section id="projects" className="section-portfolio">
       <div className="wrapper">
         <p>
           Here are the projects made during the Frontend course at Novare
@@ -20,4 +18,5 @@ export default function Portfolio() {
       </div>
     </section>
   );
-}
+};
+export default Projects;

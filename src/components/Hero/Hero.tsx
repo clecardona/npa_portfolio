@@ -1,6 +1,6 @@
 import Bubble from "./Bubble";
 
-export default function Hero() {
+const Hero = (): JSX.Element => {
   return (
     <section id="hero" className="section-hero">
       <img
@@ -18,4 +18,5 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+};
+export default Hero;

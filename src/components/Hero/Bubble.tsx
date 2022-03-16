@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 
-export default function Bubble() {
+const Bubble = (): JSX.Element => {
   const [inProp, setInProp] = useState(false);
 
   useEffect(() => {
@@ -28,9 +28,10 @@ export default function Bubble() {
       >
         <div>
           <h3>Frontend developer from France</h3>
-          <h3 style={{ fontWeight: 200 }}>Living in Stockholm, Sweden</h3>
+          <h3 style={{ fontWeight: 100 }}>Living in Stockholm, Sweden</h3>
         </div>
       </CSSTransition>
     </div>
   );
-}
+};
+export default Bubble;

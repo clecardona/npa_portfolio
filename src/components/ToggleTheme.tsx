@@ -1,6 +1,6 @@
 import { useTheme } from "state/ThemeProvider";
 
-export default function ToggleTheme() {
+const ToggleTheme = () => {
   const { theme, toggleTheme } = useTheme();
   const isDark = theme === "dark";
   return (
@@ -11,4 +11,5 @@ export default function ToggleTheme() {
       onChange={() => toggleTheme()}
     />
   );
-}
+};
+export default ToggleTheme;
