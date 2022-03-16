@@ -13,7 +13,7 @@ export default function Hero() {
         <img
           className="illustration"
           alt="illustrattion"
-          src="https://clecardona.com/npa/img/illustration-portfolio.png"
+          src="https://firebasestorage.googleapis.com/v0/b/npa-portfolio.appspot.com/o/illustration-portfolio.png?alt=media&token=e27b56d0-ab40-469b-af3e-19e7a07a9c05"
         />
       </div>
     </section>

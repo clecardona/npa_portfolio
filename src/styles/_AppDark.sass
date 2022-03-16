@@ -1,0 +1,48 @@
+.dark
+  transition: .1s ease-in
+
+  h1,h2,h3,h4,p
+    color: #cacaca
+
+  .header-menu,.accordions,.section-contact
+    background: $gray2
+
+  .header-menu img
+    filter: invert(0.3)
+
+  .header-transparent
+    background: rgba(0,0,0,.5)
+
+  .bg
+    filter: grayscale(1) brightness(.1)
+  .illustration
+    filter: grayscale(.5) sepia(.3)
+
+  .bubble
+    background: $gray2
+    .title,.subtitle h3
+      color: $grayLight
+
+    &::after
+      background: $gray2
+      color: $gray2
+
+  .accordion
+    .accordion-title
+      filter: brightness(.6)
+      &:hover
+        filter: brightness(0.8)
+      h3
+        color: $gray2
+    .accordion-content
+      background: $gray3
+
+  .section-contact .wrapper ul img
+    filter: invert(1)
+    opacity: .6
+
+  .section-contact footer
+    background: $gray2
+    border-top: 1px solid $gray5
+    img:hover
+      filter: invert(0.9)

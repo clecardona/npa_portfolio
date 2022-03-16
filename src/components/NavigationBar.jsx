@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ToggleTheme from "./ToggleTheme";
 
 export default function NavigationBar() {
   // Local state
@@ -22,9 +23,14 @@ export default function NavigationBar() {
           <img alt="logo" src="https://clecardona.com/npa/img/CC.png" />
         </a>
       </div>
-      <div className="author">Clément Cardona</div>
+      <div className="author">
+        <h3>Clément Cardona</h3>
+      </div>
       <div className="bar">
-        <a href="#more">More</a>
+        <a href="#more">
+          <h3>More</h3>
+        </a>
+        <ToggleTheme />
       </div>
     </nav>
   );

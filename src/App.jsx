@@ -18,10 +18,11 @@ export default function App() {
     setProjectsOpen,
     isTechOpen,
     setTechOpen,
+    theme,
   } = useTheme();
 
   return (
-    <div className="App">
+    <div className={theme === "dark" ? "App dark" : "App"}>
       <NavigationBar />
       <Hero />
       <div className="accordions" id="more">

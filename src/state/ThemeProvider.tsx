@@ -32,8 +32,14 @@ export function ThemeProvider({ children }: { children: any }) {
   });
 
   function toggleTheme() {
-    if (theme === "light") return localStorage.setItem("theme", "dark");
-    if (theme === "dark") return localStorage.setItem("theme", "light");
+    if (theme === "light") {
+      localStorage.setItem("theme", "dark");
+      setTheme("dark");
+    }
+    if (theme === "dark") {
+      localStorage.setItem("theme", "light");
+      setTheme("light");
+    }
   }
 
   function setAboutOpen(bool: boolean) {

@@ -13,7 +13,6 @@ const Accordion = ({
   content,
   color,
 }: IProps): JSX.Element => {
-  //const [isOpen, setisOpen] = useState(false);
   return (
     <div className="accordion">
       <button
