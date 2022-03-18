@@ -9,7 +9,7 @@ const Technologies = (): JSX.Element => {
   ));
 
   return (
-    <section id="technologies" className="section-technologies">
+    <section className="section-technologies">
       <div className="wrapper">
         <p>
           Here is the techology that I already know and also starting to learn.

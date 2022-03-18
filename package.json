@@ -12,6 +12,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
+    "react-div-100vh": "^0.7.0",
     "react-dom": "^17.0.2",
     "react-scripts": "^5.0.0",
     "react-transition-group": "^4.4.2",
@@ -21,7 +22,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "deploy website": "react-scripts build && firebase deploy"
+    "deploy website": "react-scripts build && firebase deploy",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [

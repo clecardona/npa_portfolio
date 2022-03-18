@@ -4,6 +4,7 @@ interface IProps {
   title: string;
   content: JSX.Element;
   color?: string;
+  id: string;
 }
 
 const Accordion = ({
@@ -12,20 +13,24 @@ const Accordion = ({
   title,
   content,
   color,
+  id,
 }: IProps): JSX.Element => {
   return (
-    <div className="accordion">
-      <button
-        className="accordion-title"
-        onClick={() => setisOpen(!isOpen)}
-        style={{ background: color }}
-      >
-        <h3>{title}</h3>
-        <h3 className="accordion-icon">{isOpen ? "-" : "+"}</h3>
-      </button>
+    <div className="accordion-positionner">
+      <div className="tag" id={id} />
+      <div className="accordion">
+        <button
+          className="accordion-title"
+          onClick={() => setisOpen(!isOpen)}
+          style={{ background: color }}
+        >
+          <h3>{title}</h3>
+          <h3 className="accordion-icon">{isOpen ? "-" : "+"}</h3>
+        </button>
 
-      <div className="accordion-content" aria-expanded={!isOpen}>
-        {content}
+        <div className="accordion-content" aria-expanded={!isOpen}>
+          {content}
+        </div>
       </div>
     </div>
   );

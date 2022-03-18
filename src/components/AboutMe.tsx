@@ -10,7 +10,8 @@ const AboutMe = (): JSX.Element => {
         Hi! I am Clement, a junior frontend developer from Nice , France. <br />
         This is my Portfolio, which I use to showcase everything I develop. I
         specialize in React.js development with TypeScript with a intuitive
-        design and attention to details. Why you might ask ? <br />
+        design and attention to details.
+        <br /> Why you might ask ? <br />
         Well, scroll down and let me convince you.
       </p>
     </div>

@@ -26,12 +26,14 @@ const App = (): JSX.Element => {
     <div className={theme === "dark" ? "App dark" : "App"}>
       <NavigationBar />
       <Hero />
-      <div className="accordions" id="more">
+      <div className="accordions">
         <Accordion
           isOpen={isAboutOpen}
           setisOpen={setAboutOpen}
           title="About me"
           content={<AboutMe />}
+          color="7A8C99"
+          id="about"
         />
         <Accordion
           isOpen={isProjectsOpen}
@@ -39,6 +41,7 @@ const App = (): JSX.Element => {
           title="Projects"
           content={<Portfolio />}
           color="#D1CABB"
+          id="projects"
         />
         <Accordion
           isOpen={isTechOpen}
@@ -46,6 +49,7 @@ const App = (): JSX.Element => {
           title="Tech stack"
           content={<Technologies />}
           color="#8193a1"
+          id="tech"
         />
       </div>
 

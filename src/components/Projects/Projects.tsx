@@ -3,7 +3,7 @@ import ButtonCard from "./ButtonCard";
 
 const Projects = (): JSX.Element => {
   return (
-    <section id="projects" className="section-portfolio">
+    <section className="section-portfolio">
       <div className="wrapper">
         <p>
           Here are the projects made during the Frontend course at Novare

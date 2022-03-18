@@ -1,31 +1,33 @@
 .section-hero
-  height: 100vh
+  display: grid
+  text-align: center
 
   .bg
     position: absolute
-
     padding: 0
     margin: 0
 
-    height: 100vh
+    height: -moz-available
+    height: -webkit-fill-available
+
     width: 100%
     object-fit: cover
     z-index: -10
-
     opacity: 0.7
-
+    @media only screen and (min-width: $tabletBreakpoint)
+      height: 100vh
   .layout
     display: grid
 
-    width: 100%
+    height: -moz-available
+    height: -webkit-fill-available
 
-    height: 80%
     grid-template-columns: 1fr
     grid-template-rows: 1fr min-content
     grid-template-areas: "bubble""illustration"
 
     @media only screen and (min-width: $tabletBreakpoint)
-      height: 60%
+      height: 100vh
       grid-template-columns: 1fr 1fr
       grid-template-rows: 1fr
       grid-template-areas: "bubble illustration"

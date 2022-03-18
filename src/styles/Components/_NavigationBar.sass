@@ -1,10 +1,11 @@
 .header-menu
   position: fixed
-  background: $white
-  height: $header-height
   top: 0
   left: 0
   width: 100%
+
+  background: $white
+  height: $header-height
 
   display: grid
   grid-template-columns: max-content 1fr
@@ -24,6 +25,9 @@
 .author
   display: flex
   color: $black
+  @media only screen and (MAX-width: $tabletBreakpoint)
+    h3
+      display: none
 
 .bar
   height: $mob-button-height
@@ -40,13 +44,15 @@
     background: none
     width: fit-content
 
-  a
+  button
     text-align: center
     font-size: 13px
     color: $black
     h3
+      text-transform: capitalize
+      border: 1px solid transparent
       &:hover
-        color: $pink
+        filter: brightness(.8)
 
 .nav-logo
   position: absolute

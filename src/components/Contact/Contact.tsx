@@ -24,7 +24,7 @@ const Contact = (): JSX.Element => {
   );
 
   return (
-    <section id="contact" className="section-contact">
+    <section className="section-contact">
       <div className="wrapper">
         <h2>Contact me</h2>
         <p>

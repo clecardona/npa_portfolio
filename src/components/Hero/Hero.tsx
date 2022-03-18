@@ -1,6 +1,9 @@
 import Bubble from "./Bubble";
 
+
 const Hero = (): JSX.Element => {
+
+
   return (
     <section id="hero" className="section-hero">
       <img
