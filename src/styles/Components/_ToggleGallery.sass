@@ -1,4 +1,4 @@
-.toggle-theme
+.toggle-gallery
     -webkit-appearance: none
     -moz-appearance: none
     appearance: none
@@ -15,7 +15,7 @@
     transition: background-color ease 0.3s
 
     &:before
-        content: "light dark"
+        content: "tile mason"
         display: block
         position: absolute
         z-index: 2
@@ -25,10 +25,10 @@
         left: 2px
         top: 2px
         border-radius: 50%
-        font: 10px/28px Helvetica
+        font: 9px/28px Helvetica
         text-transform: uppercase
 
-        text-indent: -35px
+        text-indent: -28px
         word-spacing: 37px
         color: $grayLight
         white-space: nowrap
@@ -36,7 +36,7 @@
         transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s
 
     &:checked
-        background-color: $yellow
+        background-color: $blue
 
     &:checked:before
         left: 42px

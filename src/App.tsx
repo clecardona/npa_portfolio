@@ -1,4 +1,4 @@
-import "./styles/base.sass";
+import "styles/base.sass";
 
 import Contact from "./components/Contact/Contact";
 import Portfolio from "./components/Projects/Projects";

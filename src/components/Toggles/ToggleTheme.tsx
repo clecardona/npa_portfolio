@@ -5,7 +5,7 @@ const ToggleTheme = () => {
   const isDark = theme === "dark";
   return (
     <input
-      className="toggle"
+      className="toggle-theme"
       type="checkbox"
       checked={isDark}
       onChange={() => toggleTheme()}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ToggleTheme from "./ToggleTheme";
+import ToggleTheme from "components/Toggles/ToggleTheme";
 import { useTheme } from "state/ThemeProvider";
 
 const NavigationBar = () => {

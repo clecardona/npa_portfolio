@@ -3,6 +3,8 @@ import { createContext, useState, useContext } from "react";
 export interface ITheme {
   theme: string;
   toggleTheme: any;
+  gallery: string;
+  toggleGallery: any;
   isAboutOpen: boolean;
   setAboutOpen: any;
   isProjectsOpen: boolean;
@@ -18,6 +20,11 @@ export function ThemeProvider({ children }: { children: JSX.Element }) {
   const [theme, setTheme] = useState<string>(
     localStorage.getItem("theme") || "light"
   );
+
+  const [gallery, setGallery] = useState<string>(
+    localStorage.getItem("gallery") || "classic"
+  );
+
   const [isAboutOpen, setisAboutOpen] = useState<boolean>(() => {
     if (localStorage.getItem("about") === "true") return true;
     else return false;
@@ -39,6 +46,16 @@ export function ThemeProvider({ children }: { children: JSX.Element }) {
     if (theme === "dark") {
       localStorage.setItem("theme", "light");
       setTheme("light");
+    }
+  }
+  function toggleGallery() {
+    if (gallery === "classic") {
+      localStorage.setItem("gallery", "creative");
+      setGallery("creative");
+    }
+    if (gallery === "creative") {
+      localStorage.setItem("gallery", "classic");
+      setGallery("classic");
     }
   }
 
@@ -66,6 +83,8 @@ export function ThemeProvider({ children }: { children: JSX.Element }) {
         setProjectsOpen,
         isTechOpen,
         setTechOpen,
+        gallery,
+        toggleGallery,
       }}
     >
       {children}
