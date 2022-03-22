@@ -20,8 +20,8 @@ const ButtonCard = ({ item }: IItem): JSX.Element => {
   // Components
   const NotReleased = () => (
     <div className="card-overlay">
-      <p>COMING</p>
-      <p>SOON</p>
+      <p className="comingsoon">COMING</p>
+      <p className="comingsoon">SOON ...</p>
     </div>
   );
 
