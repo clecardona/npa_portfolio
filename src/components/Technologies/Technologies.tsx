@@ -1,6 +1,8 @@
-import technologies from "./assets/technologies.json";
+interface IProps {
+  technologies: any[];
+}
 
-const Technologies = (): JSX.Element => {
+const Technologies = ({ technologies }: IProps): JSX.Element => {
   const Technolist = technologies.map((item) => (
     <li key={item.id}>
       <img className="img-40 img-bw" alt={item.name} src={item.iconURL} />

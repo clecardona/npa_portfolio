@@ -9,6 +9,9 @@ import Hero from "./components/Hero/Hero";
 import Accordion from "./components/Accordion";
 import AboutMe from "./components/AboutMe";
 import { useTheme } from "state/ThemeProvider";
+import { useState, useEffect, useCallback } from "react";
+import { getCollection } from "scripts/firebase/fireStore";
+import { BoxError, Spinner } from "components/FetchItems";
 
 const App = (): JSX.Element => {
   // Global state
@@ -22,38 +25,73 @@ const App = (): JSX.Element => {
     theme,
   } = useTheme();
 
+  const [projects, setProjects] = useState([]);
+  const [technologies, setTechnologies] = useState([]);
+  console.log("technologies", technologies);
+  const LOADING = "loading";
+  const READY = "ready";
+  const ERROR = "error";
+
+  //Local state
+  const [status, setStatus] = useState(LOADING);
+
+  const fetchData: () => void = useCallback(async () => {
+    try {
+      const listOfProjects = await getCollection("projects");
+      const listOfTechnologies = await getCollection("technologies");
+
+      //@ts-ignore
+      setProjects(listOfProjects);
+      //@ts-ignore
+      setTechnologies(listOfTechnologies);
+      setStatus(READY);
+    } catch (error) {
+      setStatus(ERROR);
+      console.error(error);
+    }
+  }, []);
+
+  useEffect(() => fetchData(), [fetchData]);
+
   return (
     <div className={theme === "dark" ? "App dark" : "App"}>
-      <NavigationBar />
-      <Hero />
-      <div className="accordions">
-        <Accordion
-          isOpen={isAboutOpen}
-          setisOpen={setAboutOpen}
-          title="About me"
-          content={<AboutMe />}
-          color="7A8C99"
-          id="about"
-        />
-        <Accordion
-          isOpen={isProjectsOpen}
-          setisOpen={setProjectsOpen}
-          title="Projects"
-          content={<Portfolio />}
-          color="#D1CABB"
-          id="projects"
-        />
-        <Accordion
-          isOpen={isTechOpen}
-          setisOpen={setTechOpen}
-          title="Tech stack"
-          content={<Technologies />}
-          color="#8193a1"
-          id="tech"
-        />
-      </div>
+      {status === LOADING && <Spinner />}
+      {status === ERROR && <BoxError />}
+      {status === READY && (
+        <>
+          <NavigationBar />
+          <Hero />
 
-      <Contact />
+          <div className="accordions">
+            <Accordion
+              isOpen={isAboutOpen}
+              setisOpen={setAboutOpen}
+              title="About me"
+              content={<AboutMe />}
+              color="7A8C99"
+              id="about"
+            />
+            <Accordion
+              isOpen={isProjectsOpen}
+              setisOpen={setProjectsOpen}
+              title="Projects"
+              content={<Portfolio projects={projects} />}
+              color="#D1CABB"
+              id="projects"
+            />
+            <Accordion
+              isOpen={isTechOpen}
+              setisOpen={setTechOpen}
+              title="Tech stack"
+              content={<Technologies technologies={technologies} />}
+              color="#8193a1"
+              id="tech"
+            />
+          </div>
+
+          <Contact />
+        </>
+      )}
     </div>
   );
 };
