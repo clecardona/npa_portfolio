@@ -9,13 +9,16 @@
   padding: 1em
   @media only screen and (min-width: $tabletBreakpoint)
     grid-template-rows: 1fr
-    grid-template-columns: 1fr min-content
+    grid-template-columns: 1fr 1fr
     grid-template-areas: "paragraph img"
-    padding: 1em 2em 3em 2em
+    justify-items: flex-end
+    padding: 2em 5em 3em 3em
 
 .about-paragraph
   grid-area: paragraph
   max-width: 500px
+  border-left: 1em solid $grayLight
+  padding-left: 2em
 
 .about-img
   grid-area: img

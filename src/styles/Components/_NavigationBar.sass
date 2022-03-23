@@ -53,8 +53,13 @@
       border: 1px solid transparent
       &:hover
         filter: brightness(.8)
+
   .toggle-theme
-    margin-left: 1em
+    margin-left: .5em
+    transform: scale(.8)
+    @media only screen and (min-width: $tabletBreakpoint)
+      margin-left: 1em
+      transform: scale(1)
 
 .nav-logo
   position: absolute

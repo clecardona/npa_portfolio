@@ -8,10 +8,24 @@ const Contact = (): JSX.Element => {
   const { emailURL, phoneURL, locationURL, linkedInURL, githubURL } = icons;
 
   // Components
-  const ContactItem = ({ text, icon }: { text: string; icon: string }) => (
+  const ContactItem = ({
+    text,
+    icon,
+    link,
+  }: {
+    text: string;
+    icon: string;
+    link?: string;
+  }) => (
     <li>
       <img alt="icn" src={icon} className="img-1em" />
-      <h4>{text}</h4>
+      {link ? (
+        <a href={`mailto:${link}`}>
+          <h4>{text}</h4>
+        </a>
+      ) : (
+        <h4>{text}</h4>
+      )}
     </li>
   );
 
@@ -24,27 +38,29 @@ const Contact = (): JSX.Element => {
   );
 
   return (
-    <section className="section-contact">
-      <div className="wrapper">
-        <h2>Contact me</h2>
-        <p>
-          Here is my contact information if you are interested in starting a
-          collaboration.
-        </p>
-        <ul>
-          <ContactItem icon={emailURL} text={email} />
-          <ContactItem icon={phoneURL} text={phone} />
-          <ContactItem icon={locationURL} text={location} />
-        </ul>
-      </div>
+    <>
+      <section className="section-contact">
+        <div className="wrapper">
+          <h2>Contact me</h2>
+          <p>
+            Here is my contact information if you are interested in starting a
+            collaboration.
+          </p>
+          <ul>
+            <ContactItem icon={emailURL} text={email} link={email} />
+            <ContactItem icon={phoneURL} text={phone} />
+            <ContactItem icon={locationURL} text={location} />
+          </ul>
+        </div>
+      </section>
       <footer>
         <ul>
           <IconSocial icon={linkedInURL} link={linkedIn} />
           <IconSocial icon={githubURL} link={github} />
         </ul>
-        <span>© 2021 • {fullname}</span>
+        <span>© 2022 • {fullname}</span>
       </footer>
-    </section>
+    </>
   );
 };
 export default Contact;

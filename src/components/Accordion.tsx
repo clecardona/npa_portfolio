@@ -25,7 +25,11 @@ const Accordion = ({
           style={{ background: color }}
         >
           <h3>{title}</h3>
-          <h3 className="accordion-icon">{isOpen ? "-" : "+"}</h3>
+          {isOpen ? (
+            <h3 className="accordion-icon">-</h3>
+          ) : (
+            <h3 className="accordion-icon collapsed">+</h3>
+          )}
         </button>
 
         <div className="accordion-content" aria-expanded={!isOpen}>
