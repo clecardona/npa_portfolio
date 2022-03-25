@@ -1,0 +1,81 @@
+.cv-grid
+    display: grid
+    grid-template-columns: 3fr min-content
+    grid-template-rows: repeat(2,min-content)
+    justify-content: center
+    gap: 1em .5em
+    padding-right: 3em
+
+    grid-template-areas: "experience contact" "experience languages" "education languages"
+
+    .cv-highlights
+        grid-area: highlights
+        // background: yellow
+    .cv-contact
+        grid-area: contact
+        border-radius: .3em
+        margin-top: 3.8em
+        padding: 1em
+
+        ul
+            display: grid
+            grid-auto-flow: row
+            align-content: flex-start
+
+    .cv-experience
+        grid-area: experience
+
+        display: grid
+        grid-auto-flow: row
+        gap: 1em
+
+        padding: 1em 0
+        h2
+            color: $blueLight
+        ul
+            display: grid
+            grid-auto-flow: row
+            gap: 1em
+            align-content: flex-start
+    .cv-education
+        grid-area: education
+
+        display: grid
+        grid-auto-flow: row
+        gap: 1em
+
+        padding: 1em 0
+        h2
+            color: $pink
+        ul
+            display: grid
+            grid-auto-flow: row
+            gap: 1em
+            align-content: flex-end
+
+    .cv-languages
+        grid-area: languages
+
+        display: grid
+        grid-auto-flow: row
+        gap: 1em
+        align-content: flex-start
+
+        padding: 1em
+
+        h2
+            color: $green
+
+// animate
+// closed
+.cv-grid[aria-expanded="false"]
+    max-height: 0
+    opacity: 0.3
+    transition: max-height .2s ease-out
+// opened
+.cv-grid[aria-expanded="true"]
+    max-height: 1500px
+    opacity: 1
+    transition: all .5s ease-in-out
+    border-top: 1px solid $grayDark
+    padding-top: 1em
