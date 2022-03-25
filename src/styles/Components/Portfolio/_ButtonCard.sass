@@ -64,23 +64,22 @@
           transform: scale(1)
           filter: brightness(.9)
 
-          &:disabled
-            cursor: default
-            img
-              filter: brightness(0.5)
+    button:disabled
+      cursor: default
+      img
+        filter: brightness(0.5)
 
-            &:hover
-              filter: grayscale(0.7)
-              transform: scale(1)
+        &:hover
+          filter: grayscale(0.7)
+          transform: scale(1)
 
   .projects-lists
-    li:nth-child(3n) .card .card-inner
-      .card-back
-        background: $lightBlue
-
     li:nth-child(2n+2) .card .card-inner
       .card-back
         background: $green
+    li:nth-child(3n) .card .card-inner
+      .card-back
+        background: $lightBlue
 
 .section-portfolio .wrapper .card-overlay
   position: absolute
