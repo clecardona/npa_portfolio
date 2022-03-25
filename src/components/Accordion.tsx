@@ -32,7 +32,7 @@ const Accordion = ({
           )}
         </button>
 
-        <div className="accordion-content" aria-expanded={!isOpen}>
+        <div className="accordion-content" aria-expanded={isOpen}>
           {content}
         </div>
       </div>

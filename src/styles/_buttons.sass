@@ -10,6 +10,7 @@ button
   align-items: center
   justify-items: center
   border-radius: 6px
+
   img
     height: 1.2em
     padding: 0 1em
@@ -23,10 +24,18 @@ button
     color: white
 
 .btn-ghost
-  background: none
   border: 1px solid black
 
   h3
     color: black
   &:hover
     background: $grayLight
+
+.btn-more
+  grid-template-columns: 22px 1fr
+  h3
+    color: $darkBlue
+    margin-right: .3em
+  &:hover
+    h3
+      color: $lightBlue

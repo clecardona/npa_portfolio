@@ -1,0 +1,146 @@
+@import ./_variables
+
+.card-edu
+    border-radius: 0 16px 0 0
+
+    box-shadow: 2px 2px 4px rgba(0,0,0 ,.1 )
+    background: linear-gradient(0.25turn, $pink, $pinkLight)
+
+    display: grid
+    grid-auto-flow: row
+    grid-gap: .3em
+    padding-bottom: 1em
+
+    &:hover
+
+        opacity: .9
+        transition: .2s ease
+        .with-link
+            background: $beige
+            h3
+                color: $pink
+    .title
+        border-radius: 0 16px 0 0
+        height: 36px
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    p,h3,h4
+
+        position: relative
+        color: $white
+        padding: 0 32px
+
+    p,h4
+
+        &::before
+            position: absolute
+            left: -8px
+            top: 0
+
+            content: ("")
+            height: 16px
+            width: 16px
+            border-radius: 16px
+            border: 1px solid $grayLight
+
+            background: linear-gradient(0.75turn, #fcf8f0, #ebe7de)
+            // background: #a05c78
+            box-shadow: 1px 1px 2px rgba(0,0,0 ,.1 )
+    p
+        font-weight: 200
+
+.card-cont
+
+    display: grid
+    grid-auto-flow: row
+    grid-gap: .3em
+
+    p,h4
+        position: relative
+        color: $black
+
+        display: flex
+        align-items: center
+
+        &:hover
+            color: $blue
+
+        &::before
+            content: (">")
+            top: 5px
+            margin-right: 16px
+            font-weight: 900
+            font-size: 24px
+
+.card-exp
+    border-radius: 0 0 16px 0
+
+    box-shadow: 2px 2px 4px rgba(0,0,0 ,.1 )
+    background: linear-gradient(0.25turn, $blueLight, #4086be)
+
+    display: grid
+    grid-auto-flow: row
+    grid-gap: .3em
+    padding-bottom: 1em
+
+    &:hover
+
+        opacity: .9
+        transition: .2s ease
+        .title
+            background: $beige
+            h3
+                color: $blueLight
+
+    .title
+
+        height: 36px
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    p,h3,h4
+
+        position: relative
+        color: $white
+        padding: 0 32px
+
+    p,h4
+
+        &::before
+            position: absolute
+            left: -8px
+            top: 0
+
+            content: ("")
+            height: 16px
+            width: 16px
+            border-radius: 16px
+            border: 1px solid $grayLight
+
+            background: linear-gradient(0.75turn, #fcf8f0, #ebe7de)
+            box-shadow: 1px 1px 2px rgba(0,0,0 ,.1 )
+    p
+        font-weight: 200
+
+.card-skills
+
+    display: grid
+    grid-auto-flow: row
+    gap: .3em
+    border-radius: .3em
+    overflow: hidden
+
+    background: linear-gradient(0.75turn, #d1ad3f, #e2c15d)
+    box-shadow: 2px 2px 4px rgba(0,0,0,.1)
+    border-right: 5px solid $yellow
+
+    p,h4
+        position: relative
+        color: $white
+
+        display: flex
+        align-items: center
+        padding: 1em

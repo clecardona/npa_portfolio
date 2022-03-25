@@ -11,6 +11,8 @@ export interface ITheme {
   setProjectsOpen: any;
   isTechOpen: boolean;
   setTechOpen: any;
+  isCVOpen: boolean;
+  setCVOpen: any;
 }
 //@ts-expect-error
 const ThemeContext = createContext<ITheme>(null);
@@ -35,6 +37,10 @@ export function ThemeProvider({ children }: { children: JSX.Element }) {
   });
   const [isTechOpen, setisTechOpen] = useState<boolean>(() => {
     if (localStorage.getItem("tech") === "true") return true;
+    else return false;
+  });
+  const [isCVOpen, setisCVOpen] = useState<boolean>(() => {
+    if (localStorage.getItem("cv") === "true") return true;
     else return false;
   });
 
@@ -71,6 +77,10 @@ export function ThemeProvider({ children }: { children: JSX.Element }) {
     setisTechOpen(bool);
     localStorage.setItem("tech", bool.toString());
   }
+  function setCVOpen(bool: boolean) {
+    setisCVOpen(bool);
+    localStorage.setItem("cv", bool.toString());
+  }
 
   return (
     <ThemeContext.Provider
@@ -85,6 +95,8 @@ export function ThemeProvider({ children }: { children: JSX.Element }) {
         setTechOpen,
         gallery,
         toggleGallery,
+        isCVOpen,
+        setCVOpen,
       }}
     >
       {children}

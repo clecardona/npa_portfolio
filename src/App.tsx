@@ -1,8 +1,9 @@
 import "styles/base.sass";
 
-import Contact from "./components/Contact/Contact";
-import Portfolio from "./components/Projects/Projects";
-import Technologies from "./components/Technologies/Technologies";
+import Contact from "components/Contact/Contact";
+import Portfolio from "components/Projects/Projects";
+import Technologies from "components/Technologies/Technologies";
+import CV from "components/CV/CV";
 
 import NavigationBar from "./components/NavigationBar";
 import Hero from "./components/Hero/Hero";
@@ -27,7 +28,7 @@ const App = (): JSX.Element => {
 
   const [projects, setProjects] = useState([]);
   const [technologies, setTechnologies] = useState([]);
-  console.log("technologies", technologies);
+
   const LOADING = "loading";
   const READY = "ready";
   const ERROR = "error";
@@ -71,6 +72,7 @@ const App = (): JSX.Element => {
               color="7A8C99"
               id="about"
             />
+
             <Accordion
               isOpen={isProjectsOpen}
               setisOpen={setProjectsOpen}
