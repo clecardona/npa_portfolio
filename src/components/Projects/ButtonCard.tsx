@@ -32,11 +32,18 @@ const ButtonCard = ({ item }: IItem): JSX.Element => {
         disabled={!item.isReleased}
         onClick={() => setIsOpen(true)}
       >
-        <div className="card-img">
-          {!isReleased && <NotReleased />}
-          <img alt={title} src={thumbnailURL} />
+        <div className="card-inner">
+          <div className="card-front">
+            <div className="card-img">
+              {!isReleased && <NotReleased />}
+              <img alt={title} src={thumbnailURL} />
+            </div>
+          </div>
+
+          <div className="card-back">
+            <h3>{thumbnailTitle}</h3>
+          </div>
         </div>
-        <h3>{thumbnailTitle}</h3>
       </button>
 
       <CSSTransition in={isOpen} timeout={500} classNames="modal-overlay">

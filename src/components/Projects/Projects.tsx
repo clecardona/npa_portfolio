@@ -13,7 +13,7 @@ const Projects = ({ projects }: IProps): JSX.Element => {
   return (
     <section className="section-portfolio">
       <div className="wrapper">
-        <ToggleGallery />
+        {/* <ToggleGallery /> */}
         <p>
           Here are the projects made during the Frontend course at Novare
           Potential, and further on...
