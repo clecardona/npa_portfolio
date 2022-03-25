@@ -3,7 +3,6 @@ import "styles/base.sass";
 import Contact from "components/Contact/Contact";
 import Portfolio from "components/Projects/Projects";
 import Technologies from "components/Technologies/Technologies";
-import CV from "components/CV/CV";
 
 import NavigationBar from "./components/NavigationBar";
 import Hero from "./components/Hero/Hero";

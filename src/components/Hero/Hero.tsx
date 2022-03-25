@@ -1,6 +1,10 @@
+import { useTheme } from "state/ThemeProvider";
 import Bubble from "./Bubble";
+import Stars from "./Stars";
 
 const Hero = (): JSX.Element => {
+  const { theme } = useTheme();
+  const isDark = theme == "dark";
   return (
     <section id="hero" className="section-hero">
       <img
@@ -8,6 +12,7 @@ const Hero = (): JSX.Element => {
         alt="bg"
         src="https://clecardona.com/npa/img/bg.png"
       />
+      {isDark && <Stars />}
       <div className="layout">
         <Bubble />
         <img
