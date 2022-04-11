@@ -30,14 +30,14 @@
 
   display: grid
   align-items: center
-  grid-template-rows: min-content min-content min-content 1fr min-content
+  grid-template-rows: min-content min-content min-content 1fr min-content min-content
   grid-template-columns: 1fr
-  grid-template-areas: "data ""title ""pills ""description ""buttons "
+  grid-template-areas: "data ""title ""pills ""description " "mq" "buttons"
 
   @media only screen and (min-width: $desktopBreakpoint)
-    grid-template-rows: min-content min-content 1fr min-content
+    grid-template-rows: min-content min-content 1fr min-content min-content
     grid-template-columns: 1fr 1fr 1fr 1fr 2fr .4fr
-    grid-template-areas: "data data data data title none""data data data data pills pills""data data data data description description ""data data data data buttons buttons "
+    grid-template-areas: "data data data data title none""data data data data pills pills""data data data data description description ""data data data data mq mq ""data data data data buttons buttons "
     gap: .5em
     padding: 0
     height: 80vh
@@ -96,10 +96,45 @@
         height: 24px
         margin: 0 2px
 
+  .mq-container
+    grid-area: mq
+
+    padding: 0 16px
+
+    display: flex
+    justify-content: center
+    align-content: flex-end
+
+    color: #222
+    .mq-item
+      position: relative
+      margin-right: 2px
+      margin-left: 2px
+      cursor: pointer
+
+      p
+        position: absolute
+        top: -20px
+        left: 50%
+        transform: translateX(-50%)
+        opacity: 0
+
+        margin: 0
+        padding: 0
+
+        transition: opacity .3s
+
+      &:hover
+        color: $blue
+        p
+          opacity: 1
+          transition: opacity .3s
+          color: $blue
+
   .buttons
 
     grid-area: buttons
-    padding: 1em
+    padding: 0 1em 1em 1em
 
     margin: 0
     display: flex
@@ -112,12 +147,6 @@
     .btn-ghost
       width: 100%
       margin: .3em 0
-
-    .btn-main
-      &:hover
-        filter: invert(.2)
-      h3
-        color: $white
 
   .btn-close
     position: fixed

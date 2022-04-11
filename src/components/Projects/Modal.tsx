@@ -1,6 +1,12 @@
 //npm packages
 import reactDom from "react-dom";
 import { CSSTransition } from "react-transition-group";
+import {
+  IoIosTabletLandscape,
+  IoIosLaptop,
+  IoIosDesktop,
+  IoIosPhonePortrait,
+} from "react-icons/io";
 
 //Local imports
 import link from "assets/icns/link.png";
@@ -54,6 +60,34 @@ const Modal = ({ isOpen, onClose, item }: IModalProps) => {
 
             <div className="pills-container">
               <Pills technologies={technologies8} />
+            </div>
+
+            <div className="mq-container" style={{ height: 30 }}>
+              {item.responsive && item.responsive.mobile && (
+                <div className="mq-item">
+                  <p>Mobile</p>
+                  <IoIosPhonePortrait size={22} style={{ marginTop: 8 }} />
+                </div>
+              )}
+              {item.responsive && item.responsive.tablet && (
+                <div className="mq-item">
+                  <p>Tablet</p>
+                  <IoIosTabletLandscape size={24} style={{ marginTop: 9 }} />
+                </div>
+              )}
+              {item.responsive && item.responsive.laptop && (
+                <div className="mq-item">
+                  <p>Laptop</p>
+                  <IoIosLaptop size={30} style={{ marginTop: 5 }} />
+                </div>
+              )}
+
+              {item.responsive && item.responsive.desktop && (
+                <div className="mq-item">
+                  <p>Desktop</p>
+                  <IoIosDesktop size={30} style={{ marginTop: 3 }} />
+                </div>
+              )}
             </div>
 
             <div className="buttons">

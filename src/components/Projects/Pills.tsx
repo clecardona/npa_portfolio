@@ -18,6 +18,10 @@ const Pills = ({ technologies }: IProps) => {
         return "https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white";
       case "css":
         return "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white";
+      case "node":
+        return "https://img.shields.io/badge/Node.js-black?style=for-the-badge&logo=Node.js&logoColor=white";
+      case "graphql":
+        return "https://img.shields.io/badge/GraphQL-DB0075?style=for-the-badge&logo=graphql&logoColor=white";
       default:
         return key;
     }

@@ -1,80 +1,40 @@
+import React from "react";
 import { useTheme } from "state/ThemeProvider";
 import CircleChart from "./CircleChart";
 import cvData from "./CV.json";
+import EduCard from "./EduCard";
+import ExpCard from "./ExpCard";
 import "./_cards.sass";
 
 const CV = () => {
   const { education, experience, contact, skills } = cvData;
   const { isCVOpen } = useTheme();
 
-  const Education = education.map((e: any, idx) => {
-    const Card = ({ isLink }: any) => (
-      <li key={idx} className="card-edu">
-        <div className={isLink ? "title with-link" : "title"}>
-          <h3>
-            <b>{e.program}</b>
-          </h3>
-          <h3 style={{ fontWeight: 200 }}>
-            {e.from} - {e.to}
-          </h3>
-        </div>
-
-        <h4 className="position">
-          <b>{e.school} </b>| {e.city}
-        </h4>
-        <p>
-          {e.description.map((i: string, id: number) => (
-            <li key={id}>• {i}</li>
-          ))}
-        </p>
-      </li>
-    );
-
+  const Experience = experience.map((item: any, index) => {
     return (
-      <>
-        {e.url ? (
-          <a href={e.url} target="_blank" rel="noreferrer">
-            <Card isLink={true} />
+      <React.Fragment key={index}>
+        {item.url ? (
+          <a href={item.url} target="_blank" rel="noreferrer">
+            <ExpCard item={item} key={index} />
           </a>
         ) : (
-          <Card isLink={false} />
+          <ExpCard item={item} key={index} />
         )}
-      </>
+      </React.Fragment>
     );
   });
 
-  const Experience = experience.map((e: any, idx) => {
-    const Card = ({ isLink }: any) => (
-      <li key={idx} className="card-exp">
-        <div className="title">
-          <h3>
-            <b>{e.position}</b>
-          </h3>
-          <h3 style={{ fontWeight: 200 }}>
-            {e.from} - {e.to}
-          </h3>
-        </div>
-
-        <h4 className="position">
-          <b>{e.company} </b>| {e.city}
-        </h4>
-        <p>
-          {e.description.map((i: string, id: number) => (
-            <li key={id}>• {i}</li>
-          ))}
-        </p>
-      </li>
-    );
+  const Education = education.map((item: any, index) => {
     return (
-      <>
-        {e.url ? (
-          <a href={e.url} target="_blank" rel="noreferrer">
-            <Card isLink={true} />
+      <React.Fragment key={index}>
+        {item.url ? (
+          <a href={item.url} target="_blank" rel="noreferrer">
+            <EduCard item={item} />
           </a>
         ) : (
-          <Card isLink={false} />
+          <EduCard item={item} />
         )}
-      </>
+      </React.Fragment>
     );
   });
 
@@ -94,8 +54,8 @@ const CV = () => {
       </li>
     </ul>
   );
-  const Skills = skills.map((e: any, idx) => (
-    <li key={idx} className="card-skills">
+  const Skills = skills.map((e: any, index) => (
+    <li key={index} className="card-skills">
       <h4 className="position">{e}</h4>
     </li>
   ));
