@@ -90,6 +90,13 @@ const App = (): JSX.Element => {
             />
           </div>
 
+          <div className="bigimage">
+            <img
+              src="https://cdn.dribbble.com/users/1107982/screenshots/15590058/media/009849e098dfd3c036ca2a2dd40ab17f.png?compress=1&resize=1200x900&vertical=top"
+              alt=""
+            />
+          </div>
+
           <Contact />
         </>
       )}

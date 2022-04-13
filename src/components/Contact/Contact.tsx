@@ -1,11 +1,12 @@
 // Local imports
 import contact from "./contact.json";
 import icons from "assets/icons.json";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 const Contact = (): JSX.Element => {
   // Gloabal states
   const { email, phone, location, linkedIn, github, fullname } = contact;
-  const { emailURL, phoneURL, locationURL, linkedInURL, githubURL } = icons;
+  const { emailURL, phoneURL, locationURL } = icons;
 
   // Components
   const ContactItem = ({
@@ -29,10 +30,21 @@ const Contact = (): JSX.Element => {
     </li>
   );
 
+  function getIcon(key: string) {
+    switch (key) {
+      case "github":
+        return <SiGithub size={25} />;
+      case "linkedin":
+        return <SiLinkedin size={25} />;
+      default:
+        return null;
+    }
+  }
+
   const IconSocial = ({ link, icon }: { link: string; icon: string }) => (
     <li>
       <a href={link} target="blank">
-        <img alt="icn" src={icon} />
+        {getIcon(icon)}
       </a>
     </li>
   );
@@ -55,8 +67,8 @@ const Contact = (): JSX.Element => {
       </section>
       <footer>
         <ul>
-          <IconSocial icon={linkedInURL} link={linkedIn} />
-          <IconSocial icon={githubURL} link={github} />
+          <IconSocial icon="linkedin" link={linkedIn} />
+          <IconSocial icon="github" link={github} />
         </ul>
         <span>© 2022 • {fullname}</span>
       </footer>

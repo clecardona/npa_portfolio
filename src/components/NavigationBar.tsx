@@ -17,50 +17,44 @@ const NavigationBar = () => {
       }
     }
   }
+  const timeoutScroll = 700;
+  const timeoutOpen = 1000;
 
   const navItems = [
     {
       title: "about",
+      id: "#about",
       color: "#F6C9B6",
       action: () => {
-        function handleModals() {
-          setAboutOpen(true);
-          setProjectsOpen(false);
-          setTechOpen(false);
-          return true;
-        }
-        const finished = handleModals();
-
-        setTimeout(() => handleScrollAccordion("#about", finished), 500);
+        setProjectsOpen(false);
+        setTechOpen(false);
+        setTimeout(() => handleScrollAccordion("#about", true), timeoutScroll);
+        setTimeout(() => setAboutOpen(true), timeoutOpen);
       },
     },
     {
       title: "projects",
+      id: "#projects",
       color: "#D1CABB",
       action: () => {
-        function handleModals() {
-          setAboutOpen(false);
-          setProjectsOpen(true);
-          setTechOpen(false);
-          return true;
-        }
-        const finished = handleModals();
-
-        setTimeout(() => handleScrollAccordion("#projects", finished), 500);
+        setAboutOpen(false);
+        setTechOpen(false);
+        setTimeout(
+          () => handleScrollAccordion("#projects", true),
+          timeoutScroll
+        );
+        setTimeout(() => setProjectsOpen(true), timeoutOpen);
       },
     },
     {
       title: "tech",
+      id: "#tech",
       color: "#8193a1",
       action: () => {
-        function handleModals() {
-          setAboutOpen(false);
-          setProjectsOpen(false);
-          setTechOpen(true);
-          return true;
-        }
-        const finished = handleModals();
-        setTimeout(() => handleScrollAccordion("#tech", finished), 500);
+        setAboutOpen(false);
+        setProjectsOpen(false);
+        setTimeout(() => handleScrollAccordion("#tech", true), timeoutScroll);
+        setTimeout(() => setTechOpen(true), timeoutOpen);
       },
     },
   ];
@@ -74,7 +68,7 @@ const NavigationBar = () => {
 
   const NavItems = navItems.map((item, idx) => (
     <li key={idx}>
-      <button onClick={item.action}>
+      <button onClick={item.action} /*  href={item.id} */>
         <h3 style={{ color: item.color }}>{item.title}</h3>
       </button>
     </li>

@@ -5,7 +5,7 @@
   justify-content: center
   align-items: center
 
-  padding-left: 2em
+  padding: 2em 2em 0 2em
 
   .wrapper
     width: 100%
@@ -72,13 +72,9 @@ footer
     li
       margin: 0 12px
 
-      img
-        width: 24px
-        margin: 0
-        filter: invert(1)
-        opacity: 0.8
-        &:hover
-          filter: invert(0)
+    a:hover
+      color: $black
+      transition: .3s
 
   span
     font-size: 13px
