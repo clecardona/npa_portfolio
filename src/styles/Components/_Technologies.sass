@@ -4,41 +4,27 @@
   align-items: center
 
   .wrapper
-    h2
-      grid-area: title
-      width: 100%
-
-    p
-      grid-area: paragraph
-      padding: 1em
-      line-height: 1.4
-
-      @media only screen and (min-width: $desktopBreakpoint)
-        height: 100%
-        margin-top: 36px
-
-    ul
-      grid-area: data
-
-  ul
-    margin: 20px 0
+    grid-template-columns: 1fr
+    grid-template-areas: unset
+    gap: 0
     width: 100%
-    padding: 0
+    padding: 1em 0
 
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
-
-    li
+    .techno-grid
       display: grid
-      grid-template-rows: 50px 1fr
-      overflow: hidden
+      gap: 1em
+      grid-template-columns: 1fr 1fr
+      width: 100%
+      padding: 2em 0
+      li
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
 
-      justify-content: center
-      align-content: center
-      align-items: center
-      justify-items: center
+        img
+          height: 50px
 
-      h3
-        font-size: 11px
-        text-align: center
-        color: $grayDark
+        p
+          padding: 1em
+          line-height: 1.4

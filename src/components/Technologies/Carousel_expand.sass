@@ -1,0 +1,62 @@
+.carousel-expand
+    position: relative
+    overflow: hidden
+    height: 240px
+
+    border-radius: 12px
+
+    #box
+        position: absolute
+        display: flex
+        height: 100%
+        width: 100%
+        transition: .5s ease
+        justify-items: center
+        align-items: center
+        padding: 1em
+
+        li
+            position: relative
+            overflow: hidden
+            margin: 0 3px
+            background: #eee
+            border-radius: .5em
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: .7s
+            img
+                height: 70%
+                object-fit: cover
+            .item-title
+                width: 100%
+                opacity: 0
+                position: absolute
+                bottom: 12px
+                text-align: center
+
+                text-shadow: 2px 2px 8px#00000037
+                transform: translateY(40px)
+                transition: all .5s
+                transition-delay: .5s
+
+        .current
+            z-index: 3
+            transition: .7s
+
+            width: 50%
+            .item-title
+                opacity: 1
+                transform: translateY(0)
+                transition: all .5s
+                transition-delay: .2s
+
+        .adjacent
+            filter: opacity(.7) blur(1px)
+
+        .standard
+            filter: opacity(.3) blur(2px)
+
+    #br,#bl
+        display: none
