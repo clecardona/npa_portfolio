@@ -4,7 +4,7 @@ import Stars from "./Stars";
 
 const Hero = (): JSX.Element => {
   const { theme } = useTheme();
-  const isDark = theme == "dark";
+  const isDark = theme === "dark";
   return (
     <section id="hero" className="section-hero">
       <img

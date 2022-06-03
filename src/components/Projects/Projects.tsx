@@ -1,4 +1,3 @@
-import ToggleGallery from "components/Toggles/ToggleGallery";
 import ButtonCard from "./ButtonCard";
 
 import { useTheme } from "state/ThemeProvider";
@@ -13,7 +12,6 @@ const Projects = ({ projects }: IProps): JSX.Element => {
   return (
     <section className="section-portfolio">
       <div className="wrapper">
-        {/* <ToggleGallery /> */}
         <p>
           Here are the projects made during the Frontend course at Novare
           Potential, and further on...
