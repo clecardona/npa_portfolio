@@ -21,7 +21,7 @@ function ExpCard({ item }: Props) {
       </h4>
       <p className="description">
         {item.description.map((i: string, index: number) => (
-          <React.Fragment key={index}>• {i}</React.Fragment>
+          <React.Fragment key={index}> <p className="list-item">• {i}</p></React.Fragment>
         ))}
       </p>
     </li>

@@ -19,9 +19,9 @@ function EduCard({ item }: Props) {
       <h4 className="position">
         <b>{item.school} </b>| {item.city}
       </h4>
-      <p>
+      <p className="description">
         {item.description.map((i: string, id: number) => (
-          <React.Fragment key={i}>• {i}</React.Fragment>
+          <React.Fragment key={i}> <p className="list-item">• {i}</p></React.Fragment>
         ))}
       </p>
     </li>

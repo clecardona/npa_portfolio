@@ -22,13 +22,13 @@ const Accordion = ({
         <button
           className="accordion-title"
           onClick={() => setisOpen(!isOpen)}
-          style={{ background: color }}
+      
         >
           <h3>{title}</h3>
           {isOpen ? (
-            <h3 className="accordion-icon">-</h3>
+            <h2 className="accordion-icon">-</h2>
           ) : (
-            <h3 className="accordion-icon collapsed">+</h3>
+            <h2 className="accordion-icon collapsed">+</h2>
           )}
         </button>
 

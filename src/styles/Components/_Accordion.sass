@@ -8,44 +8,53 @@
 .accordion
   border-radius: .5em
   overflow: hidden
-  @include shadow-light
+  @include shadow-light-accordion
+ 
+  .accordion-title,.accordion-content
+    background: $beigeDark
 
   .accordion-title
     display: flex
     justify-content: space-between
+    align-items: center
 
-    background: $pinkLight
     color: $gray5
     cursor: pointer
     padding: 18px
     width: 100%
     height: 100%
+    
+    *
+      transition: .3s ease
+
+
     &:hover
-      filter: brightness(.95)
+    
       h3
-        transform: scale(1.1)
+        transform: translateX(15px)
         transform-origin: center left
         transition: .3s ease
       .accordion-icon
         transform-origin: center center
-        transform: scale(1.5)
+       
         transition: .3s ease
 
   .accordion-content
-    background: $grayLighter
-
+  
+    border-top: 1px solid #00000010 
     overflow: hidden
     padding: 0 18px
 
 // animate
 // accordion closed
 .accordion-content[aria-expanded="false"]
+  border-top-color:  transparent
   max-height: 0px
   opacity: .3
-  transition: all .5s ease-out
+  transition: all .3s ease-out
 
 // accordion opened
 .accordion-content[aria-expanded="true"]
   max-height: 3000px
   opacity: 1
-  transition: all 1s ease-in-out
+  transition: max-height 1s ease-in-out

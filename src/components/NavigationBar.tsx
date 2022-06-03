@@ -24,7 +24,6 @@ const NavigationBar = () => {
     {
       title: "about",
       id: "#about",
-      color: "#F6C9B6",
       action: () => {
         setProjectsOpen(false);
         setTechOpen(false);
@@ -35,7 +34,6 @@ const NavigationBar = () => {
     {
       title: "projects",
       id: "#projects",
-      color: "#D1CABB",
       action: () => {
         setAboutOpen(false);
         setTechOpen(false);
@@ -49,7 +47,6 @@ const NavigationBar = () => {
     {
       title: "tech",
       id: "#tech",
-      color: "#8193a1",
       action: () => {
         setAboutOpen(false);
         setProjectsOpen(false);
@@ -68,8 +65,8 @@ const NavigationBar = () => {
 
   const NavItems = navItems.map((item, idx) => (
     <li key={idx}>
-      <button onClick={item.action} /*  href={item.id} */>
-        <h3 style={{ color: item.color }}>{item.title}</h3>
+      <button onClick={item.action} className="nav-item">
+        <h3 >{item.title}</h3>
       </button>
     </li>
   ));
