@@ -1,0 +1,80 @@
+.section-contact
+  display: flex
+  flex-direction: column
+
+  justify-content: center
+  align-items: center
+
+  padding: 2em 2em 0 2em
+
+  .wrapper
+    width: 100%
+    padding: .5em 3em
+    margin-bottom: 2em
+    grid-template-rows: repeat(3, min-content)
+    grid-template-areas: "title title title""paragraph paragraph paragraph" "data data data"
+    border-left: 1em solid $grayLight
+
+    @media only screen and (min-width: $tabletBreakpoint)
+      grid-template-rows: repeat(2, min-content)
+      grid-template-areas: "title data data""paragraph data data"
+
+    h2
+      grid-area: title
+      width: 100%
+    p
+      grid-area: paragraph
+      justify-self: flex-start
+      @media only screen and (min-width: $tabletBreakpoint)
+        height: 100%
+        margin-top: 36px
+
+    ul
+      grid-area: data
+
+      width: 100%
+      margin: 0
+      @media only screen and (min-width: $desktopBreakpoint)
+        padding-left: 4em
+
+      li
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+        margin: 12px 0
+        a:hover h4
+          color: $pink
+
+      img
+        opacity: 0.15
+
+      h4
+        margin-left: 12px
+
+footer
+  height: $footer-height
+  width: 100%
+
+  background: $grayDark
+  color: $grayLight
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  align-items: center
+
+  ul
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    li
+      margin: 0 12px
+
+    a:hover
+      color: $black
+      transition: .3s
+
+  span
+    font-size: 13px

@@ -1,0 +1,87 @@
+.header-menu
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+
+  background: $white
+  height: $header-height
+
+  display: grid
+  grid-template-columns: max-content 1fr
+  align-items: center
+  padding-left: 5em
+  padding-right: 2em
+
+  z-index: 100
+
+  @include shadow-light
+
+  @media only screen and (min-width: $desktopBreakpoint)
+    display: flex
+    justify-content: space-between
+    height: $header-height
+
+.author
+  display: flex
+  color: $black
+  @media only screen and (MAX-width: $tabletBreakpoint)
+    h3
+      display: none
+
+.bar
+  height: $mob-button-height
+  width: 100%
+  display: grid
+  grid-auto-flow: column
+
+  justify-content: flex-end
+  align-items: center
+
+  border-radius: 44px
+
+  @media only screen and (min-width: $desktopBreakpoint)
+    background: none
+    width: fit-content
+
+  button
+    text-align: center
+    font-size: 13px
+    color: $black
+    h3
+      text-transform: capitalize
+      border-bottom: 3px solid transparent
+      &:hover
+        border-color: inherit
+
+  .toggle-theme
+    margin-left: .5em
+    transform: scale(.8)
+    @media only screen and (min-width: $tabletBreakpoint)
+      margin-left: 1em
+      transform: scale(1)
+
+.nav-logo
+  position: absolute
+  border-radius: 60px
+  left: 1em
+
+  img
+
+    height: 50px
+    width: 50px
+    filter: invert(1)
+
+  &:hover
+    transform: scale(1.05)
+    transition: 0.1s ease
+
+.header-transparent
+  background: rgba(255,255 ,255 ,.7 )
+
+  img
+    filter: invert(1)
+  div,a
+    color: $black
+  a:hover
+    color: $blueLight

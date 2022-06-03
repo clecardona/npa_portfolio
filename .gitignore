@@ -43,10 +43,8 @@ build
 /build
 
 # Firebase Hosting
-
-
 _.firebase
-.firebasesrc
+.firebaserc
 firebase-debug.log
 firebase.json
 

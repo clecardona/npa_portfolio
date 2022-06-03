@@ -1,0 +1,48 @@
+.bubble
+    background: $beige
+
+    padding: 1.5em 2em
+    border-radius: 2em
+    box-shadow: 22px 22px $gray5_Shadow
+    animation: float2 5s ease-in-out infinite
+    @media only screen and (min-width: $tabletBreakpoint)
+        padding: 1.5em 3em 1.5em 5em
+    .title
+        color: $gray5
+
+    .subtitle
+        h3
+            color: $gray5
+            font-weight: 200
+            text-align: left
+
+.bubble:after
+    transform: translatey(0px)
+    animation: float2 5s ease-in-out infinite
+    content: "."
+    font-weight: bold
+
+    background: $beige
+    color: $beige
+
+    text-shadow: 22px 22px $gray5_Shadow
+    text-align: left
+
+    font-size: 55px
+    width: 55px
+    height: 11px
+    line-height: 30px
+    border-radius: 11px
+
+    position: absolute
+    display: block
+    bottom: -30px
+
+    left: 120px
+    box-shadow: 22px 22px $gray5_Shadow
+    z-index: -2
+
+    @media only screen and (min-width: $tabletBreakpoint)
+        left: unset
+        right: 0
+        text-align: right

@@ -1,0 +1,115 @@
+/* list appears */
+
+//Initial state
+.fade-down-appear
+  transform: translateY(-30px)
+  opacity: 0
+
+.fade-up-appear
+  transform: translateY(30px)
+  opacity: 0
+
+//Final state
+.fade-down-appear-active,
+.fade-up-appear-active
+  opacity: 1
+  transform: translateY(0px)
+  transition: ease 400ms
+
+.title
+  &-enter
+    opacity: 0
+    transform: translateY(-30px)
+    &-active
+      opacity: 1
+      transform: translateX(0)
+      transition: opacity 300ms, transform 300ms
+
+.subtitle
+  &-enter
+    opacity: 0
+    transform: translateY(30px)
+    &-active
+      opacity: 1
+      transform: translateX(0)
+      transition: opacity 300ms, transform 300ms
+
+.modal-overlay
+  &-enter
+    opacity: 0
+    &-active
+      opacity: 1
+      transition: opacity 400ms
+
+  &-exit
+    opacity: 1
+    &-active
+      opacity: 0
+      transition: opacity 400ms
+
+.modal
+  &-enter
+    opacity: 0
+    &-active
+      opacity: 0.5
+      transition: opacity 400ms,
+
+@keyframes enter-animation
+  0%
+    opacity: 0
+    transform: translateX(30vw)
+
+  70%
+    opacity: 1
+    transform: translateX(-50px)
+
+  100%
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes float
+  0%
+    transform: translatey(0px)
+
+  50%
+    transform: translatey(-20px)
+
+  100%
+    transform: translatey(0px)
+
+@keyframes float2
+  0%
+    //line-height: 30px
+    transform: translatey(0px)
+
+  55%
+    transform: translatey(-20px)
+
+  60%
+    //line-height: 10px
+
+  100%
+    //line-height: 30px
+    transform: translatey(0px)
+
+@keyframes fadein
+  0%
+    opacity: 0
+  100%
+    opacity: .8
+
+@keyframes fadeout
+  0%
+    opacity: .8
+  100%
+    opacity: 0
+
+@keyframes shine
+  0%
+    box-shadow: 0px 0px 40px #fefefe
+
+  50%
+    box-shadow: 0px 0px 64px #f7faef
+
+  100%
+    box-shadow: 0px 0px 40px #fefefe

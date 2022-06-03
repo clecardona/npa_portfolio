@@ -1,0 +1,31 @@
+html
+  scroll-behavior: smooth
+  overflow-x: hidden
+
+.App
+  display: grid
+  grid-auto-flow: row
+  min-height: -webkit-fill-available
+
+.accordions
+  padding: 1em .5em
+  display: grid
+  row-gap: 1em
+  @media only screen and (min-width: $tabletBreakpoint)
+    padding: 3em 2em
+
+.bigimage
+
+  background: $gray2
+
+  img
+    height: 500px
+    width: 100%
+    overflow: hidden
+    opacity: .7
+    filter: brightness(.9)
+    object-fit: cover
+    object-position: bottom
+    @media only screen and (max-width: $tabletBreakpoint)
+      height: 300px
+      object-position: bottom right

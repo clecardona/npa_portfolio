@@ -1,0 +1,195 @@
+[
+  {
+    "id": 1,
+    "thumbnailTitle": "Java todo list",
+    "thumbnailURL": "https://cdn.dribbble.com/users/153946/screenshots/1089494/media/67bced0b33ddc31186a2f46f148b101a.png?compress=1&resize=400x300",
+    "isReleased": true,
+    "title": "Todo list",
+    "description": "A simple Java todo list ",
+    "technologies": [
+      "java"
+    ],
+    "githubURL": "https://github.com/clecardona/todolist",
+    "websiteURL": "",
+    "screenshotURL": "https://clecardona.com/npa/img/screenshots/desktop/todolist.png"
+  },
+  {
+    "id": 2,
+    "thumbnailTitle": "Fashion social network",
+    "thumbnailURL": "https://cdn.dribbble.com/users/2402074/screenshots/10630606/media/90e69d28d7d4b875bd26a97638edb868.jpg?compress=1&resize=800x600",
+    "isReleased": true,
+    "title": "Fashion social network",
+    "description": "A tinder-like social app where users can submit their daily style, and fight with others in order to become the fashion king of the day",
+    "technologies": [
+      "javascript",
+      "react",
+      "firebase",
+      "css",
+      "html",
+      "java",
+      "spring"
+    ],
+    "githubURL": "https://github.com/clecardona/inStyle",
+    "websiteURL": "https://instyle-3f5f5.web.app/",
+    "screenshotURL": "https://clecardona.com/npa/img/screenshots/desktop/instyle.png"
+  },
+  {
+    "id": 3,
+    "thumbnailTitle": "EIKA Shopping-List",
+    "thumbnailURL": "https://cdn.dribbble.com/users/1008875/screenshots/4532141/shopping.png?compress=1&resize=800x600",
+    "isReleased": true,
+    "description": "A Shopping-list app where users can save their items to buy by EIKA store",
+    "technologies": [
+      "javascript",
+      "react",
+      "firebase",
+      "sass",
+      "html"
+    ],
+    "title": "Shopping-List",
+    "githubURL": "https://github.com/clecardona/eika",
+    "websiteURL": "https://eika-31a2e.web.app/",
+    "screenshotURL": "https://firebasestorage.googleapis.com/v0/b/npa-portfolio.appspot.com/o/screenshot-eika.png?alt=media&token=0d5c2adf-63c5-4c03-ad8e-e5e21a1c4ed8"
+  },
+  {
+    "id": 4,
+    "thumbnailTitle": "Image gallery",
+    "thumbnailURL": "https://cdn.dribbble.com/users/4540442/screenshots/15285300/media/e68d117f62722937a9448c2d7ad2c72c.png?compress=1&resize=1600x1200",
+    "isReleased": true,
+    "description": "A simple multi style gallery, to apprehend different way of rendering images on a website",
+    "technologies": [
+      "javascript",
+      "react",
+      "firebase",
+      "sass",
+      "html"
+    ],
+    "title": "La Galerie",
+    "githubURL": "https://github.com/clecardona/galerie",
+    "websiteURL": "https://galerie-9a9ae.web.app/",
+    "screenshotURL": "https://clecardona.com/npa/img/screenshots/desktop/galerie.png"
+  },
+  {
+    "id": 5,
+    "thumbnailTitle": "Vegan Restaurant",
+    "thumbnailURL": "https://cdn.dribbble.com/users/427368/screenshots/11523001/dribbble.jpg?compress=1&resize=800x600",
+    "isReleased": true,
+    "description": "A website for a Vegan Restaurant where user can order food online",
+    "technologies": [
+      "javascript",
+      "react",
+      "firebase",
+      "sass",
+      "html"
+    ],
+    "title": "Wild and the Moon",
+    "githubURL": "https://github.com/clecardona/vegan-restaurant",
+    "websiteURL": "https://npa-vegan-restaurant.web.app/",
+    "screenshotURL": "https://clecardona.com/npa/portfolio/screenshots/vegan_restaurant.png"
+  },
+  {
+    "id": 6,
+    "thumbnailTitle": "Package Tracker",
+    "thumbnailURL": "https://cdn.dribbble.com/users/427368/screenshots/11475057/dribbble.jpg?compress=1&resize=800x600",
+    "isReleased": true,
+    "description": "A Package tracker who allows user to track his parcel ordered online.",
+    "technologies": [
+      "javascript",
+      "react",
+      "firebase",
+      "sass",
+      "html"
+    ],
+    "title": "TrackCel",
+    "githubURL": "https://github.com/clecardona/npa-package-tracker",
+    "websiteURL": "https://npa-package-tracker.web.app/",
+    "screenshotURL": "https://clecardona.com/npa/portfolio/screenshots/react_package_tracker.png"
+  },
+  {
+    "id": 7,
+    "thumbnailTitle": "Todo list Unit Testing",
+    "thumbnailURL": "https://cdn.dribbble.com/users/441305/screenshots/5477297/dribbble-school_4x.png?compress=1&resize=1600x1200",
+    "isReleased": true,
+    "description": "A todo list developed using Unit Testing",
+    "technologies": [
+      "javascript",
+      "react",
+      "firebase",
+      "sass",
+      "html"
+    ],
+    "title": "Todo list Unit Testing",
+    "githubURL": "https://github.com/clecardona/npa-todolist-test",
+    "websiteURL": "https://npa-todolist-tested.web.app/",
+    "screenshotURL": "https://firebasestorage.googleapis.com/v0/b/npa-portfolio.appspot.com/o/screenshot-todolist-test.png?alt=media&token=08a306ba-761e-497d-b81f-e9a272f4bcfd"
+  },
+  {
+    "id": 8,
+    "thumbnailTitle": "BBQ restaurant website",
+    "thumbnailURL": "https://cdn.dribbble.com/users/1277705/screenshots/13554344/media/a8026e142c02a09c52da8d419ad92b75.png?compress=1&resize=1600x1200",
+    "isReleased": true,
+    "description": "YETI BBQ Restaurant in Stockholm",
+    "technologies": [
+      "javascript",
+      "react",
+      "firebase",
+      "sass",
+      "html"
+    ],
+    "title": "YETI BBQ",
+    "githubURL": "https://github.com/clecardona/npa-bbq-restaurant",
+    "websiteURL": "https://yet-bbq.web.app/",
+    "screenshotURL": "https://firebasestorage.googleapis.com/v0/b/npa-portfolio.appspot.com/o/screenshot-bbq.png?alt=media&token=85ec5bac-32db-46da-9908-a68739aace5a"
+  },
+  {
+    "id": 9,
+    "thumbnailTitle": "Learning platform",
+    "thumbnailURL": "https://cdn.dribbble.com/users/46743/screenshots/4406766/evertonmedical_header-dribbble.jpg?compress=1&resize=410x300",
+    "isReleased": true,
+    "description": "A fun learning platform based on self learning and interests",
+    "technologies": [
+      "react",
+      "typescript",
+      "sass",
+      "firebase"
+    ],
+    "title": "Foot-X",
+    "githubURL": "https://github.com/clecardona/npa-lms",
+    "websiteURL": "https://lms-football.web.app/",
+    "screenshotURL": "https://clecardona.com/npa/portfolio/screenshots/footx.png"
+  },
+  {
+    "id": 10,
+    "thumbnailTitle": "Netflix Clone",
+    "thumbnailURL": "https://cdn.dribbble.com/users/2522172/screenshots/14777334/media/07b4f226c700d5557be52e4a449d3e3c.png?compress=1&resize=1600x1200",
+    "isReleased": true,
+    "description": "A video on demand app mimicking the Famous One ",
+    "technologies": [
+      "typescript",
+      "react",
+      "sass",
+      "firebase"
+    ],
+    "title": "FLETNIX",
+    "githubURL": "https://github.com/clecardona/fletnix",
+    "websiteURL": "https://fletnix-3640a.web.app/",
+    "screenshotURL": "https://clecardona.com/npa/portfolio/screenshots/fletnix.png"
+  },
+  {
+    "id": 11,
+    "thumbnailTitle": "CV Creator",
+    "thumbnailURL": "https://cdn.dribbble.com/users/2525010/screenshots/6231961/cv.jpg?compress=1&resize=400x300&vertical=top",
+    "isReleased": true,
+    "description": "A CV Maker App",
+    "technologies": [
+      "typescript",
+      "react",
+      "sass",
+      "firebase"
+    ],
+    "githubURL": "https://github.com/clecardona/cool_components",
+    "title": "The CV Coach",
+    "websiteURL": "https://cv-maker-cdfa3.web.app/",
+    "screenshotURL": "https://firebasestorage.googleapis.com/v0/b/npa-portfolio.appspot.com/o/screenshot-cvmaker.png?alt=media&token=c0686669-a16b-4171-92b1-86eb7f263123"
+  }
+]

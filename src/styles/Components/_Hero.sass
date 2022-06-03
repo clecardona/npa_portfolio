@@ -1,0 +1,57 @@
+.section-hero
+  display: grid
+  text-align: center
+
+  .bg
+    position: absolute
+    padding: 0
+    margin: 0
+
+    height: -moz-available
+    height: -webkit-fill-available
+
+    width: 100%
+    object-fit: cover
+    z-index: -10
+    opacity: 0.7
+    @media only screen and (min-width: $tabletBreakpoint)
+      height: 100vh
+  .layout
+    display: grid
+
+    height: -moz-available
+    height: -webkit-fill-available
+
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr min-content
+    grid-template-areas: "bubble""illustration"
+
+    @media only screen and (min-width: $tabletBreakpoint)
+      height: 100vh
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr
+      grid-template-areas: "bubble illustration"
+
+  .bubble
+    grid-area: bubble
+    align-self: center
+    justify-self: center
+    margin-top: 2em
+    @media only screen and (min-width: $tabletBreakpoint)
+      align-self: flex-end
+      justify-self: flex-end
+      margin-bottom: 20em
+
+  .illustration
+    grid-area: illustration
+    height: 350px
+    width: auto
+    align-self: end
+    justify-self: center
+    object-fit: cover
+    object-position: bottom center
+
+    @media only screen and (min-width: $desktopBreakpoint)
+      height: 400px
+      justify-self: center
+      padding-right: 20%

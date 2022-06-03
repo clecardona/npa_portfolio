@@ -1,0 +1,50 @@
+button
+  background: none
+  border: none
+  cursor: pointer
+
+.btn
+  height: $mob-button-height
+  display: grid
+  grid-template-columns: min-content 1fr
+  align-items: center
+  justify-items: center
+  border-radius: 6px
+
+  img
+    height: 1.2em
+    padding: 0 1em
+    border-right: 1px solid $gray5
+
+.btn-main
+  background: black
+  border: 1px solid black
+  transition: .3s
+
+  h3
+    color: white
+  &:hover
+    background: $gray3
+    border-color: $gray3
+    transition: .3s
+
+.btn-ghost
+  border: 1px solid black
+  transition: .3s
+
+  h3
+    color: black
+  &:hover
+    background: $grayLight
+    transition: .3s
+
+.btn-more
+  grid-template-columns: 22px 1fr
+  transition: .3s
+  h3
+    color: $darkBlue
+    margin-right: .3em
+  &:hover
+    h3
+      color: $lightBlue
+      transition: .3s

@@ -1,0 +1,115 @@
+.cv-grid
+    display: grid
+    gap: .5em
+
+    grid-template-columns: 1fr
+    grid-auto-flow: row
+    grid-template-areas: "contact" "experience" "languages" "education" "skills"
+
+    justify-content: center
+    padding-right: 3em
+
+    @media only screen and (min-width: $tabletBreakpoint)
+        gap: 1em .5em
+        grid-template-columns: 3fr min-content
+        grid-template-rows: repeat(2,min-content)
+        grid-template-areas: "experience contact" "experience languages" "education skills"
+
+    .cv-skills
+        grid-area: skills
+
+        display: grid
+        grid-auto-flow: row
+
+        padding: 1em
+        gap: 1em
+        h2
+            color: $yellow
+
+        ul
+            display: grid
+            grid-auto-flow: row
+            align-content: flex-start
+            gap: .3em
+
+        @media only screen and (max-width: $tabletBreakpoint)
+            padding: 0 0 1em 0
+
+    .cv-contact
+        grid-area: contact
+
+        padding: 0 1em 1em 1em
+        @media only screen and (min-width: $tabletBreakpoint)
+            margin-top: 2em
+
+        ul
+            display: grid
+            grid-auto-flow: row
+            align-content: flex-start
+    @media only screen and (max-width: $tabletBreakpoint)
+        padding: 0
+
+    .cv-experience
+        grid-area: experience
+
+        display: grid
+        grid-auto-flow: row
+        gap: 1em
+
+        h2
+            color: $blueLight
+        ul
+            display: grid
+            grid-auto-flow: row
+            gap: 1em
+            align-content: flex-start
+        @media only screen and (min-width: $tabletBreakpoint)
+            padding: 1em 0
+    .cv-education
+        grid-area: education
+
+        display: grid
+        grid-auto-flow: row
+        gap: 1em
+
+        padding: 1em 0
+        h2
+            color: $pink
+        ul
+            display: grid
+            grid-auto-flow: row
+            gap: 1em
+            align-content: flex-start
+
+    .cv-languages
+        grid-area: languages
+        padding: 1em
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-auto-flow: row
+        gap: 1em
+        align-content: flex-start
+
+        padding: 1em
+        h2
+            color: $green
+
+        .chart
+            display: grid
+            grid-auto-flow: row
+            justify-items: center
+        @media only screen and (max-width: $tabletBreakpoint)
+            padding: 2em 0 0 0
+// animate
+// closed
+.cv-grid[aria-expanded="false"]
+    max-height: 0
+    opacity: 0.3
+    transition: all .3s ease-out
+// opened
+.cv-grid[aria-expanded="true"]
+    max-height: 3000px
+    opacity: 1
+    transition: all .3s ease-in-out
+    border-top: 1px solid $grayDark
+    padding-top: 1em
