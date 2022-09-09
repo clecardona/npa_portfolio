@@ -44,16 +44,14 @@
       justify-self: flex-end
       margin-bottom: 20em
 
-  .illustration
-    grid-area: illustration
-    height: 350px
-    width: auto
-    align-self: end
-    justify-self: center
-    object-fit: cover
-    object-position: bottom center
+.hero-container
+  position: relative
+  height: 95vh
 
-    @media only screen and (min-width: $desktopBreakpoint)
-      height: 400px
-      justify-self: center
-      padding-right: 20%
+.illustration
+  position: absolute
+  bottom: 0
+  right: 50px
+  height: 350px
+  @media only screen and (min-width: $tabletBreakpoint)
+    height: 500px

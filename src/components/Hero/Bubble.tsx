@@ -1,20 +1,24 @@
-import { useState, useEffect } from "react";
-import { CSSTransition } from "react-transition-group";
+import {
+  useEffect,
+  useState,
+} from 'react';
 
-const Bubble = (): JSX.Element => {
-  const [inProp, setInProp] = useState(false);
+import { CSSTransition } from 'react-transition-group';
+
+const Bubble = ({ ...props }): JSX.Element => {
+  const [inProp, setInProp] = useState(false)
 
   useEffect(() => {
-    setInProp(true);
-  }, []);
+    setInProp(true)
+  }, [])
 
   return (
-    <div className="bubble">
+    <div className='bubble'>
       <CSSTransition
         in={inProp}
         timeout={400}
-        classNames="title"
-        className="title"
+        classNames='title'
+        className='title'
       >
         <h1>
           Hi, I am <strong>Clément</strong>
@@ -23,8 +27,8 @@ const Bubble = (): JSX.Element => {
       <CSSTransition
         in={inProp}
         timeout={400}
-        classNames="subtitle"
-        className="subtitle"
+        classNames='subtitle'
+        className='subtitle'
       >
         <div>
           <h3>Frontend developer from France</h3>
@@ -32,6 +36,6 @@ const Bubble = (): JSX.Element => {
         </div>
       </CSSTransition>
     </div>
-  );
-};
-export default Bubble;
+  )
+}
+export default Bubble
