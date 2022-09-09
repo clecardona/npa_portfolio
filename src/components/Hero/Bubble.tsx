@@ -3,17 +3,25 @@ import {
   useState,
 } from 'react';
 
+import { erf } from 'mathjs';
 import { CSSTransition } from 'react-transition-group';
 
-const Bubble = ({ ...props }): JSX.Element => {
+const Bubble = ({ percentage }: { percentage?: number }): JSX.Element => {
   const [inProp, setInProp] = useState(false)
 
   useEffect(() => {
     setInProp(true)
   }, [])
 
+  function getOffset() {
+    if (!percentage) return
+    const delta = 2000 * (percentage - 1)
+    return -150 + 400 * erf(0.003 * delta)
+  }
+
+  if (!percentage) return <></>
   return (
-    <div className='bubble'>
+    <div className='bubble' style={{ bottom: getOffset() }}>
       <CSSTransition
         in={inProp}
         timeout={400}

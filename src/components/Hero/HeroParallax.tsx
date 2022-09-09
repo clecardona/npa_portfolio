@@ -18,6 +18,7 @@ const HeroParallax = (): JSX.Element => {
       bgImageAlt='bg'
       bgImageStyle={{ opacity: 0.7 }}
       strength={250}
+      renderLayer={(percentage) => <Bubble percentage={percentage} />}
     >
       {isDark && (
         <Background>
@@ -26,7 +27,7 @@ const HeroParallax = (): JSX.Element => {
       )}
 
       <div className='hero-container'>
-        <Bubble />
+        {/* <Bubble /> */}
         <img
           className='illustration'
           alt='illustration'
