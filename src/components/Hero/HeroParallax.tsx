@@ -16,6 +16,7 @@ const HeroParallax = (): JSX.Element => {
       blur={{ min: -5, max: 5 }}
       bgImage={!isDark ? "https://clecardona.com/npa/img/bg.png" : ""}
       bgImageAlt='bg'
+      bgImageStyle={{ opacity: 0.7 }}
       strength={250}
     >
       {isDark && (
