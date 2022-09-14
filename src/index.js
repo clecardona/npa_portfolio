@@ -1,8 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import { ThemeProvider } from "state/ThemeProvider";
+import 'assets/translations/i18n';
+import './index.css';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import { ThemeProvider } from 'state/ThemeProvider';
+
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,4 +15,4 @@ ReactDOM.render(
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
-);
+)

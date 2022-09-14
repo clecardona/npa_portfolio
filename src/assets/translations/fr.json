@@ -1,0 +1,17 @@
+{
+    "translation": {
+        "accordion.about": {
+            "title": "A propos"
+        },
+        "accordion.projects": {
+            "title": "Projets"
+        },
+        "accordion.tech": {
+            "title": "Tech Stack"
+        },
+        "contact": {
+            "header": "Contactez-moi",
+            "text": "Voici mes coordonnées, si vous êtes interessé(e) pour une collaboration."
+        }
+    }
+}

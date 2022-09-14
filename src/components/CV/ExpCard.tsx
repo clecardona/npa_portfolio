@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
 type Props = {
-  item: any;
-};
+  item: any
+}
 
 function ExpCard({ item }: Props) {
   return (
-    <li key={item.position} className="card-exp">
-      <div className="title">
+    <li key={item.position} className='card-exp'>
+      <div className='title'>
         <h3>
           <b>{item.position}</b>
         </h3>
@@ -16,16 +16,18 @@ function ExpCard({ item }: Props) {
         </h3>
       </div>
 
-      <h4 className="position">
+      <h4 className='position'>
         <b>{item.company} </b>| {item.city}
       </h4>
-      <p className="description">
+      <div className='description'>
         {item.description.map((i: string, index: number) => (
-          <React.Fragment key={index}> <p className="list-item">• {i}</p></React.Fragment>
+          <React.Fragment key={index}>
+            <p className='list-item'>• {i}</p>
+          </React.Fragment>
         ))}
-      </p>
+      </div>
     </li>
-  );
+  )
 }
 
-export default ExpCard;
+export default ExpCard

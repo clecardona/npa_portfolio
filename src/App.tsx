@@ -14,6 +14,7 @@ import {
 import HeroParallax from 'components/Hero/HeroParallax';
 import Portfolio from 'components/Projects/Projects';
 import Technologies from 'components/Technologies/Technologies';
+import { useTranslation } from 'react-i18next';
 import { getCollection } from 'scripts/firebase/fireStore';
 import { useTheme } from 'state/ThemeProvider';
 
@@ -32,6 +33,7 @@ const App = (): JSX.Element => {
     setTechOpen,
     theme,
   } = useTheme()
+  const { t } = useTranslation()
 
   const [projects, setProjects] = useState([])
   const [technologies, setTechnologies] = useState([])
@@ -59,7 +61,11 @@ const App = (): JSX.Element => {
     }
   }, [])
 
-  useEffect(() => fetchData(), [fetchData])
+  useEffect(() => {
+    fetchData()
+  }, [fetchData])
+
+  useEffect(() => {}, [])
 
   return (
     <div className={theme === "dark" ? "App dark" : "App"}>
@@ -68,14 +74,13 @@ const App = (): JSX.Element => {
       {status === READY && (
         <>
           <NavigationBar />
-          {/* <Hero /> */}
           <HeroParallax />
 
           <div className='accordions'>
             <Accordion
               isOpen={isAboutOpen}
               setisOpen={setAboutOpen}
-              title='About me'
+              title={t("accordion.about.title")}
               content={<AboutMe />}
               color='7A8C99'
               id='about'
@@ -84,7 +89,7 @@ const App = (): JSX.Element => {
             <Accordion
               isOpen={isProjectsOpen}
               setisOpen={setProjectsOpen}
-              title='Projects'
+              title={t("accordion.projects.title")}
               content={<Portfolio projects={projects} />}
               color='#D1CABB'
               id='projects'
@@ -92,7 +97,7 @@ const App = (): JSX.Element => {
             <Accordion
               isOpen={isTechOpen}
               setisOpen={setTechOpen}
-              title='Tech stack'
+              title={t("accordion.tech.title")}
               content={<Technologies technologies={technologies} />}
               color='#8193a1'
               id='tech'

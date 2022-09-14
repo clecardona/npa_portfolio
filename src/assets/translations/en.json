@@ -1,0 +1,22 @@
+{
+    "translation": {
+        "accordion.about": {
+            "title": "About me"
+        },
+        "accordion.projects": {
+            "title": "Projects"
+        },
+        "accordion.tech": {
+            "title": "Tech Stack"
+        },
+        "bubble": {
+            "title": "Hi, I am <strong>Clément</strong>",
+            "subtitle": "Frontend developer from France",
+            "paragraph": "Living in Stockholm, Sweden"
+        },
+        "contact": {
+            "header": "Contact me",
+            "text": "Here is my contact information if you are interested in starting a collaboration."
+        }
+    }
+}

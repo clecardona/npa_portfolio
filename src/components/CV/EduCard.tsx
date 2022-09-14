@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 type Props = {
-  item: any;
-};
+  item: any
+}
 
 function EduCard({ item }: Props) {
   return (
-    <li key={item.program} className="card-edu">
+    <li key={item.program} className='card-edu'>
       <div className={item.url ? "title with-link" : "title"}>
         <h3>
           <b>{item.program}</b>
@@ -16,16 +16,18 @@ function EduCard({ item }: Props) {
         </h3>
       </div>
 
-      <h4 className="position">
+      <h4 className='position'>
         <b>{item.school} </b>| {item.city}
       </h4>
-      <p className="description">
+      <div className='description'>
         {item.description.map((i: string, id: number) => (
-          <React.Fragment key={i}> <p className="list-item">• {i}</p></React.Fragment>
+          <React.Fragment key={i}>
+            <p className='list-item'>• {i}</p>
+          </React.Fragment>
         ))}
-      </p>
+      </div>
     </li>
-  );
+  )
 }
 
-export default EduCard;
+export default EduCard
