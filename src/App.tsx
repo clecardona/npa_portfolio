@@ -20,7 +20,7 @@ import { useTheme } from 'state/ThemeProvider';
 
 import AboutMe from './components/AboutMe';
 import Accordion from './components/Accordion';
-import NavigationBar from './components/NavigationBar';
+import NavigationBar from './components/NavBar/NavigationBar';
 
 const App = (): JSX.Element => {
   // Global state

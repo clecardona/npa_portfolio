@@ -4,8 +4,9 @@ import {
 } from 'react';
 
 import ToggleTheme from 'components/Toggles/ToggleTheme';
-import { useTranslation } from 'react-i18next';
 import { useTheme } from 'state/ThemeProvider';
+
+import { SelectLanguage } from './SelectLanguage';
 
 const NavigationBar = () => {
   // Global state
@@ -78,44 +79,27 @@ const NavigationBar = () => {
   ))
 
   return (
-    <nav
-      className={
-        scrollPosition < 50 ? "header-menu" : "header-menu header-transparent"
-      }
-    >
-      <div className='nav-logo'>
-        <a href='#hero'>
-          <img alt='logo' src='https://clecardona.com/npa/img/CC.png' />
-        </a>
-      </div>
-      <div className='author'>
-        <h3>Clément Cardona</h3>
-      </div>
-      <ul className='bar'>
-        {NavItems}
-        <ToggleTheme />
-        <SelectLanguage />
-      </ul>
-    </nav>
+    <div className='nav-container'>
+      <SelectLanguage />
+      <nav
+        className={
+          scrollPosition < 50 ? "header-menu" : "header-menu header-transparent"
+        }
+      >
+        <div className='nav-logo'>
+          <a href='#hero'>
+            <img alt='logo' src='https://clecardona.com/npa/img/CC.png' />
+          </a>
+        </div>
+        <div className='author'>
+          <h3>Clément Cardona</h3>
+        </div>
+        <ul className='bar'>
+          {NavItems}
+          <ToggleTheme />
+        </ul>
+      </nav>
+    </div>
   )
 }
 export default NavigationBar
-
-const SelectLanguage = () => {
-  const { i18n } = useTranslation()
-  const { language, setLanguage } = useTheme()
-  return (
-    <select
-      id='language'
-      value={language}
-      onChange={(e) => {
-        setLanguage(e.target.value)
-        i18n.changeLanguage(e.target.value)
-      }}
-    >
-      <option value='en'>English</option>
-      <option value='sv'>Svenska</option>
-      <option value='fr'>Français</option>
-    </select>
-  )
-}

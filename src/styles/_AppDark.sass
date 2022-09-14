@@ -10,10 +10,9 @@
 
   .header-menu img
     filter: invert(0.3)
-  
+
   .nav-item h3
     color: $white
-
 
   .header-transparent
     background: rgba(0,0,0,.5)
@@ -24,18 +23,18 @@
     filter: grayscale(.5) sepia(.3)
 
   .bubble
-    $color:$white
-
-    background:  $color
-    box-shadow: 0px 0px 16px  $color
-    .title,.subtitle h3
+    $color: $white
+    z-index: 1
+    background: $color
+    box-shadow: 0px 0px 16px $color
+    h1,h3
       color: #0c092e
 
     &::after
-      background:  $color
-      color:  $color
-      box-shadow: 0px 0px 16px  $color
-      text-shadow: 0px 0px 16px  $color
+      background: $color
+      color: $color
+      box-shadow: 0px 0px 16px $color
+      text-shadow: 0px 0px 16px $color
 
   .accordion
     .accordion-title
@@ -44,10 +43,10 @@
         // filter: brightness(0.8)
       h3
         color: $white
-  
+
     .accordion-content
       background: $gray3
-      border-top: 1px solid #ffffff10 
+      border-top: 1px solid #ffffff10
     .about-paragraph
       border-color: $gray4
 
@@ -56,7 +55,6 @@
     ul img
       filter: invert(1)
       opacity: .6
-   
 
   footer
     background: $gray2
@@ -75,4 +73,14 @@
     filter: brightness(0.8)
     &:hover
       filter: brightness(1)
-      
+
+  .caret-container
+    background: #2d2929a2
+    &:hover
+      background: $gray3
+    svg
+      fill: white
+    button
+      color: white
+    .caret li:hover
+      background: $gray3
