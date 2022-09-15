@@ -1,8 +1,11 @@
-import { useTheme } from "state/ThemeProvider"
-import CV from "./CV/CV"
+import { useTranslation } from 'react-i18next';
+import { useTheme } from 'state/ThemeProvider';
+
+import CV from './CV/CV';
 
 const AboutMe = (): JSX.Element => {
   const { isCVOpen, setCVOpen } = useTheme()
+  const { t } = useTranslation()
   return (
     <>
       <div className='about-content'>
@@ -11,15 +14,7 @@ const AboutMe = (): JSX.Element => {
           alt='portrait'
           src='http://clecardona.com/img/portrait.jpg'
         />
-        <p className='about-paragraph'>
-          Hi! I am Clement, a junior frontend developer from Nice , France.
-          <br />
-          This is my Portfolio, which I use to showcase everything I develop. I
-          specialize in React.js development with TypeScript with a intuitive
-          design and attention to details.
-          <br /> Why you might ask ? <br />
-          Well, scroll down and let me convince you.
-        </p>
+        <p className='about-paragraph'>{t("accordion.about.paragraph")}</p>
       </div>
       <div className='additional-content'>
         <button className='btn btn-more' onClick={() => setCVOpen(!isCVOpen)}>

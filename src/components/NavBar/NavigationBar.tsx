@@ -4,6 +4,7 @@ import {
 } from 'react';
 
 import ToggleTheme from 'components/Toggles/ToggleTheme';
+import { useTranslation } from 'react-i18next';
 import { useTheme } from 'state/ThemeProvider';
 
 import { SelectLanguage } from './SelectLanguage';
@@ -11,6 +12,7 @@ import { SelectLanguage } from './SelectLanguage';
 const NavigationBar = () => {
   // Global state
   const { setAboutOpen, setProjectsOpen, setTechOpen } = useTheme()
+  const { t } = useTranslation()
 
   // Local state
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -29,7 +31,7 @@ const NavigationBar = () => {
 
   const navItems = [
     {
-      title: "about",
+      title: t("accordion.about.title"),
       id: "#about",
       action: () => {
         setProjectsOpen(false)
@@ -39,7 +41,7 @@ const NavigationBar = () => {
       },
     },
     {
-      title: "projects",
+      title: t("accordion.projects.title"),
       id: "#projects",
       action: () => {
         setAboutOpen(false)
@@ -52,7 +54,7 @@ const NavigationBar = () => {
       },
     },
     {
-      title: "tech",
+      title: t("accordion.tech.title"),
       id: "#tech",
       action: () => {
         setAboutOpen(false)

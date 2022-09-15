@@ -16,11 +16,6 @@
             "levelValue": "95"
         }
     ],
-    "highlights": {
-        "success": "I did 50  top 1 in Fortnite",
-        "yourself": "Dedicated and passionate",
-        "impression": "Blue is my favourite color"
-    },
     "photoURL": "http://clecardona.com/img/portrait.jpg",
     "contact": {
         "firstname": "Clément",
@@ -31,8 +26,7 @@
         "lastname": "Cardona",
         "jobTitle": "Frontend developer",
         "email": "clecardona@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/clecardona/",
-        "middlename": "Emil"
+        "linkedin": "https://www.linkedin.com/in/clecardona/"
     },
     "education": [
         {

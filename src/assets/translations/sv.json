@@ -1,13 +1,16 @@
 {
     "translation": {
         "accordion.about": {
-            "title": "Om mig"
+            "title": "Om mig",
+            "paragraph": "Hej! Clement heter jag , en junior frontend utvecklare. Det är min Portfolio, som jag använder att visa projekt jag utvecklar med  React.js och TypeScript med fokuset på design och detaljer. Skrolla ner för atte se mer"
         },
         "accordion.projects": {
-            "title": "Projekt"
+            "title": "Projekt",
+            "paragraph": "Här finns flera projekt att titta på."
         },
         "accordion.tech": {
-            "title": "Tech Stack"
+            "title": "Tech Stack",
+            "paragraph": "Här finns teknologi jag jobbar med och de som jag har börjat att lära mig."
         },
         "bubble": {
             "title": "Hej, Jag är <strong>Clément</strong>",
@@ -17,6 +20,9 @@
         "contact": {
             "header": "Kontakta mig",
             "text": "Här finns mina kontaktuppgifter om du är intresserad att samarbeta med mig"
+        },
+        "select.language": {
+            "language": "Språk"
         }
     }
 }

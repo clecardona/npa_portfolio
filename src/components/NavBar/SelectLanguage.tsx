@@ -10,7 +10,7 @@ import {
 import { useTheme } from 'state/ThemeProvider';
 
 export const SelectLanguage = () => {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { language, setLanguage } = useTheme()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -22,7 +22,7 @@ export const SelectLanguage = () => {
   return (
     <div className='caret-container'>
       <button id='btn-opener' onClick={() => setIsOpen(!isOpen)}>
-        <h4>Language</h4>
+        <h4>{t("select.language.language")} </h4>
         {!isOpen ? (
           <IoIosArrowDown size={16} id='arrow-down' />
         ) : (
