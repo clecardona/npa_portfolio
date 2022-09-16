@@ -1,43 +1,20 @@
 {
-    "languages": [
-        {
-            "language": "Swedish",
-            "level": "Fluent",
-            "levelValue": "60"
-        },
-        {
-            "language": "English",
-            "level": "Fluent",
-            "levelValue": "75"
-        },
-        {
-            "language": "French",
-            "level": "Native",
-            "levelValue": "95"
-        }
-    ],
-    "photoURL": "http://clecardona.com/img/portrait.jpg",
     "contact": {
         "firstname": "Clément",
-        "postcode": "11354",
-        "city": "Göteborg",
-        "mobile": "0781360998",
-        "address": "",
         "lastname": "Cardona",
         "jobTitle": "Frontend developer",
         "email": "clecardona@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/clecardona/",
-        "middlename": "Emil"
+        "linkedin": "https://www.linkedin.com/in/clecardona/"
     },
     "education": [
         {
             "school": "Novare Potential",
             "program": "Frontend Academy",
-            "city": "Stockholm, Sweden",
+            "city": "Stockholm, Sverige",
             "from": "JUL 2021",
             "to": "NOV 2021",
             "description": [
-                "Focus on Frontend",
+                "Fokus på Frontend",
                 "React.js, Firebase hosting"
             ],
             "url": "https://novare.se/potential/become-a-frontend-developer-in-16-weeks-and-find-your-dream-job/"
@@ -45,62 +22,62 @@
         {
             "school": "Novare Potential and KTH",
             "program": "Software Development Academy",
-            "city": "Stockholm, Sweden",
+            "city": "Stockholm, Sverige",
             "from": "FEB 2021",
             "to": "APR 2021",
             "description": [
-                "Learning basics of software development",
-                "Frontend and Backend"
+                "Utbildning om webbutveckling",
+                "Frontend och Backend"
             ],
             "url": "https://www.kth.se/en/itm/sda/software-development-academy-1.841849"
         },
         {
             "school": "INSA",
-            "program": "Architecture - Master 2",
-            "city": "Strasbourg, France",
+            "program": "Arkitektur - Master 2",
+            "city": "Strasbourg, Frankrike",
             "from": "SEP 2009",
             "to": "SEP 2013",
             "description": [
-                "Master 2 in Architecture"
+                "Master 2 i Arkitektur"
             ],
             "url": "http://www.insa-strasbourg.fr/fr/architecte-insa/"
         }
     ],
     "experience": [
         {
-            "company": "Folksam (consultancy)",
-            "position": "Frontend Developer",
-            "city": "Stockholm, Sweden",
+            "company": "Folksam ",
+            "position": "Frontend utvecklare",
+            "city": "Stockholm, Sverige",
             "from": "JAN 2022",
-            "to": "NOW",
+            "to": "NU",
             "description": [
-                "Maintaining and developing a web app",
-                "Working in SAFe environment"
+                "Utveckla web-app (Mina Sidor)",
+                "Jobbar Agilt och SAFe ramverk"
             ],
             "url": "https://www.folksam.se/"
         },
         {
             "company": "ONArchitecture",
-            "position": "Architect (construction)",
-            "city": "Nice, France",
+            "position": "Arkitekt (konstruktion)",
+            "city": "Nice, Frankrike",
             "from": "JAN 2013",
             "to": "DEC 2019",
             "description": [
-                "Developed and lead architectural projects from sketches to construction.",
-                "Specialised on housing . Participated also in public facilities and equipments projects.",
-                "Ensured financial monitoring of construction as well as quality ,respect of schedule, architectural design .",
-                "Drove negotiations with client , building companies as well as technical design offices."
+                "/Developed and lead architectural projects from sketches to construction.",
+                "/Specialised on housing . Participated also in public facilities and equipments projects.",
+                "/Ensured financial monitoring of construction as well as quality ,respect of schedule, architectural design .",
+                "/Drove negotiations with client , building companies as well as technical design offices."
             ],
             "url": "https://www.onarchitecture.fr/"
         }
     ],
     "skills": [
         "Positivitet",
-        "/Persistence",
-        "/Problem solver",
+        "Uthållighet",
+        "Problemlösare",
         "Kreativitet",
-        "/Proactive ",
-        "/Resilience",
+        "Proaktiv",
+        "Elasticitet",
         "Nyfiken"
     ]
 }

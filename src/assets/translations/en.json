@@ -7,7 +7,9 @@
                 "experience": "Work Experience",
                 "education": "Education",
                 "skills": "Soft Skills"
-            }
+            },
+            "more": "More",
+            "less": "Less"
         },
         "accordion.projects": {
             "title": "Projects",

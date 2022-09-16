@@ -7,7 +7,9 @@
                 "experience": "Arbetserfarenhet",
                 "education": "Utbildning",
                 "skills": "Soft Skills"
-            }
+            },
+            "more": "Mer",
+            "less": "Mindre"
         },
         "accordion.projects": {
             "title": "Projekt",

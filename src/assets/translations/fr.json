@@ -7,7 +7,9 @@
                 "experience": "Expérience professionelle",
                 "education": "Education",
                 "skills": "Compétences douces"
-            }
+            },
+            "more": "Plus",
+            "less": "Moins"
         },
         "accordion.projects": {
             "title": "Projets",
