@@ -17,7 +17,6 @@ const ButtonCard = ({ item }: IItem): JSX.Element => {
     const [isOpen, setIsOpen] = useState(false)
     const { title, isReleased, thumbnailURL, thumbnailTitle } = item
 
-    // Components
     const NotReleased = () => (
         <div className="card-overlay">
             <p className="comingsoon">COMING</p>

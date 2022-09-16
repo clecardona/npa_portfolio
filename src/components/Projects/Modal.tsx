@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import reactDom from 'react-dom';
 
 import github from 'assets/icns/github.png';
@@ -26,6 +27,8 @@ interface IButtonLink {
 }
 
 const Modal = ({ isOpen, onClose, item }: IModalProps) => {
+    const [isExiting, setIsExiting] = useState(false)
+
     const technologies8 = item.technologies.slice(0, 8)
 
     const ButtonLink = ({ design, icon, label, link }: IButtonLink) => (
@@ -35,13 +38,21 @@ const Modal = ({ isOpen, onClose, item }: IModalProps) => {
         </a>
     )
 
-    if (!isOpen) return <></>
+    function closeModal() {
+        setIsExiting(true)
+        setTimeout(() => {
+            onClose()
+            setIsExiting(false)
+        }, 1000)
+    }
+
+    if (!isOpen) return null
     return reactDom.createPortal(
         <>
-            <div className={isOpen ? 'modal-overlay' : 'modal-overlay out'} onClick={onClose} />
-            <div className="modal-wrapper">
+            <div className={isExiting ? 'modal-overlay overlay-out' : 'modal-overlay'} onClick={closeModal} />
+            <div className={isExiting ? 'modal-wrapper modal-out' : 'modal-wrapper'}>
                 <div className="modal">
-                    <button className="btn-close" onClick={onClose}>
+                    <button className="btn-close" onClick={closeModal}>
                         <img alt="close" src={icons.cross} />
                     </button>
 

@@ -26,7 +26,7 @@ const App = (): JSX.Element => {
     // Global state
     const { isAboutOpen, setAboutOpen, isProjectsOpen, setProjectsOpen, isTechOpen, setTechOpen, theme, language } =
         useTheme()
-    console.log('language', language)
+
     const { t, i18n } = useTranslation()
 
     const [projects, setProjects] = useState([])
