@@ -1,6 +1,8 @@
 // npm packages
 import { useState } from 'react';
 
+import { BiExpandAlt } from 'react-icons/bi';
+
 // Local imports
 import Modal from './Modal';
 
@@ -37,6 +39,9 @@ const ButtonCard = ({ item }: IItem): JSX.Element => {
 
                     <div className="card-back">
                         <h3>{thumbnailTitle}</h3>
+                        <div className="hover-link">
+                            <BiExpandAlt size={25} />
+                        </div>
                     </div>
                 </div>
             </button>

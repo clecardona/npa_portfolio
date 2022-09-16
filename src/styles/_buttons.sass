@@ -6,7 +6,7 @@ button
 .btn
   height: $mob-button-height
   display: grid
-  grid-template-columns: min-content 1fr
+  grid-template-columns: 44px 1fr
   align-items: center
   justify-items: center
   border-radius: 6px
@@ -15,22 +15,46 @@ button
     height: 1.2em
     padding: 0 1em
     border-right: 1px solid $gray5
+.btn-icon
+  width: 100%
+  display: flex
+  justify-content: center
 
 .btn-main
   background: black
   border: 1px solid black
-  transition: .3s
-
+  transition: .6s
+  overflow: hidden
+  position: relative
+  transition: .6s
+  &::after
+    content: ""
+    opacity: 0
+    position: absolute
+    transition: .3s
+    right: -10px
+    height: 100px
+    width: 100px
+    border-radius: 100px
+    background: #ffffff50
+    animation: bloop 3s infinite
+    box-shadow: -70px 8px 0 #ffffff30 , -80px -15px 0 #ffffff70
+  .btn-icon
+    color: white
+    border-right: 1px solid #ffffff50
   h3
     color: white
   &:hover
-    background: $gray3
-    border-color: $gray3
-    transition: .3s
+    transition: .6s
+    &::after
+      opacity: 0.7
 
 .btn-ghost
   border: 1px solid black
   transition: .3s
+  .btn-icon
+    color: black
+    border-right: 1px solid #00000050
 
   h3
     color: black
@@ -49,3 +73,15 @@ button
     h3
       color: $yellowLight
       transition: .3s
+
+@keyframes bloop
+  0%
+    transform: translate(0, 0) scale(1,1)
+  25%
+    transform: translate(-40px, 20px) scale(1.8,1.5)
+  50%
+    transform: translate(-40px, 20px) scale(1.8,1.5)
+  75%
+    transform: translate(-40px, 20px) scale(1.8,1.5)
+  100%
+    transform: translate(0, 0) scale(1,1)

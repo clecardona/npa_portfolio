@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import reactDom from 'react-dom';
 
-import github from 'assets/icns/github.png';
-import link from 'assets/icns/link.png';
-import icons from 'assets/icons.json';
+import { HiOutlineExternalLink } from 'react-icons/hi';
 import {
   IoIosDesktop,
   IoIosLaptop,
   IoIosPhonePortrait,
   IoIosTabletLandscape,
 } from 'react-icons/io';
+import { IoClose } from 'react-icons/io5';
+import { SiGithub } from 'react-icons/si';
 
 import Pills from './Pills';
 
@@ -23,7 +23,7 @@ interface IButtonLink {
     design: string
     label: string
     link: string
-    icon?: string
+    icon?: JSX.Element
 }
 
 const Modal = ({ isOpen, onClose, item }: IModalProps) => {
@@ -33,7 +33,7 @@ const Modal = ({ isOpen, onClose, item }: IModalProps) => {
 
     const ButtonLink = ({ design, icon, label, link }: IButtonLink) => (
         <a className={design} target="blank" href={link}>
-            {icon && <img src={icon} alt="" />}
+            {icon && <div className="btn-icon">{icon}</div>}
             <h3>{label}</h3>
         </a>
     )
@@ -53,7 +53,7 @@ const Modal = ({ isOpen, onClose, item }: IModalProps) => {
             <div className={isExiting ? 'modal-wrapper modal-out' : 'modal-wrapper'}>
                 <div className="modal">
                     <button className="btn-close" onClick={closeModal}>
-                        <img alt="close" src={icons.cross} />
+                        <IoClose size={30} />
                     </button>
 
                     <div className="modal-img">
@@ -67,11 +67,11 @@ const Modal = ({ isOpen, onClose, item }: IModalProps) => {
                         <Pills technologies={technologies8} />
                     </div>
 
-                    <div className="mq-container" style={{ height: 30 }}>
+                    <div className="mq-container">
                         {item.responsive && item.responsive.mobile && (
                             <div className="mq-item">
                                 <p>Mobile</p>
-                                <IoIosPhonePortrait size={22} style={{ marginTop: 8 }} />
+                                <IoIosPhonePortrait size={30} style={{ marginTop: 8 }} />
                             </div>
                         )}
                         {item.responsive && item.responsive.tablet && (
@@ -100,7 +100,7 @@ const Modal = ({ isOpen, onClose, item }: IModalProps) => {
                             <ButtonLink
                                 design="btn btn-main"
                                 link={item.websiteURL}
-                                icon={link}
+                                icon={<HiOutlineExternalLink size={22} />}
                                 label="Visit Website"
                             />
                         )}
@@ -109,7 +109,7 @@ const Modal = ({ isOpen, onClose, item }: IModalProps) => {
                             <ButtonLink
                                 design="btn btn-ghost"
                                 link={item.githubURL}
-                                icon={github}
+                                icon={<SiGithub size={22} />}
                                 label="Git repository"
                             />
                         )}

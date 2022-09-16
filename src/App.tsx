@@ -60,6 +60,7 @@ const App = (): JSX.Element => {
 
     useEffect(() => {
         i18n.changeLanguage(language)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
