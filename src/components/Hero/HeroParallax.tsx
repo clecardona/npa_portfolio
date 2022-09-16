@@ -1,3 +1,9 @@
+import { useState } from 'react';
+
+import {
+  FaAngleLeft,
+  FaAngleRight,
+} from 'react-icons/fa';
 import {
   Background,
   Parallax,
@@ -8,15 +14,31 @@ import Bubble from './Bubble';
 import Stars from './Stars';
 
 const HeroParallax = (): JSX.Element => {
+    const [index, setIndex] = useState(0)
     const { theme } = useTheme()
     const isDark = theme === 'dark'
+    const bgImages = [
+        'https://clecardona.com/npa/img/bg.png',
+        'https://cdn.dribbble.com/users/1338391/screenshots/15318231/media/4c725fe4efbaa9d498f39f13600e396a.jpg?compress=1&resize=1600x1200&vertical=top',
+        'https://cdn.dribbble.com/users/1338391/screenshots/15303437/media/52785a3194a29318fd787b78e8ade9ba.jpg?compress=1&resize=1600x1200&vertical=top',
+        'https://cdn.dribbble.com/users/1916627/screenshots/14620979/media/b14bd1d5e01b29e12f1aad1da2aa2b62.jpg?compress=1&resize=1600x1200&vertical=top',
+    ]
+
+    function increase() {
+        if (index === bgImages.length - 1) return setIndex(0)
+        return setIndex(index + 1)
+    }
+    function decrease() {
+        if (index === 0) return setIndex(bgImages.length - 1)
+        return setIndex(index - 1)
+    }
 
     return (
         <Parallax
             blur={{ min: -5, max: 5 }}
-            bgImage={!isDark ? 'https://clecardona.com/npa/img/bg.png' : ''}
+            bgImage={!isDark ? bgImages[index] : ''}
             bgImageAlt="bg"
-            bgImageStyle={{ opacity: 0.7 }}
+            bgClassName={`bg-parallax bg-${index % 2}`}
             strength={250}
             renderLayer={percentage => <Bubble percentage={percentage} />}
         >
@@ -27,6 +49,15 @@ const HeroParallax = (): JSX.Element => {
             )}
 
             <div className="hero-container" id="hero">
+                <div className="hero-buttons">
+                    <button onClick={() => decrease()}>
+                        <FaAngleLeft size={50} />
+                    </button>
+                    <button onClick={() => increase()}>
+                        <FaAngleRight size={50} />
+                    </button>
+                </div>
+
                 <img
                     className="illustration"
                     alt="illustration"

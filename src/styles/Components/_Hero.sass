@@ -50,6 +50,42 @@
   @media only screen and (min-width: $desktopBreakpoint)
     height: 95vh
 
+@keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: .7
+
+@keyframes fade-in-2
+  0%
+    opacity: 0
+  100%
+    opacity: .7
+
+.bg-parallax
+  opacity: .7
+
+.bg-1
+  animation: fade-in .5s
+.bg-0
+  animation: fade-in-2 .5s
+
+.hero-buttons
+  position: absolute
+  bottom: 0
+  width: 100%
+  display: flex
+  justify-content: space-between
+  padding: 1em
+
+  button
+    transition: .2s
+    color: white
+
+    &:hover
+      transition: .2s ease-in
+      transform: scale(1.1,1.2)
+
 .illustration
   position: absolute
   bottom: 0
