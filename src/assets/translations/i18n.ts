@@ -6,13 +6,14 @@ import fr from './fr.json';
 import sv from './sv.json';
 
 i18n.use(initReactI18next).init({
-  resources: {
-    en: en,
-    fr: fr,
-    sv: sv,
-  },
-  fallbackLng: "en",
-  interpolation: {
-    escapeValue: false,
-  },
+    resources: {
+        en: en,
+        fr: fr,
+        sv: sv,
+    },
+
+    fallbackLng: 'en',
+    interpolation: {
+        escapeValue: false,
+    },
 })

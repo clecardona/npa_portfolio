@@ -2,7 +2,12 @@
     "translation": {
         "accordion.about": {
             "title": "A propos",
-            "paragraph": "Bonjour! Je m'appelle Clement , developpeur frontend junior. Ceci est mon Portfolio, Vous pouvez retrouver mes projets développés avec React.js et TypeScript. Naviguez sur ma page pour en voir un petit peu plus"
+            "paragraph": "Bonjour! Je m'appelle Clement , developpeur frontend junior. Ceci est mon Portfolio, Vous pouvez retrouver mes projets développés avec React.js et TypeScript. Naviguez sur ma page pour en voir un petit peu plus",
+            "cv": {
+                "experience": "Expérience professionelle",
+                "education": "Education",
+                "skills": "Compétences douces"
+            }
         },
         "accordion.projects": {
             "title": "Projets",
@@ -18,6 +23,11 @@
         },
         "select.language": {
             "language": "Langue"
+        },
+        "languages": {
+            "english": "Anglais",
+            "swedish": "Suédois",
+            "french": "Français"
         }
     }
 }

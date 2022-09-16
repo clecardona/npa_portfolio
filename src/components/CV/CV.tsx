@@ -2,6 +2,7 @@ import './_cards.sass';
 
 import React from 'react';
 
+import { useTranslation } from 'react-i18next';
 import { useTheme } from 'state/ThemeProvider';
 
 import CircleChart from './CircleChart';
@@ -14,6 +15,7 @@ import ExpCard from './ExpCard';
 const CV = () => {
     const { isCVOpen, language } = useTheme()
     const { education, experience, contact, skills } = getDataByLanguage(language)
+    const { t } = useTranslation()
 
     function getDataByLanguage(language: string) {
         if (language === 'fr') return CV_FR
@@ -77,10 +79,10 @@ const CV = () => {
                 <Contact />
             </section>
             <section className="cv-experience">
-                <h2>Work Experience</h2> <ul>{Experience}</ul>
+                <h2>{t('accordion.about.cv.experience')}</h2> <ul>{Experience}</ul>
             </section>
             <section className="cv-education">
-                <h2>Education</h2> <ul>{Education}</ul>
+                <h2>{t('accordion.about.cv.education')}</h2> <ul>{Education}</ul>
             </section>
             <section className="cv-languages">
                 <CircleChart selection={'English'} animate={isCVOpen} />
@@ -88,7 +90,7 @@ const CV = () => {
                 <CircleChart selection={'French'} animate={isCVOpen} />
             </section>
             <section className="cv-skills">
-                <h2>Soft Skills</h2> <ul>{Skills}</ul>
+                <h2>{t('accordion.about.cv.skills')}</h2> <ul>{Skills}</ul>
             </section>
         </div>
     )

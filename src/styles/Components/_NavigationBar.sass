@@ -6,6 +6,7 @@
   top: 0
   left: 0
   width: 100%
+  transition: .3s
 
   background: $white
   height: $header-height
@@ -75,7 +76,6 @@
   left: 1em
 
   img
-
     height: 50px
     width: 50px
     filter: invert(1)
@@ -83,13 +83,6 @@
   &:hover
     transform: scale(1.05)
     transition: 0.1s ease
-
-.header-transparent
-  background: rgba(255,255 ,255 ,.7 )
-
-  img
-    filter: invert(1)
-  div,a
-    color: $black
-  a:hover
-    color: $blueLight
+.transparent
+  transition: .3s
+  opacity: .7

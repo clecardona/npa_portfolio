@@ -45,11 +45,12 @@ build
 # Firebase Hosting
 _.firebase
 .firebase
-_.firebaserc
+.firebase/
 .firebaserc
-firebaserc
 firebase-debug.log
 firebase.json
+
+
 
 
 # misc
