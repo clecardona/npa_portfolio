@@ -8,17 +8,14 @@
   z-index: 1000
 
 .modal-wrapper
-
+  position: fixed
   width: 90vw
   height: 80vh
-
+  transform: translate(-50%, -50%)
   background: white
   overflow: hidden
-
-  position: fixed
   top: 50%
   left: 50%
-  transform: translate(-50%, -50%)
   border-radius: .5em
   z-index: 1000
   @media only screen and (min-width: $desktopBreakpoint)
@@ -178,3 +175,42 @@
         filter: invert(0)
       &:hover
         filter: invert(.5) sepia(1) invert(1) saturate(2)
+
+//Animations
+.modal-overlay
+  animation: unfold-in .6s
+.modal-wrapper
+  animation: zoom-up 1.2s
+
+@keyframes unfold-in
+  0%
+    transform: scaleY(.005) scaleX(0)
+  50%
+    transform: scaleY(.005) scaleX(1)
+  100%
+    transform: scaleY(1) scaleX(1)
+
+@keyframes unfold-out
+  0%
+    transform: scaleY(1) scaleX(1)
+  50%
+    transform: scaleY(.005) scaleX(1)
+  100%
+    transform: scaleY(.005) scaleX(0)
+
+@keyframes pop-up
+  from
+    transform: translate(-50%, -50%) translateY(50px)
+  to:
+    transform: translateX(0)
+
+@keyframes zoom-up
+  0%
+    transform: translate(-50%, -50%) scale(.5,.5)
+    opacity: 0
+  50%
+    transform: translate(-50%, -50%) scale(.5,.5)
+    opacity: 0
+  100%
+    transform: translate(-50%, -50%) scale(1,1)
+    opacity: 1
