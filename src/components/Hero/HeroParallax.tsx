@@ -19,7 +19,7 @@ const HeroParallax = (): JSX.Element => {
     const isDark = theme === 'dark'
     const bgImages = [
         'https://clecardona.com/npa/img/bg.png',
-        'https://cdn.dribbble.com/users/1338391/screenshots/15318231/media/4c725fe4efbaa9d498f39f13600e396a.jpg?compress=1&resize=1600x1200&vertical=top',
+        'https://cdn.dribbble.com/users/2811827/screenshots/16188096/media/e5f6179e8841cef78bad8b5475311e66.png?compress=1&resize=1600x1200&vertical=bottom',
         'https://cdn.dribbble.com/users/1338391/screenshots/15303437/media/52785a3194a29318fd787b78e8ade9ba.jpg?compress=1&resize=1600x1200&vertical=top',
         'https://cdn.dribbble.com/users/1916627/screenshots/14620979/media/b14bd1d5e01b29e12f1aad1da2aa2b62.jpg?compress=1&resize=1600x1200&vertical=top',
     ]
@@ -34,37 +34,40 @@ const HeroParallax = (): JSX.Element => {
     }
 
     return (
-        <Parallax
-            blur={{ min: -5, max: 5 }}
-            bgImage={!isDark ? bgImages[index] : ''}
-            bgImageAlt="bg"
-            bgClassName={`bg-parallax bg-${index % 2}`}
-            strength={250}
-            renderLayer={percentage => <Bubble percentage={percentage} />}
-        >
-            {isDark && (
-                <Background>
-                    <Stars />
-                </Background>
-            )}
+        <>
+            <Parallax
+                blur={{ min: -5, max: 5 }}
+                bgImage={!isDark ? bgImages[index] : ''}
+                bgImageAlt="bg"
+                bgClassName={`bg-parallax bg-${index % 2}`}
+                strength={250}
+                renderLayer={percentage => <Bubble percentage={percentage} />}
+            >
+                {isDark && (
+                    <Background>
+                        <Stars />
+                    </Background>
+                )}
 
-            <div className="hero-container" id="hero">
-                <div className="hero-buttons">
-                    <button onClick={() => decrease()}>
-                        <FaAngleLeft size={50} />
-                    </button>
-                    <button onClick={() => increase()}>
-                        <FaAngleRight size={50} />
-                    </button>
+                <div className="hero-container" id="hero">
+                    <div id="bg-overlay" />
+                    <div className="hero-buttons">
+                        <button onClick={() => decrease()}>
+                            <FaAngleLeft size={50} />
+                        </button>
+                        <button onClick={() => increase()}>
+                            <FaAngleRight size={50} />
+                        </button>
+                    </div>
+
+                    <img
+                        className="illustration"
+                        alt="illustration"
+                        src="https://clecardona.com/npa/portfolio/img/illustration-portfolio.png"
+                    />
                 </div>
-
-                <img
-                    className="illustration"
-                    alt="illustration"
-                    src="https://clecardona.com/npa/portfolio/img/illustration-portfolio.png"
-                />
-            </div>
-        </Parallax>
+            </Parallax>
+        </>
     )
 }
 export default HeroParallax
