@@ -19,9 +19,11 @@ const HeroParallax = (): JSX.Element => {
     const isDark = theme === 'dark'
     const bgImages = [
         'https://clecardona.com/npa/img/bg.png',
-        'https://cdn.dribbble.com/users/2811827/screenshots/16188096/media/e5f6179e8841cef78bad8b5475311e66.png?compress=1&resize=1600x1200&vertical=bottom',
         'https://cdn.dribbble.com/users/1338391/screenshots/15303437/media/52785a3194a29318fd787b78e8ade9ba.jpg?compress=1&resize=1600x1200&vertical=top',
-        'https://cdn.dribbble.com/users/1916627/screenshots/14620979/media/b14bd1d5e01b29e12f1aad1da2aa2b62.jpg?compress=1&resize=1600x1200&vertical=top',
+        'https://cdn.dribbble.com/users/13449/screenshots/12078823/media/c6662b0de7365559f79d9eb6088d9527.png?compress=1&resize=1600x1200&vertical=top',
+        'https://cdn.dribbble.com/users/1016207/screenshots/16888945/media/d0849186193c9b868abb0c1e37194d63.png?compress=1&resize=1600x1200&vertical=top',
+        'https://cdn.dribbble.com/users/13449/screenshots/10094240/media/bbac9c3ddc0d46017085b7c7cafa5f6b.png?compress=1&resize=1600x1200&vertical=top',
+        'https://cdn.dribbble.com/users/4851961/screenshots/10015940/media/134cf1b8f66092b404297e926a125e93.jpg?compress=1&resize=1600x1200&vertical=top',
     ]
 
     function increase() {
@@ -41,6 +43,7 @@ const HeroParallax = (): JSX.Element => {
                 bgImageAlt="bg"
                 bgClassName={`bg-parallax bg-${index % 2}`}
                 strength={250}
+                bgImageStyle={{ height: '100%', width: '100%', objectFit: 'cover', objectPosition: 'left bottom' }}
                 renderLayer={percentage => <Bubble percentage={percentage} />}
             >
                 {isDark && (
