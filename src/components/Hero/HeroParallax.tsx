@@ -54,14 +54,7 @@ const HeroParallax = (): JSX.Element => {
 
                 <div className="hero-container" id="hero">
                     <div id="bg-overlay" />
-                    <div className="hero-buttons">
-                        <button onClick={() => decrease()}>
-                            <FaAngleLeft size={50} />
-                        </button>
-                        <button onClick={() => increase()}>
-                            <FaAngleRight size={50} />
-                        </button>
-                    </div>
+                    {!isDark && <GalleryButtons increase={increase} decrease={decrease} />}
 
                     <img
                         className="illustration"
@@ -74,3 +67,20 @@ const HeroParallax = (): JSX.Element => {
     )
 }
 export default HeroParallax
+
+interface IGalleryButtons {
+    increase: () => void
+    decrease: () => void
+}
+const GalleryButtons = ({ increase, decrease }: IGalleryButtons) => {
+    return (
+        <div className="hero-buttons">
+            <button onClick={() => decrease()}>
+                <FaAngleLeft size={50} />
+            </button>
+            <button onClick={() => increase()}>
+                <FaAngleRight size={50} />
+            </button>
+        </div>
+    )
+}

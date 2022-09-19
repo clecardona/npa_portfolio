@@ -9,7 +9,7 @@
   border-radius: .5em
   overflow: hidden
   @include shadow-light-accordion
- 
+
   .accordion-title,.accordion-content
     background: $beigeDark
 
@@ -23,32 +23,32 @@
     padding: 18px
     width: 100%
     height: 100%
-    
+
     *
       transition: .3s ease
 
-
     &:hover
-    
+      background: #eeeeee
+
       h3
         transform: translateX(15px)
         transform-origin: center left
         transition: .3s ease
       .accordion-icon
         transform-origin: center center
-       
+
         transition: .3s ease
 
   .accordion-content
-  
-    border-top: 1px solid #00000010 
+
+    border-top: 1px solid #00000010
     overflow: hidden
     padding: 0 18px
 
 // animate
 // accordion closed
 .accordion-content[aria-expanded="false"]
-  border-top-color:  transparent
+  border-top-color: transparent
   max-height: 0px
   opacity: .3
   transition: all .3s ease-out
