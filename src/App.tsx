@@ -22,6 +22,30 @@ import AboutMe from './components/AboutMe';
 import Accordion from './components/Accordion';
 import NavigationBar from './components/NavBar/NavigationBar';
 
+interface IProject {
+    description: string
+    githubURL: string
+    id: string
+    isReleased: boolean
+    responsive: any
+    screenshotURL: string
+    technologies: string[]
+    thumbnailTitle: string
+    thumbnailURL: string
+    title: string
+    websiteURL: string
+}
+interface ITechnology {
+    iconURL: string
+    id: number
+    name: string
+}
+enum FETCH_STATUS {
+    LOADING = 'loading',
+    READY = 'ready',
+    ERROR = 'error',
+}
+
 const App = (): JSX.Element => {
     // Global state
     const { isAboutOpen, setAboutOpen, isProjectsOpen, setProjectsOpen, isTechOpen, setTechOpen, theme, language } =
@@ -29,27 +53,21 @@ const App = (): JSX.Element => {
 
     const { t, i18n } = useTranslation()
 
-    const [projects, setProjects] = useState([])
-    const [technologies, setTechnologies] = useState([])
-
-    const LOADING = 'loading'
-    const READY = 'ready'
-    const ERROR = 'error'
+    const [projects, setProjects] = useState<IProject[]>([])
+    const [technologies, setTechnologies] = useState<ITechnology[]>([])
 
     //Local state
-    const [status, setStatus] = useState(LOADING)
+    const [status, setStatus] = useState(FETCH_STATUS.LOADING)
 
     const fetchData: () => void = useCallback(async () => {
         try {
-            const listOfProjects = await getCollection('projects')
-            const listOfTechnologies = await getCollection('technologies')
-            //@ts-ignore
-            setProjects(listOfProjects)
-            //@ts-ignore
-            setTechnologies(listOfTechnologies)
-            setStatus(READY)
+            const listOfProjects = (await getCollection('projects')) as IProject[]
+            const listOfTechnologies = (await getCollection('technologies')) as ITechnology[]
+            if (listOfProjects.length) setProjects(listOfProjects)
+            if (listOfTechnologies.length) setTechnologies(listOfTechnologies)
+            setStatus(FETCH_STATUS.READY)
         } catch (error) {
-            setStatus(ERROR)
+            setStatus(FETCH_STATUS.ERROR)
             console.error(error)
         }
     }, [])
@@ -60,14 +78,13 @@ const App = (): JSX.Element => {
 
     useEffect(() => {
         i18n.changeLanguage(language)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [i18n, language])
 
     return (
         <div className={theme === 'dark' ? 'App dark' : 'App'}>
-            {status === LOADING && <Spinner />}
-            {status === ERROR && <BoxError />}
-            {status === READY && (
+            {status === FETCH_STATUS.LOADING && <Spinner />}
+            {status === FETCH_STATUS.ERROR && <BoxError />}
+            {status === FETCH_STATUS.READY && (
                 <>
                     <NavigationBar />
                     <HeroParallax />
@@ -78,7 +95,6 @@ const App = (): JSX.Element => {
                             setisOpen={setAboutOpen}
                             title={t('accordion.about.title')}
                             content={<AboutMe />}
-                            color="7A8C99"
                             id="about"
                         />
 
@@ -87,7 +103,6 @@ const App = (): JSX.Element => {
                             setisOpen={setProjectsOpen}
                             title={t('accordion.projects.title')}
                             content={<Portfolio projects={projects} />}
-                            color="#D1CABB"
                             id="projects"
                         />
                         <Accordion
@@ -95,7 +110,6 @@ const App = (): JSX.Element => {
                             setisOpen={setTechOpen}
                             title={t('accordion.tech.title')}
                             content={<Technologies technologies={technologies} />}
-                            color="#8193a1"
                             id="tech"
                         />
                     </div>

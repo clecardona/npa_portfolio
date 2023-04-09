@@ -17,47 +17,44 @@ const NavigationBar = () => {
     // Local state
     const [scrollPosition, setScrollPosition] = useState(0)
 
-    function handleScrollAccordion(id: string, condition: boolean) {
-        if (condition) {
-            const element = document.querySelector(id)
-            if (element) {
-                const position = element?.getBoundingClientRect().top + window.scrollY
-                window.scrollTo(0, position)
-            }
-        }
+    function scrollToId(id: string) {
+        const element = document.getElementById(id) //TODO: useRef
+        if (element) return element.scrollIntoView()
     }
-    const timeoutScroll = 700
-    const timeoutOpen = 1000
+    const DELAY = {
+        SCROLL: 400,
+        OPEN: 400,
+    }
 
     const navItems = [
         {
             title: t('accordion.about.title'),
-            id: '#about',
+            id: 'about',
             action: () => {
                 setProjectsOpen(false)
                 setTechOpen(false)
-                setTimeout(() => handleScrollAccordion('#about', true), timeoutScroll)
-                setTimeout(() => setAboutOpen(true), timeoutOpen)
+                setTimeout(() => scrollToId('about'), DELAY.SCROLL)
+                setTimeout(() => setAboutOpen(true), DELAY.OPEN)
             },
         },
         {
             title: t('accordion.projects.title'),
-            id: '#projects',
+            id: 'projects',
             action: () => {
                 setAboutOpen(false)
                 setTechOpen(false)
-                setTimeout(() => handleScrollAccordion('#projects', true), timeoutScroll)
-                setTimeout(() => setProjectsOpen(true), timeoutOpen)
+                setTimeout(() => scrollToId('projects'), DELAY.SCROLL)
+                setTimeout(() => setProjectsOpen(true), DELAY.OPEN)
             },
         },
         {
             title: t('accordion.tech.title'),
-            id: '#tech',
+            id: 'tech',
             action: () => {
                 setAboutOpen(false)
                 setProjectsOpen(false)
-                setTimeout(() => handleScrollAccordion('#tech', true), timeoutScroll)
-                setTimeout(() => setTechOpen(true), timeoutOpen)
+                setTimeout(() => scrollToId('tech'), DELAY.SCROLL)
+                setTimeout(() => setTechOpen(true), DELAY.OPEN)
             },
         },
     ]
@@ -69,8 +66,8 @@ const NavigationBar = () => {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    const NavItems = navItems.map((item, idx) => (
-        <li key={idx}>
+    const NavItems = navItems.map(item => (
+        <li key={item.id}>
             <button onClick={item.action} className="nav-item">
                 <h3>{item.title}</h3>
             </button>
