@@ -17,34 +17,15 @@ import Technologies from 'components/Technologies/Technologies';
 import { useTranslation } from 'react-i18next';
 import { getCollection } from 'scripts/firebase/fireStore';
 import { useTheme } from 'state/ThemeProvider';
+import {
+  FETCH_STATUS,
+  IProject,
+  ITechnology,
+} from 'types';
 
 import AboutMe from './components/AboutMe';
 import Accordion from './components/Accordion';
 import NavigationBar from './components/NavBar/NavigationBar';
-
-interface IProject {
-    description: string
-    githubURL: string
-    id: string
-    isReleased: boolean
-    responsive: any
-    screenshotURL: string
-    technologies: string[]
-    thumbnailTitle: string
-    thumbnailURL: string
-    title: string
-    websiteURL: string
-}
-interface ITechnology {
-    iconURL: string
-    id: number
-    name: string
-}
-enum FETCH_STATUS {
-    LOADING = 'loading',
-    READY = 'ready',
-    ERROR = 'error',
-}
 
 const App = (): JSX.Element => {
     // Global state
@@ -55,6 +36,8 @@ const App = (): JSX.Element => {
 
     const [projects, setProjects] = useState<IProject[]>([])
     const [technologies, setTechnologies] = useState<ITechnology[]>([])
+
+    const illustrations = projects.map(project => project.screenshotURL)
 
     //Local state
     const [status, setStatus] = useState(FETCH_STATUS.LOADING)
@@ -87,7 +70,7 @@ const App = (): JSX.Element => {
             {status === FETCH_STATUS.READY && (
                 <>
                     <NavigationBar />
-                    <HeroParallax />
+                    <HeroParallax data={illustrations} />
 
                     <div className="accordions">
                         <Accordion

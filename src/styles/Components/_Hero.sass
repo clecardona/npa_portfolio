@@ -62,13 +62,42 @@
   100%
     opacity: .8
 
-.bg-parallax
-  opacity: .8
+@keyframes slide-in-r
+  0%
+    left: 0
+    opacity: 0
+  100%
+    width: 100%
 
-.bg-1
-  animation: fade-in .5s
-.bg-0
-  animation: fade-in-2 .5s
+@keyframes slide-in-r-2
+  0%
+    left: 0
+  100%
+    width: 100%
+
+.bg-0-r
+  animation: slide-in-r .4s
+.bg-1-r
+  animation: slide-in-r-2 .4s
+
+.bg-0-l
+  animation: slide-in-l .4s
+.bg-1-l
+  animation: slide-in-l-2 .4s
+
+@keyframes slide-in-l
+  0%
+    left: 100%
+    opacity: 0
+  100%
+    width: 100%
+
+@keyframes slide-in-l-2
+  0%
+    left: 100%
+    opacity: 0
+  100%
+    width: 100%
 
 #bg-overlay
   position: absolute
