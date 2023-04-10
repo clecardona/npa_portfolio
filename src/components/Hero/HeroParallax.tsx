@@ -55,18 +55,7 @@ const HeroParallax = ({ data }: { data: string[] }): JSX.Element => {
                 }}
                 renderLayer={percentage => (
                     <>
-                        {!isDark && (
-                            <div
-                                id="bg-overlay-full"
-                                style={{
-                                    background: 'black',
-                                    opacity: 0.4,
-                                    height: '100%',
-                                    width: '100%',
-                                    position: 'absolute',
-                                }}
-                            />
-                        )}
+                        {!isDark && <div id="bg-overlay-full" />}
                         <Bubble percentage={percentage} />
                     </>
                 )}

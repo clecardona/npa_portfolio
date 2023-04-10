@@ -21,8 +21,8 @@
         },
         "bubble": {
             "title": "Hi, I am <strong>Clément</strong>",
-            "subtitle": "Frontend developer from France",
-            "paragraph": "Living in Stockholm, Sweden"
+            "subtitle": "Frontend developer",
+            "paragraph": "Stockholm | Sweden"
         },
         "contact": {
             "header": "Contact me",
