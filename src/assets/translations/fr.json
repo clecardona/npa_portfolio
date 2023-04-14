@@ -1,0 +1,35 @@
+{
+    "translation": {
+        "accordion.about": {
+            "title": "A propos",
+            "paragraph": "Bonjour! Je m'appelle Clement , developpeur frontend junior. Ceci est mon Portfolio, Vous pouvez retrouver mes projets développés avec React.js et TypeScript. Naviguez sur ma page pour en voir un petit peu plus",
+            "cv": {
+                "experience": "Expérience professionelle",
+                "education": "Education",
+                "skills": "Compétences douces"
+            },
+            "more": "Plus",
+            "less": "Moins"
+        },
+        "accordion.projects": {
+            "title": "Projets",
+            "paragraph": "Une sélection de mes projets, mise à jour."
+        },
+        "accordion.tech": {
+            "title": "Tech Stack",
+            "paragraph": "Les languages informatiques / technologies utilisés ou en cours d'apprentissage."
+        },
+        "contact": {
+            "header": "Contactez-moi",
+            "text": "Voici mes coordonnées, pour toute collaboration."
+        },
+        "select.language": {
+            "language": "Langue"
+        },
+        "languages": {
+            "english": "Anglais",
+            "swedish": "Suédois",
+            "french": "Français"
+        }
+    }
+}

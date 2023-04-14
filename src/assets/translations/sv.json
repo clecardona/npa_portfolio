@@ -1,0 +1,40 @@
+{
+    "translation": {
+        "accordion.about": {
+            "title": "Om mig",
+            "paragraph": "Hej! Clement heter jag , en junior frontend utvecklare. Det är min Portfolio, som jag använder att visa projekt jag utvecklar med  React.js och TypeScript med fokuset på design och detaljer. Skrolla ner för atte se mer",
+            "cv": {
+                "experience": "Arbetserfarenhet",
+                "education": "Utbildning",
+                "skills": "Soft Skills"
+            },
+            "more": "Mer",
+            "less": "Mindre"
+        },
+        "accordion.projects": {
+            "title": "Projekt",
+            "paragraph": "Här finns flera projekt att titta på."
+        },
+        "accordion.tech": {
+            "title": "Tech Stack",
+            "paragraph": "Här finns teknologi jag jobbar med och de som jag har börjat att lära mig."
+        },
+        "bubble": {
+            "title": "Hej, Jag är <strong>Clément</strong>",
+            "subtitle": "Frontend utvecklare från Frankrike",
+            "paragraph": "Baserad i Stockholm, Sverige"
+        },
+        "contact": {
+            "header": "Kontakta mig",
+            "text": "Här finns mina kontaktuppgifter om du är intresserad att samarbeta med mig"
+        },
+        "select.language": {
+            "language": "Språk"
+        },
+        "languages": {
+            "english": "Engelska",
+            "swedish": "Svenska",
+            "french": "Franska"
+        }
+    }
+}

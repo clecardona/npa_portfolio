@@ -1,12 +1,23 @@
 .bubble
     background: $beige
+    position: absolute
+    left: 5%
 
     padding: 1.5em 2em
     border-radius: 2em
     box-shadow: 22px 22px $gray5_Shadow
     animation: float2 5s ease-in-out infinite
-    @media only screen and (min-width: $tabletBreakpoint)
+
+    @media only screen and (min-width: $desktopBreakpoint)
         padding: 1.5em 3em 1.5em 5em
+        right: calc(400px + 10%)
+        left: unset
+        bottom: unset
+
+    @media only screen and (max-width: 420px)
+        max-width: fit-content
+        padding: .75em 1em
+
     .title
         color: $gray5
 

@@ -1,0 +1,84 @@
+{
+    "contact": {
+        "firstname": "Clément",
+        "city": "Stockholm",
+        "lastname": "Cardona",
+        "jobTitle": "Développeur frontend",
+        "email": "clecardona@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/clecardona/"
+    },
+    "education": [
+        {
+            "school": "Novare Potential",
+            "program": "Frontend Academy",
+            "city": "Stockholm, Suède",
+            "from": "JUIL 2021",
+            "to": "NOV 2021",
+            "description": [
+                "Focus sur le Frontend",
+                "React.js, Firebase hosting"
+            ],
+            "url": "https://novare.se/potential/become-a-frontend-developer-in-16-weeks-and-find-your-dream-job/"
+        },
+        {
+            "school": "Novare Potential avec KTH",
+            "program": "Software Development Academy",
+            "city": "Stockholm, Suède",
+            "from": "FEV 2021",
+            "to": "AVR 2021",
+            "description": [
+                "Apprentissage des bases du développement",
+                "Frontend et Backend"
+            ],
+            "url": "https://www.kth.se/en/itm/sda/software-development-academy-1.841849"
+        },
+        {
+            "school": "INSA",
+            "program": "Architecture - Master 2",
+            "city": "Strasbourg, France",
+            "from": "SEP 2009",
+            "to": "SEP 2013",
+            "description": [
+                "Master 2 en Architecture"
+            ],
+            "url": "http://www.insa-strasbourg.fr/fr/architecte-insa/"
+        }
+    ],
+    "experience": [
+        {
+            "company": "Folksam",
+            "position": "Développeur frontend",
+            "city": "Stockholm, Suède",
+            "from": "JAN 2022",
+            "to": "AUJ",
+            "description": [
+                "Développement et maintenant d'une web app (pages personelles)",
+                "Travail selon la méthode Agile et le framework SAFe"
+            ],
+            "url": "https://www.folksam.se/"
+        },
+        {
+            "company": "ONArchitecture",
+            "position": "Architecte (construction)",
+            "city": "Nice, France",
+            "from": "JAN 2013",
+            "to": "DEC 2019",
+            "description": [
+                "Chef de projet,",
+                "Spécalisé dans la construction de logements et opérations publiques.",
+                "Gestion de chantiers jusqu'à 12 lots",
+                "Estimatifs financiers "
+            ],
+            "url": "https://www.onarchitecture.fr/"
+        }
+    ],
+    "skills": [
+        "Positif",
+        "Persistant",
+        "Résolution de problèmes",
+        "Creatif",
+        "Proactif ",
+        "Resilient",
+        "Curiosité"
+    ]
+}

@@ -1,53 +1,53 @@
 {
-  "name": "npa_portfolio",
-  "version": "2.0.0",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-regular-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.15",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "firebase": "^9.6.9",
-    "react": "^17.0.2",
-    "react-div-100vh": "^0.7.0",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-scripts": "^5.0.0",
-    "react-transition-group": "^4.4.2",
-    "sass": "^1.38.2",
-    "typescript": "^4.6.2",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "deploy website": "react-scripts build && firebase deploy",
-    "build": "react-scripts build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@types/react": "^17.0.40",
-    "@types/react-dom": "^17.0.13",
-    "@types/react-transition-group": "^4.4.4"
-  }
+    "name": "npa_portfolio",
+    "version": "2.0.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^13.3.0",
+        "firebase": "^9.8.2",
+        "i18next": "^21.9.1",
+        "mathjs": "^11.1.0",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0",
+        "react-i18next": "^11.18.6",
+        "react-icons": "^4.4.0",
+        "react-parallax": "^3.5.1",
+        "react-scripts": "^5.0.1",
+        "react-transition-group": "^4.4.2",
+        "sass": "^1.52.2",
+        "typescript": "^4.7.2"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "deploy-to-firebase": "react-scripts build && firebase deploy",
+        "deploy-website": "react-scripts build && node deploy"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.10",
+        "@types/react-dom": "^18.0.5",
+        "@types/react-transition-group": "^4.4.4",
+        "ftp-deploy": "^2.4.3",
+        "webpack": "^5.73.0",
+        "webpack-cli": "^4.9.2"
+    }
 }

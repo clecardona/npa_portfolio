@@ -4,11 +4,14 @@
   align-items: center
 
   .wrapper
+    width: 100%
+    padding: 1em
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: repeat(3, min-content)
     grid-template-areas: "paragraph paragraph paragraph""toggle toggle toggle""data data data"
 
     @media only screen and (min-width: $tabletBreakpoint)
+      padding-left: 3em
       grid-template-columns: repeat(3, 1fr)
       grid-template-rows: 120px min-content
       grid-template-areas: "paragraph data data""toggle data data"
@@ -26,6 +29,9 @@
       grid-area: paragraph
       padding: 1em
       line-height: 1.4
+      justify-self: flex-start
+      border-left: 1em solid #eeeeee
+      padding-left: 2em
 
       @media only screen and (min-width: $tabletBreakpoint)
         height: min-content

@@ -41,6 +41,11 @@
         padding: 2em
         h3
           color: $white
+        .hover-link
+          position: absolute
+          bottom: 10px
+          right: 10px
+          color: white
 
       @media only screen and (min-width: $desktopBreakpoint)
         grid-template-rows: 120px
@@ -63,15 +68,6 @@
           object-fit: cover
           transform: scale(1)
           filter: brightness(.9)
-
-    button:disabled
-      cursor: default
-      img
-        filter: brightness(0.5)
-
-        &:hover
-          filter: grayscale(0.7)
-          transform: scale(1)
 
   .projects-lists
     li:nth-child(2n+2) .card .card-inner

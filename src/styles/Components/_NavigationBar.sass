@@ -1,26 +1,40 @@
+.nav-container
+  position: relative
+
 .header-menu
   position: fixed
   top: 0
   left: 0
   width: 100%
+  transition: .3s
 
   background: $white
   height: $header-height
-
   display: grid
   grid-template-columns: max-content 1fr
   align-items: center
-  padding-left: 5em
-  padding-right: 2em
+  padding-left: 4em
+  padding-right: .5em
 
   z-index: 100
 
   @include shadow-light
 
+  @media only screen and (min-width: $tabletBreakpoint)
+    padding-right: 2em
+    padding-left: 5em
+
   @media only screen and (min-width: $desktopBreakpoint)
     display: flex
     justify-content: space-between
     height: $header-height
+
+  .nav-item
+    padding: 0
+    h3
+      transition: .3s
+      &:hover
+        transition: .3s
 
 .author
   display: flex
@@ -34,11 +48,10 @@
   width: 100%
   display: grid
   grid-auto-flow: column
+  gap: 6px
 
   justify-content: flex-end
   align-items: center
-
-  border-radius: 44px
 
   @media only screen and (min-width: $desktopBreakpoint)
     background: none
@@ -55,7 +68,6 @@
         border-color: inherit
 
   .toggle-theme
-    margin-left: .5em
     transform: scale(.8)
     @media only screen and (min-width: $tabletBreakpoint)
       margin-left: 1em
@@ -67,7 +79,6 @@
   left: 1em
 
   img
-
     height: 50px
     width: 50px
     filter: invert(1)
@@ -75,13 +86,6 @@
   &:hover
     transform: scale(1.05)
     transition: 0.1s ease
-
-.header-transparent
-  background: rgba(255,255 ,255 ,.7 )
-
-  img
-    filter: invert(1)
-  div,a
-    color: $black
-  a:hover
-    color: $blueLight
+.transparent
+  transition: .3s
+  opacity: .7

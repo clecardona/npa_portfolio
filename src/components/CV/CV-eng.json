@@ -1,38 +1,11 @@
 {
-    "languages": [
-        {
-            "language": "Swedish",
-            "level": "Fluent",
-            "levelValue": "60"
-        },
-        {
-            "language": "English",
-            "level": "Fluent",
-            "levelValue": "75"
-        },
-        {
-            "language": "French",
-            "level": "Native",
-            "levelValue": "95"
-        }
-    ],
-    "highlights": {
-        "success": "I did 50  top 1 in Fortnite",
-        "yourself": "Dedicated and passionate",
-        "impression": "Blue is my favourite color"
-    },
     "photoURL": "http://clecardona.com/img/portrait.jpg",
     "contact": {
         "firstname": "Clément",
-        "postcode": "11354",
-        "city": "Göteborg",
-        "mobile": "0781360998",
-        "address": "",
         "lastname": "Cardona",
         "jobTitle": "Frontend developer",
         "email": "clecardona@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/clecardona/",
-        "middlename": "Emil"
+        "linkedin": "https://www.linkedin.com/in/clecardona/"
     },
     "education": [
         {
@@ -73,7 +46,7 @@
     ],
     "experience": [
         {
-            "company": "Folksam (consultancy)",
+            "company": "Folksam",
             "position": "Frontend Developer",
             "city": "Stockholm, Sweden",
             "from": "JAN 2022",

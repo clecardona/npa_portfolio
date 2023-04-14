@@ -1,37 +1,26 @@
-import { useState, useEffect } from "react";
-import { CSSTransition } from "react-transition-group";
+import { erf } from 'mathjs';
+import { useTranslation } from 'react-i18next';
 
-const Bubble = (): JSX.Element => {
-  const [inProp, setInProp] = useState(false);
+const Bubble = ({ percentage }: { percentage?: number }): JSX.Element => {
+    const { t } = useTranslation()
+    function getOffset() {
+        if (!percentage) return
+        const delta = 2000 * (percentage - 1)
+        return -150 + 350 * erf(0.003 * delta)
+    }
 
-  useEffect(() => {
-    setInProp(true);
-  }, []);
+    const title = t('bubble.title')
 
-  return (
-    <div className="bubble">
-      <CSSTransition
-        in={inProp}
-        timeout={400}
-        classNames="title"
-        className="title"
-      >
-        <h1>
-          Hi, I am <strong>Clément</strong>
-        </h1>
-      </CSSTransition>
-      <CSSTransition
-        in={inProp}
-        timeout={400}
-        classNames="subtitle"
-        className="subtitle"
-      >
-        <div>
-          <h3>Frontend developer from France</h3>
-          <h3 style={{ fontWeight: 100 }}>Living in Stockholm, Sweden</h3>
+    if (!percentage) return <></>
+    return (
+        <div className="bubble" style={{ bottom: getOffset() }}>
+            <h1 dangerouslySetInnerHTML={{ __html: title }} />
+
+            <div>
+                <h3> {t('bubble.subtitle')}</h3>
+                <h3 style={{ fontWeight: 100 }}>{t('bubble.paragraph')}</h3>
+            </div>
         </div>
-      </CSSTransition>
-    </div>
-  );
-};
-export default Bubble;
+    )
+}
+export default Bubble

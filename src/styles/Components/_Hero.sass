@@ -1,6 +1,7 @@
 .section-hero
   display: grid
   text-align: center
+  height: 100vh
 
   .bg
     position: absolute
@@ -12,12 +13,13 @@
 
     width: 100%
     object-fit: cover
-    z-index: -10
-    opacity: 0.7
+    z-index: 1
+    opacity: 0.3
     @media only screen and (min-width: $tabletBreakpoint)
       height: 100vh
   .layout
     display: grid
+    z-index: 2
 
     height: -moz-available
     height: -webkit-fill-available
@@ -42,16 +44,94 @@
       justify-self: flex-end
       margin-bottom: 20em
 
-  .illustration
-    grid-area: illustration
-    height: 350px
-    width: auto
-    align-self: end
-    justify-self: center
-    object-fit: cover
-    object-position: bottom center
+.hero-container
+  position: relative
+  height: 80vh
+  @media only screen and (min-width: $desktopBreakpoint)
+    height: 95vh
 
-    @media only screen and (min-width: $desktopBreakpoint)
-      height: 400px
-      justify-self: center
-      padding-right: 20%
+@keyframes slide-in-r
+  0%
+    left: 0
+    opacity: 0
+  30%
+    opacity: 0
+  100%
+    width: 100%
+
+@keyframes slide-in-r-2
+  0%
+    left: 0
+  30%
+    opacity: 0
+  100%
+    width: 100%
+
+.bg-0-r
+  animation: slide-in-r .6s
+.bg-1-r
+  animation: slide-in-r-2 .6s
+
+.bg-0-l
+  animation: slide-in-l .6s
+.bg-1-l
+  animation: slide-in-l-2 .6s
+
+@keyframes slide-in-l
+  0%
+    left: 100%
+    opacity: 0
+  30%
+    opacity: 0
+  100%
+    width: 100%
+
+@keyframes slide-in-l-2
+  0%
+    left: 100%
+    opacity: 0
+  30%
+    opacity: 0
+  100%
+    width: 100%
+
+#bg-overlay
+  position: absolute
+  bottom: 0
+  z-index: 0
+  height: 100px
+  width: 100vw
+  background: linear-gradient(180deg, #00000000, #00000080)
+
+#bg-overlay-full
+  opacity: 0.7
+  height: 100%
+  width: 100%
+  position: absolute
+  background: linear-gradient(109.6deg, rgb(84, 13, 110) 11.2%, rgb(238, 66, 102) 100.2%)
+
+.hero-buttons
+  position: absolute
+  bottom: 0
+  width: 100%
+  display: flex
+  justify-content: space-between
+  padding: 1em
+
+  button
+    transition: .2s
+    color: white
+
+    &:hover
+      transition: .2s ease-in
+      transform: scale(1.1,1.2)
+
+.illustration
+  z-index: 2
+  position: absolute
+  bottom: 0
+  right: 50px
+  height: 250px
+
+  @media only screen and (min-width: $tabletBreakpoint)
+    height: 500px

@@ -1,5 +1,6 @@
 .dark
   transition: .1s ease-in
+  background: $gray2
 
   h1,h2,h3,h4,p
     color: #cacaca
@@ -10,6 +11,9 @@
   .header-menu img
     filter: invert(0.3)
 
+  .nav-item h3
+    color: $white
+
   .header-transparent
     background: rgba(0,0,0,.5)
 
@@ -19,28 +23,36 @@
     filter: grayscale(.5) sepia(.3)
 
   .bubble
-    background: $yellow
-    box-shadow: 0px 0px 16px $yellow
-    .title,.subtitle h3
+    $color: $white
+    z-index: 1
+    background: $color
+    box-shadow: 0px 0px 16px $color
+    h1,h3
       color: #0c092e
 
     &::after
-      background: $yellow
-      color: $yellow
-      box-shadow: 0px 0px 16px $yellow
-      text-shadow: 0px 0px 16px $yellow
+      background: $color
+      color: $color
+      box-shadow: 0px 0px 16px $color
+      text-shadow: 0px 0px 16px $color
 
   .accordion
     .accordion-title
-      filter: brightness(.6)
+      background: $gray3
       &:hover
-        filter: brightness(0.8)
+        background: $gray4
+
       h3
-        color: $gray2
+        color: $white
+
     .accordion-content
       background: $gray3
+      border-top: 1px solid #ffffff10
     .about-paragraph
       border-color: $gray4
+
+  .section-portfolio .wrapper p, .section-technologies .wrapper p
+    border-color: $gray4
 
   .section-contact .wrapper
     border-color: $gray4
@@ -60,3 +72,26 @@
   .carousel-expand
     h3, p
       color: #000
+
+  .card-edu,.card-exp
+    filter: brightness(0.8)
+    &:hover
+      filter: brightness(1)
+
+  .caret-container
+    background: $gray2
+    &:hover
+      background: $gray3
+    svg
+      fill: white
+    button
+      color: white
+    .caret li:hover
+      background: $gray4
+
+  .btn-more
+    background: $yellow
+    h3,h4,p
+      color: $gray2
+    &:hover
+      background: $yellowLight

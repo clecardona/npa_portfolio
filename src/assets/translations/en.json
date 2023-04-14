@@ -1,0 +1,40 @@
+{
+    "translation": {
+        "accordion.about": {
+            "title": "About me",
+            "paragraph": "Hi! I am Clement, a junior frontend developer from Nice, France. This is my Portfolio, which I use to showcase everything I develop. I specialize in React.js development with TypeScript with a intuitive design and attention to details.Why you might ask ?Well, scroll down and let me convince you.",
+            "cv": {
+                "experience": "Work Experience",
+                "education": "Education",
+                "skills": "Soft Skills"
+            },
+            "more": "More",
+            "less": "Less"
+        },
+        "accordion.projects": {
+            "title": "Projects",
+            "paragraph": "Here are a selection of my projects."
+        },
+        "accordion.tech": {
+            "title": "Tech Stack",
+            "paragraph": "Here is the techology that I already know and also starting to learn."
+        },
+        "bubble": {
+            "title": "Hi, I am <strong>Clément</strong>",
+            "subtitle": "Frontend developer",
+            "paragraph": "Stockholm | Sweden"
+        },
+        "contact": {
+            "header": "Contact me",
+            "text": "Here is my contact information if you are interested in starting a collaboration."
+        },
+        "select.language": {
+            "language": "Language"
+        },
+        "languages": {
+            "english": "English",
+            "swedish": "Swedish",
+            "french": "French"
+        }
+    }
+}

@@ -11,10 +11,10 @@ $shadows-medium: multiple-box-shadow(50)
 $shadows-big: multiple-box-shadow(20)
 
 .sky
-    position: absolute
+    // position: absolute
     height: 100vh
     width: 100vw
-    z-index: -9
+    z-index: 1
 
     background: radial-gradient(ellipse at bottom, #1B2735a2 0%, #090a0fa2 70%)
     background-blend-mode: multiply
@@ -35,8 +35,7 @@ $shadows-big: multiple-box-shadow(20)
 
     @media only screen and (min-width: 500px)
         top: 150px
-        left: unset
-        right: 200px
+        left: 180px
 
 #stars
     z-index: 1000
@@ -48,7 +47,6 @@ $shadows-big: multiple-box-shadow(20)
 
     &:after
         content: " "
-        position: absolute
         top: 2000px
         width: 1px
         height: 1px

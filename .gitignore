@@ -8,8 +8,6 @@
 # Log file
 *.log
 
-# BlueJ files
-*.ctxt
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -44,9 +42,13 @@ build
 
 # Firebase Hosting
 _.firebase
+.firebase
+.firebase/
 .firebaserc
 firebase-debug.log
 firebase.json
+
+
 
 
 # misc
@@ -56,6 +58,12 @@ firebase.json
 .env.test.local
 .env.production.local
 
+.bin
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+todo
+# deployment script
+deploy.js
