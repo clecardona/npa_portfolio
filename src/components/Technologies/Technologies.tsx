@@ -23,9 +23,18 @@ const Technologies = ({ technologies }: IProps): JSX.Element => {
     }, [])
 
     const Technolist = technologies.map(item => (
-        <li key={item.id}>
-            <img className="img-40 img-bw" alt={item.name} src={item.iconURL} />
-            <h3>{item.name}</h3>
+        <li key={item.id} className="techno-item">
+            {item.url ? (
+                <a href={item.url} target="_blank" rel="noreferrer">
+                    <img className="img-40 img-bw" alt={item.name} src={item.iconURL} />
+                    <h3>{item.name}</h3>
+                </a>
+            ) : (
+                <>
+                    <img className="img-40 img-bw" alt={item.name} src={item.iconURL} />
+                    <h3>{item.name}</h3>
+                </>
+            )}
         </li>
     ))
 

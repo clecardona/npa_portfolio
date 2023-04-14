@@ -9,7 +9,7 @@
     animation: float2 5s ease-in-out infinite
 
     @media only screen and (min-width: $desktopBreakpoint)
-        padding: 1.5em 3em 1.5em 5em
+        padding: 1.5em 3em
         right: calc(400px + 10%)
         left: unset
         bottom: unset
@@ -21,11 +21,11 @@
     .title
         color: $gray5
 
-    .subtitle
-        h3
-            color: $gray5
-            font-weight: 200
-            text-align: left
+    .location
+        display: flex
+        align-items: end
+        p
+            font-size: 17px
 
 .bubble:after
     transform: translatey(0px)

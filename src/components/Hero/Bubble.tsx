@@ -15,10 +15,10 @@ const Bubble = ({ percentage }: { percentage?: number }): JSX.Element => {
     return (
         <div className="bubble" style={{ bottom: getOffset() }}>
             <h1 dangerouslySetInnerHTML={{ __html: title }} />
-
-            <div>
-                <h3> {t('bubble.subtitle')}</h3>
-                <h3 style={{ fontWeight: 100 }}>{t('bubble.paragraph')}</h3>
+            <h3> {t('bubble.subtitle')}</h3>
+            <div className="location">
+                <p>📍</p>
+                <h3 style={{ fontWeight: 300 }}>{t('bubble.paragraph')}</h3>
             </div>
         </div>
     )

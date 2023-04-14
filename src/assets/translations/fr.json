@@ -17,7 +17,12 @@
         },
         "accordion.tech": {
             "title": "Tech Stack",
-            "paragraph": "Les languages informatiques / technologies utilisés ou en cours d'apprentissage."
+            "paragraph": "Langages informatiques / technologies utilisés ou en cours d'apprentissage."
+        },
+        "bubble": {
+            "title": "Bonjour, je suis <strong>Clément</strong>",
+            "subtitle": "Développeur Frontend",
+            "paragraph": "Stockholm"
         },
         "contact": {
             "header": "Contactez-moi",

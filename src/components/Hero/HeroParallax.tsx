@@ -40,45 +40,43 @@ const HeroParallax = ({ data }: { data: string[] }): JSX.Element => {
     }
 
     return (
-        <>
-            <Parallax
-                blur={{ min: -5, max: 5 }}
-                bgImage={!isDark ? bgImages[index] : ''}
-                bgImageAlt="bg"
-                bgClassName={`bg-parallax bg-${index % 2}-${direction}`}
-                strength={250}
-                bgImageStyle={{
-                    height: '100%',
-                    width: '100%',
-                    objectFit: 'cover',
-                    objectPosition: 'left bottom',
-                }}
-                renderLayer={percentage => (
-                    <>
-                        {!isDark && <div id="bg-overlay-full" />}
-                        <Bubble percentage={percentage} />
-                    </>
-                )}
-            >
-                {isDark && (
-                    <Background>
-                        <Stars />
-                    </Background>
-                )}
+        <Parallax
+            blur={{ min: -5, max: 5 }}
+            bgImage={!isDark ? bgImages[index] : ''}
+            bgImageAlt="bg"
+            bgClassName={`bg-parallax bg-${index % 2}-${direction}`}
+            strength={250}
+            bgImageStyle={{
+                height: '100%',
+                width: '100%',
+                objectFit: 'cover',
+                objectPosition: 'left bottom',
+            }}
+            renderLayer={percentage => (
+                <>
+                    {!isDark && <div id="bg-overlay-full" />}
+                    <Bubble percentage={percentage} />
+                </>
+            )}
+        >
+            {isDark && (
+                <Background>
+                    <Stars />
+                </Background>
+            )}
 
-                <div className="hero-container" id="hero">
-                    <div id="bg-overlay" />
+            <div className="hero-container" id="hero">
+                <div id="bg-overlay" />
 
-                    {!isDark && <GalleryButtons increase={increase} decrease={decrease} />}
+                {!isDark && <GalleryButtons increase={increase} decrease={decrease} />}
 
-                    <img
-                        className="illustration"
-                        alt="illustration"
-                        src="https://clecardona.com/npa/portfolio/img/illustration-portfolio.png"
-                    />
-                </div>
-            </Parallax>
-        </>
+                <img
+                    className="illustration"
+                    alt="illustration"
+                    src="https://clecardona.com/npa/portfolio/img/illustration-portfolio.png"
+                />
+            </div>
+        </Parallax>
     )
 }
 export default HeroParallax
